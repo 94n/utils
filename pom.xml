@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+    <name>Utility project</name>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>utilities</groupId>
+    <artifactId>utility</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+    <description>Different utilities</description>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>3.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>3.5.1-Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <version>1.0.0-CR-1</version>
+        </dependency>
+    </dependencies>
+
+</project>
