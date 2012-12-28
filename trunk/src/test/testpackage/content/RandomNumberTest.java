@@ -1,7 +1,7 @@
 package testpackage.content;
 
-//import org.testng.annotations.BeforeSuite;
-//import org.testng.annotations.Test;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 import testpackage.content.repetition.RandomNumber;
 
 /**
@@ -13,18 +13,18 @@ public class RandomNumberTest {
 
     private RandomNumber randomNumber;
 
-//    @BeforeSuite
+    @BeforeSuite
     public void setUp() {
         randomNumber = new RandomNumber();
     }
 
-//    @Test
+    @Test
     public void testGetFromRange1() {
         final int randomInt = randomNumber.getFromRange(3, 0);
         assert randomInt >= 0 && randomInt <= 3;
     }
 
-//    @Test
+    @Test
     public void testGetFromRange() {
         final int randomInt = randomNumber.getFromRange(0, 3);
         assert randomInt >= 0 && randomInt <= 3;

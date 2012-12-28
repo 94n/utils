@@ -1,13 +1,13 @@
 package testpackage.content.repetition.stringlists;
 
-//import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-//import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 /**
  * User: mtitov
@@ -16,7 +16,7 @@ import java.util.TreeMap;
  */
 public class StringListGeneratorTest {
 
-//    @Test
+    @Test
     public void testShufflePrintStrings_frequency() {
 //        final String[] strings = StringType.PORN.getList();
 //        final Map<String, Integer> stringsCount = new HashMap<String, Integer>();
