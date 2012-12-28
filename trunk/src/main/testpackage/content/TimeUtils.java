@@ -55,6 +55,12 @@ public class TimeUtils {
         calendar.add(Calendar.HOUR_OF_DAY, 9);
         return calendar.getTimeInMillis();
     }
+	
+	public static void printAddMinutes(int minutes) {
+        final Calendar calendar = GregorianCalendar.getInstance();
+        calendar.add(Calendar.MINUTE, minutes);
+        printTimeByMillis(calendar.getTimeInMillis());
+    }
 
     public static void printHalfTimeOfDay(Date start) {
         final long dayEnd = getWorkingDayEndTime() - HOUR;//dinner
