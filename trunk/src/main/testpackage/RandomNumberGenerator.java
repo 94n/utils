@@ -1,5 +1,6 @@
 package testpackage;
 
+import testpackage.content.TimeUtils;
 import testpackage.content.repetition.RandomNumber;
 
 import java.util.Arrays;
@@ -12,8 +13,8 @@ import java.util.Arrays;
 public class RandomNumberGenerator {
 
     public static void main(String[] args) {
-//        System.out.println(new RandomNumber().getFromRange(0, 65535));
-        System.out.println(Arrays.toString(new RandomNumber().getFromRange(1, 0, 6)));
+//        System.out.println(new RandomNumber().getFromRange(0, 360));
+        System.out.println(new RandomNumber().getFromRange(0, TimeUtils.DAY / 1000));
     }
 
 }
