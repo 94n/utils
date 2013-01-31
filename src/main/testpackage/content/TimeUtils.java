@@ -21,8 +21,10 @@ public class TimeUtils {
     private static final long MILLISECONS_IN_SECOND = 1000;
     private static final long SECONDS_IN_MINUTE = 60;
     private static final long MINUTES_IN_HOUR = 60;
+    private static final long HOURS_IN_DAY = 24;
     public static final long MINUTE = MILLISECONS_IN_SECOND * SECONDS_IN_MINUTE;
     private static final long HOUR = MILLISECONS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR;
+    public static final long DAY = MILLISECONS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY;
 
     public static Date getDateByDayOfYear(int dayOfYear, int year) {
         Calendar calendar = GregorianCalendar.getInstance();
@@ -30,6 +32,11 @@ public class TimeUtils {
         calendar.set(Calendar.YEAR, year);
         calendar.set(Calendar.DAY_OF_YEAR, dayOfYear);
         return calendar.getTime();
+    }
+
+    public static void printDayDifference(long startDate){
+        final long now = new Date().getTime();
+        System.out.println((now - startDate)/DAY);
     }
 
     public static Date addDate(int days) {

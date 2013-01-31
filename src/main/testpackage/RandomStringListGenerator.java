@@ -1,9 +1,10 @@
 package testpackage;
 
-import testpackage.content.repetition.stringlists.PuzataHataFood;
+import testpackage.content.repetition.stringlists.InterviewQuestions;
 import testpackage.content.repetition.stringlists.StringListGenerator;
 import testpackage.content.repetition.stringlists.StringType;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,8 +15,9 @@ import java.util.List;
 public class RandomStringListGenerator {
 
     public static void main(String[] args) {
-        StringListGenerator.shufflePrintStrings(PuzataHataFood.ALL, 2);//2.2
+//        StringListGenerator.shufflePrintStrings(PuzataHataFood.ALL, 2);//2,2
 //        printChildrenStuff();
+        printInterviewQuestions();
 //        StringListGenerator.shufflePrintStrings(StringType.TOYS, 32);
 //        StringListGenerator.shufflePrintStrings(StringType.WALLPAPERS, 1);
 //        StringListGenerator.shufflePrintStrings(StringType.KNOWLEDGE_AREAS, 1);
@@ -32,6 +34,65 @@ public class RandomStringListGenerator {
             System.out.println((i + 1) + ") " + zaytsev.get(i));
             System.out.println("   " + simpleGames.get(i));
             System.out.println("   " + passiveBalanceProgram.get(i));
+        }
+    }
+
+    private static void printInterviewQuestions() {
+        final int count = 2;
+        final List<String> questions = new ArrayList<>();
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.ACTION_SCRIPT, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.AJAX, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.ANDROID, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.ANT, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.ARCHITECTURE, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.AUTO_IT, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.C, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.COLLECTIONS, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.CONCURRENCY, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.CPLUSPLUS, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.CRYPTOGRAPHY, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.CSHARP, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.CSS, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.DB, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.DEBUGGING, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.ESTIMATION, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.HIBERNATE, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.HTML, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.IOS, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JAVA, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JAVA_EE, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JAVASCRIPT, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JAVA_SE, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JBOSS, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JDBC, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JQUERY, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JS, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JSON, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.JUNIT, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.LINUX, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.MAVEN, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.MULTITHREADING, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.MYSQL, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.OOP, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.ORACLE, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.PASCAL, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.PATTERNS, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.PHP, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.PROPOSALS, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.QT, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.RUBY, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.SELENIUM, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.SERVLETS, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.SOA, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.SPRING, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.SPRING_MVC, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.SQL, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.SWING, count));
+        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.TOMCAT, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.UNIX_SHELL_SCRIPTING, count));
+//        questions.addAll(StringListGenerator.getRandomStringListWithUniqueElementsAndTypeName(InterviewQuestions.XML, count));
+        for (String s : questions) {
+            System.out.println(s);
         }
     }
 

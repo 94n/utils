@@ -23,7 +23,11 @@ public class RandomObjectListGenerator {
     public static <T> List<T> generateRandomListWithUniqueElements(T[] orderedArray, int expectedLength) {
         final List<T> list = Arrays.asList(orderedArray);
         Collections.shuffle(list);
-        return list.subList(0, expectedLength);
+        if (list.size() <= expectedLength) {
+            return list;
+        } else {
+            return list.subList(0, expectedLength);
+        }
     }
 
 }

@@ -46,4 +46,12 @@ public class StringListGenerator {
         return RandomObjectListGenerator.generateRandomListWithUniqueElements(strings, numberOfStrings);
     }
 
+    public static List<String> getRandomStringListWithUniqueElementsAndTypeName(StringTypeInterface stringType, int numberOfStrings) {
+        final String[] strings = stringType.getList();
+        for(int i=0;i<strings.length;i++){
+            strings[i] = stringType + ": " + strings[i];
+        }
+        return RandomObjectListGenerator.generateRandomListWithUniqueElements(strings, numberOfStrings);
+    }
+
 }
