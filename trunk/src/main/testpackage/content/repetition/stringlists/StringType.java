@@ -9,7 +9,7 @@ import java.util.EnumSet;
  */
 public enum StringType implements StringTypeInterface {
 
-    A_SALADS(getSalads()), B_SOUPS(getSoups()), C_SECOND_COURSES(getSecondCourses()), D_MEAT(getMeat()),
+    A_SALADS(getSalads()), B_SOUPS(getSoups()), BOOKS(getBooks()), C_SECOND_COURSES(getSecondCourses()), CHILDREN_FOOD(getChildrenFood()), D_MEAT(getMeat()),
     FOOD(getFood()), FOOTBALL_PARTNERS(getFootballPartners()), GAMES(getGames()), KNOWLEDGE_AREAS(getKnowledgeAreas()),
     MACDONALDS(getMacdonalds()), MUSIC(getMusic()), PASSIVE_BALANCE_PROGRAM(getPassiveBalanceProgram()),
     PUZZLES(getPuzzles()), TENNIS_PARTNERS(getTennisPartners()), TOYS(getToys()), WALLPAPERS(getWallpapers()),
@@ -27,8 +27,16 @@ public enum StringType implements StringTypeInterface {
 
     private String[] list;
 
+    public static String[] getBooks() {
+        return StringListHolder.books;
+    }
+
     public static String[] getGames() {
         return StringListHolder.games;
+    }
+
+    public static String[] getChildrenFood() {
+        return StringListHolder.childrenFood;
     }
 
     public static String[] getZaytsevGames() {
@@ -92,6 +100,47 @@ public enum StringType implements StringTypeInterface {
     }
 
     private static class StringListHolder {
+
+        public static String[] books = {
+                "Лошадка",
+                "Зима",
+                "Белочка",
+                "В деревне",
+                "Овощи",
+                "Слоненок",
+                "Гав",
+                "Фрукты",
+                "Маша-растеряша",
+                "Мамы и малыши",
+                "Мои игрушки",
+                "Барто",
+                "На отдыхе",
+                "Перед сном",
+                "Азбука",
+                "Удивительные звери",
+                "Гуси-лебеди",
+                "Домашние животные",
+                "Транспорт",
+                "Зоопарк",
+                "Малыши"
+        };
+
+        public static String[] childrenFood = {
+//                молочных продуктов (детские творог, сыр, сметану и сливки)
+//                постная говядина, свинина, телятина, курица, индейка, кролик, нежирная рыба (судак, хек, треска)
+//                печень и язык
+//                мясное в баночках
+//                рыба, рыбное в баночках
+//                любые овощи, включая свеклы, редиса, репы и остальные, укроп и петрушку, листовой салат и зеленый лук
+//                готовые овощные пюре в баночках
+//                ржаной Хлеб и каша
+//                печенье, а также кукурузные хлопья, мюсли и макаронные изделия
+//                омлет из цельного яйца
+//                грушам, яблокам, бананам и сливам, апельсины, абрикосы, персики, киви, клубника, лимоны,
+//                вишня, смородина, крыжовник, клюква, ежевика, малина и брусника
+//                детских фруктовых пюре, компоты из свежих фруктов и соки (свежевыжатые или с маркировкой "для детского питания")
+//                детским фруктовым и травяным чаям
+        };
 
         public static String[] toys = {
                 "африка",
@@ -506,7 +555,7 @@ public enum StringType implements StringTypeInterface {
                 "какое дерево выше, какое ниже; у какого дерева листик шире, а у какого уже",
                 "Домики, норки и берлоги",
                 "прятки зверей",
-                "Рыба, птица, зверь (в домиках)",
+                "Рыба, птица, зверь",
         };
 
         public static String[] zaytsev = {

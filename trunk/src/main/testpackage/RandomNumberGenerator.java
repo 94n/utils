@@ -14,7 +14,9 @@ public class RandomNumberGenerator {
 
     public static void main(String[] args) {
 //        System.out.println(new RandomNumber().getFromRange(0, 360));
-        System.out.println(new RandomNumber().getFromRange(0, TimeUtils.DAY / 1000));
+        for (int i : new RandomNumber().getFromRange(6, 3, 12)) {
+            System.out.print(i + " ");
+        }
     }
 
 }

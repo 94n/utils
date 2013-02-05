@@ -17,8 +17,8 @@ public class RandomStringListGenerator {
     public static void main(String[] args) {
 //        StringListGenerator.shufflePrintStrings(PuzataHataFood.ALL, 2);//2,2
 //        printChildrenStuff();
-        printInterviewQuestions();
-//        StringListGenerator.shufflePrintStrings(StringType.TOYS, 32);
+//        printInterviewQuestions();
+        StringListGenerator.shufflePrintStrings(StringType.BOOKS, 1);//1.1
 //        StringListGenerator.shufflePrintStrings(StringType.WALLPAPERS, 1);
 //        StringListGenerator.shufflePrintStrings(StringType.KNOWLEDGE_AREAS, 1);
 //        StringListGenerator.shufflePrintStringsWithUniqueElements(StringType.MUSIC_STYLES, StringType.MUSIC_STYLES.getList().length);
@@ -30,10 +30,12 @@ public class RandomStringListGenerator {
         final List<String> zaytsev = StringListGenerator.getRandomStringList(StringType.ZAYTSEV_GAMES, count);
         final List<String> simpleGames = StringListGenerator.getRandomStringList(StringType.GAMES, count);
         final List<String> passiveBalanceProgram = StringListGenerator.getRandomStringList(StringType.PASSIVE_BALANCE_PROGRAM, count);
+        final List<String> books = StringListGenerator.getRandomStringList(StringType.BOOKS, count);
         for (int i = 0; i < count; i++) {
             System.out.println((i + 1) + ") " + zaytsev.get(i));
             System.out.println("   " + simpleGames.get(i));
             System.out.println("   " + passiveBalanceProgram.get(i));
+            System.out.println("   " + books.get(i));
         }
     }
 
