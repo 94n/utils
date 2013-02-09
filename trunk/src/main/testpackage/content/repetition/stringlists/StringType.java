@@ -12,7 +12,7 @@ public enum StringType implements StringTypeInterface {
     A_SALADS(getSalads()), B_SOUPS(getSoups()), BOOKS(getBooks()), C_SECOND_COURSES(getSecondCourses()), CHILDREN_FOOD(getChildrenFood()), D_MEAT(getMeat()),
     FOOD(getFood()), FOOTBALL_PARTNERS(getFootballPartners()), GAMES(getGames()), KNOWLEDGE_AREAS(getKnowledgeAreas()),
     MACDONALDS(getMacdonalds()), MUSIC(getMusic()), PASSIVE_BALANCE_PROGRAM(getPassiveBalanceProgram()),
-    PUZZLES(getPuzzles()), TENNIS_PARTNERS(getTennisPartners()), TOYS(getToys()), WALLPAPERS(getWallpapers()),
+    PUZZLES(getPuzzles()), TENNIS_PARTNERS(getTennisPartners()), TOYS(getToys()), WALLPAPERS(getWallpapers()), WORDS(getWords()),
     ZAYTSEV_GAMES(getZaytsevGames());
 
     public static final EnumSet<StringType> DISH_TYPES = EnumSet.of(A_SALADS, B_SOUPS, C_SECOND_COURSES, D_MEAT);
@@ -26,6 +26,10 @@ public enum StringType implements StringTypeInterface {
     }
 
     private String[] list;
+
+    public static String[] getWords() {
+        return StringListHolder.words;
+    }
 
     public static String[] getBooks() {
         return StringListHolder.books;
@@ -101,6 +105,10 @@ public enum StringType implements StringTypeInterface {
 
     private static class StringListHolder {
 
+        public static String[] words = {
+                "Книгу"
+        };
+
         public static String[] books = {
                 "Лошадка",
                 "Зима",
@@ -121,8 +129,9 @@ public enum StringType implements StringTypeInterface {
                 "Гуси-лебеди",
                 "Домашние животные",
                 "Транспорт",
-                "Зоопарк",
-                "Малыши"
+                "Малыши",
+                "Фигуры",
+                "Время суток"
         };
 
         public static String[] childrenFood = {
