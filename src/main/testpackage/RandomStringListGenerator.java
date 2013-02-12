@@ -15,11 +15,11 @@ import java.util.List;
  */
 public class RandomStringListGenerator {
 
-    public static void ma6in(String[] args) {
+    public static void main(String[] args) {
 //        StringListGenerator.shufflePrintStrings(PuzataHataFood.ALL, 3);//3,1
 //        printChildrenStuff();
 //        printInterviewQuestions();
-        StringListGenerator.shufflePrintStrings(StringType.BOOKS, 4);
+        StringListGenerator.shufflePrintStrings(StringType.BOOKS, 8);
 //        StringListGenerator.shufflePrintStrings(StringType.WORDS, 1);//1.1
 //        StringListGenerator.shufflePrintStrings(StringType.WALLPAPERS, 1);
 //        StringListGenerator.shufflePrintStrings(StringType.KNOWLEDGE_AREAS, 1);
