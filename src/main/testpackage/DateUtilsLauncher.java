@@ -14,17 +14,25 @@ import java.util.GregorianCalendar;
 public class DateUtilsLauncher {
 
     public static void main(String[] args) {
-//        addDate();
+        final Calendar start = GregorianCalendar.getInstance();
+        start.set(Calendar.YEAR, 2011);
+        start.set(Calendar.MONTH, Calendar.JUNE);
+        start.set(Calendar.DAY_OF_MONTH, 29);
+        final Calendar end = GregorianCalendar.getInstance();
+        end.set(Calendar.YEAR, 2012);
+        end.set(Calendar.MONTH, Calendar.MARCH);
+        end.set(Calendar.DAY_OF_MONTH, 6);
+        TimeUtils.printDayDifference(start.getTimeInMillis(), end.getTimeInMillis());
 //        System.out.println(TimeUtils.timeStampToDate(1335997506310l));
 //        System.out.println(TimeUtils.getDateByDayOfYear(592, 2012));
 //        halfTimeOfDay(9, 46);
 //        TimeUtils.printTimeDiff(7, 30, 12, 8);
 //        TimeUtils.printAddTime(9, 30, -4, -38);
-        final Calendar start = GregorianCalendar.getInstance();
+        /*final Calendar start = GregorianCalendar.getInstance();
         start.set(Calendar.YEAR, 2012);
         start.set(Calendar.DAY_OF_MONTH, 22);
         start.set(Calendar.MONTH, Calendar.FEBRUARY);
-        TimeUtils.printDayDifference(start.getTimeInMillis()); //529
+        TimeUtils.printDayDifference(start.getTimeInMillis()); //529*/
     }
 
     static void halfTimeOfDay(Date date) {

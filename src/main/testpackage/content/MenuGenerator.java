@@ -1,6 +1,5 @@
 package testpackage.content;
 
-import testpackage.content.repetition.RandomNumber;
 import testpackage.content.repetition.core.RandomObjectListGenerator;
 import testpackage.content.repetition.stringlists.PuzataHataFood;
 import testpackage.content.repetition.stringlists.StringListGenerator;
@@ -8,7 +7,6 @@ import testpackage.content.repetition.stringlists.StringType;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.EnumSet;
 import java.util.List;
 
 /**
@@ -24,7 +22,7 @@ public class MenuGenerator {
         final int numberOfDishes = 3;//new RandomNumber().getFromRange(1, MAX_NUMBER_OF_DISHES);
         final List<StringType> dishTypesList = new ArrayList<StringType>();
         if (numberOfDishes == 1) {
-            dishTypesList.add(StringType.B_SOUPS);
+            dishTypesList.add(StringType.SOUPS);
         } else {
             dishTypesList.addAll(RandomObjectListGenerator.generateRandomListWithUniqueElements(
                     StringType.DISH_TYPES.toArray(new StringType[MAX_NUMBER_OF_DISHES]), numberOfDishes));
@@ -39,8 +37,8 @@ public class MenuGenerator {
 
     public static List<String> getDietMenu() {
         final List<StringType> dishTypesList = new ArrayList<StringType>();
-        dishTypesList.add(StringType.A_SALADS);
-        dishTypesList.add(StringType.B_SOUPS);
+        dishTypesList.add(StringType.SALADS);
+        dishTypesList.add(StringType.SOUPS);
         final List<String> menu = new ArrayList<String>();
         for (Object stringType : dishTypesList) {
             menu.add(StringListGenerator.getRandomStringList((StringType) stringType, 1).get(0));

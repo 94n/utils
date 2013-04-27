@@ -2,9 +2,6 @@ package testpackage;
 
 import testpackage.content.repetition.RandomTimeGenerator;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-
 /**
  * User: mtitov
  * Date: 10/31/11

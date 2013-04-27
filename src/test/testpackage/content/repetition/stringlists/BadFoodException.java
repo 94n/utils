@@ -7,7 +7,7 @@ package testpackage.content.repetition.stringlists;
  * Time: 13:08
  * To change this template use File | Settings | File Templates.
  */
-public class BadFoodException extends Exception {
+public class BadFoodException extends RuntimeException {
 
 
 
