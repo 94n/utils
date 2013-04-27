@@ -48,7 +48,7 @@ public class DailyStuffGenerator {
         final int count = new RandomNumber().getFromRange(1, TENNISS_MAX_COUNT);
         for (int i = 0; i < count; i++) {
             RandomTimeGenerator.printRandomTime(1, start, dayEnd);
-            StringListGenerator.shufflePrintStrings(StringType.TENNIS_PARTNERS, 1);
+//            StringListGenerator.shufflePrintStrings(StringType.TENNIS_PARTNERS, 1);
         }
     }
 
@@ -70,7 +70,7 @@ public class DailyStuffGenerator {
         } else {
             RandomTimeGenerator.printRandomTime(1, start, dayEnd);
         }
-        StringListGenerator.shufflePrintStrings(StringType.TENNIS_PARTNERS, 1);
+//        StringListGenerator.shufflePrintStrings(StringType.TENNIS_PARTNERS, 1);
 
         final int period = 3;
         while (end < dayEnd) {
@@ -84,7 +84,7 @@ public class DailyStuffGenerator {
                 } else {
                     RandomTimeGenerator.printRandomTime(1, start, dayEnd);
                 }
-                StringListGenerator.shufflePrintStrings(StringType.TENNIS_PARTNERS, 1);
+//                StringListGenerator.shufflePrintStrings(StringType.TENNIS_PARTNERS, 1);
             }
         }
     }

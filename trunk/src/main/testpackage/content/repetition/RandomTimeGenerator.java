@@ -68,7 +68,7 @@ public class RandomTimeGenerator {
         }
     }
 
-    public static void printSleepingTime(){
+    public static void printSleepingTime() {
         final int minutesToSleep = new RandomNumber().getFromRange(240, 600);//4 - 10 hours
         final Calendar calendar = GregorianCalendar.getInstance();
         calendar.add(Calendar.DAY_OF_MONTH, 1);
@@ -80,14 +80,11 @@ public class RandomTimeGenerator {
         TimeUtils.printTimeByMillis(calendar.getTimeInMillis());
     }
 
-
-
     public static void printWorkingDayRandomTime(int number) {
         for (Long time : getWorkingDayRandomTime(number)) {
             TimeUtils.printTimeByMillis(time);
         }
     }
-
 
 
     public static void printWorkingDayRandomTimeRange(int number) {
@@ -99,17 +96,6 @@ public class RandomTimeGenerator {
             System.out.println(TimeUtils.getTimeByMillis(time) + " - " + TimeUtils.getTimeByMillis(rangeEndTime));
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

@@ -5,23 +5,29 @@ package testpackage.content.repetition.stringlists;
  * User: makstitoff
  * Date: 29.01.13
  * Time: 17:29
- * To change this template use File | Settings | File Templates.
+ * To change this template use File | Settings | File Templates. DELPHI_API(getDelphiApi()),
  */
 public enum InterviewQuestions implements StringTypeInterface {
 
-    ACTION_SCRIPT(getActionScript()), AJAX(getAjax()), ANDROID(getAndroid()), ANT(getAnt()), APACHE_AXIS(getApacheAxis()),
-    ARCHITECTURE(getArchitecture()), AUTO_IT(getAutoIt()), C(getC()), COLLECTIONS(getCollections()), CONCURRENCY(getConcurrency()),
-    CPLUSPLUS(getCPlusPlus()), CRYPTOGRAPHY(getCryptography()), CRYSTAL_REPORT(getCrystalReport()), CSHARP(getCSharp()),
-    CSS(getCss()), DB(getDb()), DEBUGGING(getDebugging()), FREEMARKER(getFreeMarker()),
-    HIBERNATE(getHibernate()), HTML(getHtml()), IBATIS(getIBatis()), IOS(getIos()),
-    J2EE(getJ2ee()), JAVA(getJava()), JAVA_EE(getJavaEe()),
-    JAVASCRIPT(getJavaScript()), JAVA_SE(getJavaSe()), JAVA_WEB_TECHNOLOGIES(getJavaWebTechnologies()), JBOSS(getJBoss()), JDBC(getJdbc()),
-    JQUERY(getJQuery()), JS(getJs()), JS_FRAMEWORKS(getJsFrameworks()), JSON(getJson()), JSP(getJsp()),
-    JUNIT(getJunit()), LINUX(getLinux()), MAVEN(getMaven()), MULTITHREADING(getMultithreading()), MYSQL(getMySql()),
-    OOP(getOop()), ORACLE(getOracle()), PASCAL(getPascal()), PATTERNS(getPatterns()), PHP(getPhp()), POSTGRESQL(getPostgreSql()),
-    PROPOSALS(getProposals()), QT(getQt()), RUBY(getRuby()), SCRUM(getScrum()), SELENIUM(getSelenium()), SERVLETS(getServlets()), SOA(getSoa()),
-    SPRING(getSpring()), SPRING_MVC(getSpringMvc()), SQL(getSql()), SWING(getSwing()), TOMCAT(getTomcat()),
-    UNIX_SHELL_SCRIPTING(getUnixShellScripting()), XML(getXml());
+    ACTION_SCRIPT(getActionScript()), AJAX(getAjax()), ANDROID(getAndroid()), ANT(getAnt()),
+    APACHE_AXIS(getApacheAxis()), ARCHITECTURE(getArchitecture()), AUTO_IT(getAutoIt()), C(getC()),
+    COLLECTIONS(getCollections()), CONCURRENCY(getConcurrency()), CPLUSPLUS(getCPlusPlus()),
+    CRYPTOGRAPHY(getCryptography()), CRYSTAL_REPORT(getCrystalReport()), CSHARP(getCSharp()), CSS(getCss()),
+    DB(getDb()), DEBUGGING(getDebugging()), DELPHI_ACTIVEX(getDelphiActiveX()), DELPHI_API(getDelphiApi()),
+    DELPHI_COM(getDelphiCom()), DELPHI_COM_PLUS(getDelphiComPlus()), DELPHI_DCOM(getDelphiDCom()),
+    DELPHI_OLE(getDelphiOle()), DELPHI_TCP(getDelphiTcp()), DELPHI_UDP(getDelphiUdpSockets()), EJB(getEjb()),
+    EXT_JS(getExtJs()), FIREBIRD(getFirebird()), FREEMARKER(getFreeMarker()), HIBERNATE(getHibernate()),
+    HTML(getHtml()), INFORMIX(getInformix()), IBATIS(getIBatis()), IOS(getIos()), J2EE(getJ2ee()), JAVA(getJava()),
+    JAVA_EE(getJavaEe()), JAVASCRIPT(getJavaScript()), JAVA_SE(getJavaSe()),
+    JAVA_WEB_TECHNOLOGIES(getJavaWebTechnologies()), JBOSS(getJBoss()), JDBC(getJdbc()), JQUERY(getJQuery()),
+    JS(getJs()), JS_FRAMEWORKS(getJsFrameworks()), JSON(getJson()), JSP(getJsp()), JUNIT(getJunit()), LINUX(getLinux()),
+    MAVEN(getMaven()), MULTITHREADING(getMultithreading()), MYSQL(getMySql()), OOP(getOop()), ORACLE(getOracle()),
+    PASCAL(getPascal()), PATTERNS(getPatterns()), PERL(getPerl()), PHP(getPhp()), PL_SQL(getPlSql()),
+    POSTGRESQL(getPostgreSql()), PROPOSALS(getProposals()), QT(getQt()), RUBY(getRuby()), SCRUM(getScrum()),
+    SELENIUM(getSelenium()), SERVLETS(getServlets()), SOA(getSoa()), SPRING(getSpring()), SPRING_MVC(getSpringMvc()),
+    SQL(getSql()), SWING(getSwing()), TOMCAT(getTomcat()), UML(getUml()), UNIX_SHELL_SCRIPTING(getUnixShellScripting()),
+    WEBLOGIC(getWeblogic()), WEB_SERVICES(getWebServices()), WIN_API(getWinApi()), WIN_FORMS(getWinForms()),
+    WSDL(getWsdl()),XHTML(getXhtml()), XML(getXml());
 
     InterviewQuestions(String[] list) {
         this.list = list;
@@ -102,6 +108,50 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.debugging;
     }
 
+    public static String[] getDelphiActiveX() {
+        return StringListHolder.delphiActiveX;
+    }
+
+    public static String[] getDelphiApi() {
+        return StringListHolder.delphiApi;
+    }
+
+    public static String[] getDelphiCom() {
+        return StringListHolder.delphiCom;
+    }
+
+    public static String[] getDelphiComPlus() {
+        return StringListHolder.delphiComPlus;
+    }
+
+    public static String[] getDelphiDCom() {
+        return StringListHolder.delphiDCom;
+    }
+
+    public static String[] getDelphiOle() {
+        return StringListHolder.delphiOle;
+    }
+
+    public static String[] getDelphiTcp() {
+        return StringListHolder.delphiTcp;
+    }
+
+    public static String[] getDelphiUdpSockets() {
+        return StringListHolder.delphiUdpSockets;
+    }
+
+    public static String[] getEjb() {
+        return StringListHolder.ejb;
+    }
+
+    public static String[] getExtJs() {
+        return StringListHolder.extJs;
+    }
+
+    public static String[] getFirebird() {
+        return StringListHolder.firebird;
+    }
+
     public static String[] getFreeMarker() {
         return StringListHolder.freeMarker;
     }
@@ -112,6 +162,10 @@ public enum InterviewQuestions implements StringTypeInterface {
 
     public static String[] getHtml() {
         return StringListHolder.html;
+    }
+
+    public static String[] getInformix() {
+        return StringListHolder.informix;
     }
 
     public static String[] getIBatis() {
@@ -210,8 +264,16 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.patterns;
     }
 
+    public static String[] getPerl() {
+        return StringListHolder.perl;
+    }
+
     public static String[] getPhp() {
         return StringListHolder.php;
+    }
+
+    public static String[] getPlSql() {
+        return StringListHolder.plSql;
     }
 
     public static String[] getPostgreSql() {
@@ -266,8 +328,36 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.tomcat;
     }
 
+    public static String[] getUml() {
+        return StringListHolder.uml;
+    }
+
     public static String[] getUnixShellScripting() {
         return StringListHolder.unixShellScripting;
+    }
+
+    public static String[] getWeblogic() {
+        return StringListHolder.weblogic;
+    }
+
+    public static String[] getWebServices() {
+        return StringListHolder.webServices;
+    }
+
+    public static String[] getWinApi() {
+        return StringListHolder.winApi;
+    }
+
+    public static String[] getWinForms() {
+        return StringListHolder.winForms;
+    }
+
+    public static String[] getWsdl() {
+        return StringListHolder.wsdl;
+    }
+
+    public static String[] getXhtml() {
+        return StringListHolder.xhtml;
     }
 
     public static String[] getXml() {
@@ -347,7 +437,8 @@ public enum InterviewQuestions implements StringTypeInterface {
 
         public static String[] architecture = {
                 "What do you think\n" +
-                        "the best way for software to be architected?/Який, на твою думку, найкращий спосіб створювати архітектуру?"
+                        "the best way for software to be architected?/Який, на твою думку, найкращий спосіб створювати архітектуру?",
+                "who in the \"community\" they follow and admire for their architectural ability and why?"
         };
 
         public static String[] autoIt = {
@@ -410,15 +501,16 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] cSharp = {
-                "What are namespaces, and how they are used?/Що таке namespaces, і як вони використовуються?"
+                "What are namespaces, and how they are used?/Що таке namespaces, і як вони використовуються?",
 //                Namespaces are used to organize classes within the .NET Framework. They dictate the logical structure of the code. They are analogous to Java packages, with the key difference being Java packages define the physical layout of source files (directory structure) while .NET namespaces do not. However, many developers follow this approach and organize their C# source files in directories that correlate with namespaces. The .NET Framework has namespaces defined for its many classes, such as System.Xml–these are utilized via the using statement. Namespaces are assigned to classes via the namespace keyword.
+                "What is a constructor?"
         };
 
         public static String[] css = {
                 "What is CSS?",
                 "What are Cascading Style Sheets?/Що таке Cascading Style Sheets?",
 //                A Cascading Style Sheet (CSS) is a list of statements (also known as rules) that can assign various rendering properties to HTML elements. Style rules can be specified for a single element occurrence, multiple elements, an entire document, or even multiple documents at once. It is possible to specify many different rules for an element in different locations using different methods. All these rules are collected and merged (known as a "cascading" of styles) when the document is rendered to form a single style rule for each element.
-                "How do I center block-elements with CSS1? "
+                "How do I center block-elements with CSS1? ",
 //                There are two ways of centering block level elements:
 //
 //                1. By setting the properties margin-left and margin-right to auto and width to some explicit value:
@@ -432,13 +524,16 @@ public enum InterviewQuestions implements StringTypeInterface {
 //
 //        TABLE {margin-left: auto; margin-right: auto; width: 400px;}
 //        In most legacy browsers, a table's width is by default determined by its content. In CSS-conformant browsers, the complete width of any element (including tables) defaults to the full width of its parent element's content area. As browser become more conformant, authors will need to be aware of the potential impact on their designs.
+                "If background and color should always be set together, why do they exist as separate properties?",
+//                There are several reasons for this. First, style sheets become more legible -- both for humans and machines. The background property is already the most complex property in CSS1 and combining it with color would make it even more complex. Second, color inherits, but background doesn't and this would be a source of confusion.
         };
 
         public static String[] db = {
                 "What is SQL?/Що таке SQL?",
 //                SQL stands for 'Structured Query Language'.
                 "What is SELECT statement?",
-                "How can you compare a part of the name rather than the entire name?"
+                "How can you compare a part of the name rather than the entire name?",
+                "What did you use to connect perl to database?"
         };
 
         public static String[] debugging = {
@@ -468,6 +563,59 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "difference between release build and debug build. Did you hear about memory leaks? how do they occur?",
 //                i dunno about release build an debug build but memory leaks are something like the memory locations that are not referred that is for example if a pointer is assigned an memory but after it is changed to some other reference then the previous memory that the pointer being referred is lost but not freed from the memory this is called memory leak.
 //                A release build would generally have symbols stripped off and log levels are generally low.
+                "A program has a bug. How would you debug it?",
+        };
+
+        public static String[] delphiActiveX = {
+                "How to save images or make copy of a database with Delphi?"
+        };
+
+        public static String[] delphiApi = {
+                "What is Delphi?"
+        };
+
+        public static String[] delphiCom = {
+                "What are the different types of pointers used in Delphi?"
+        };
+
+        public static String[] delphiComPlus = {
+                "How to Select a cell in a DBGrid ?"
+        };
+
+        public static String[] delphiDCom = {
+                "How to Test IDispatch Descendants"
+        };
+
+        public static String[] delphiOle = {
+                "What is the default extension of file when we create user components?"
+        };
+
+        public static String[] delphiTcp = {
+                "What should I give to Windows API functions that want a hWnd?"
+        };
+
+        public static String[] delphiUdpSockets = {
+                "What is the target load order?"
+        };
+
+        public static String[] ejb = {
+                "Which of the beans available in EJB 3 are only called by clients?"
+//                Session  and Singleton (EJB 3.1) beans are the ones who encapsulate the business logic which is why it is the only bean which is called by clients. Other beans like MDB and Entity beans are called by session and singleton beans to complete the business requirement.
+        };
+
+        public static String[] extJs = {
+                "Why we need javascript Library?"
+//                Javascript is an awesome language. It’s super flexible.Browsers are the modern UI paradigm.
+//        The javascript Libraries now must provide a rich set of UI Widgets.
+        };
+
+        public static String[] firebird = {
+                "How to activate all indexes in Firebird?"
+//                If you run Firebird 1.x which doesn't have EXECUTE BLOCK, you can run the following query:
+//
+//                select 'ALTER INDEX '||rdb$index_name ||' ACTIVE;'
+//                from rdb$indices
+//                where rdb$system_flag is not null and rdb$system_flag = 0
         };
 
         public static String[] freeMarker = {
@@ -478,8 +626,10 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "What is ORM?/Що таке ORM?",
 //                ORM stands for object/relational mapping. ORM is the automated persistence of objects in a Java application to the tables in a relational database.
                 "What does ORM consists of?",
-                "What’s Hibernate?"
+                "What’s Hibernate?",
 //                Hibernate is a popular framework of Java which allows an efficient Object Relational mapping using configuration files in XML format. After java objects mapping to database tables, database is used and handled using Java objects without writing complex database queries.
+                "How properties of a class are mapped to the columns of a database table in Hibernate?",
+//                Mappings between class properties and table columns are specified in XML file as in the below example:
         };
 
         public static String[] html = {
@@ -500,9 +650,18 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        </CENTER>
 //
 //        A drawback to this solution is that very long blocks inside a table may take a while to download and may not appear until the entire table has been downloaded. Another drawback is that it may force users to resize their viewing window after they have become accustomed to their preferred settings.
-                "Can I put markup in ALT text?"
+                "Can I put markup in ALT text?",
 //                No. Character entities (&copy;, &#nnn; and such) are permitted, though.
 //        If you want to know how to write good ALT texts without markup, please see Alan Flavell's essay on choosing ALT texts.
+                "How do I include one file in another?"
+//                Use server-side includes, if your server supports them. Ask your Webmaster if this is the case, and if so, what the exact syntax is for your server.
+//        Since server-side includes make the document slower, they are not always desirable. If your documents only have a static footer, which doesn't change every day, you might be better off by using an editor which can insert files in the current document, or a preprocessor. The C preprocessor can do this, but there are also several HTML-specific preprocessors available.
+        };
+
+        public static String[] informix = {
+                "What are the uses of key value locking in Informix?"
+//                The database server uses a concept called key-value locking to lock the deleted row. When the database server deletes a row, key values in the indexes for the table are not removed immediately. Instead, each key value is marked as deleted, and a lock is placed on the key value. One of the most important uses for key-value locking is to assure that a unique key remains unique through the end of the transaction that deleted it.
+//        Without this protection mechanism, user A might delete a unique key within a transaction, and user B might insert a row with the same key before the transaction commits. This scenario makes rollback by user A impossible. Key-value locking prevents user B from inserting the row until the end of user A's transaction.
         };
 
         public static String[] iBatis = {
@@ -522,14 +681,16 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "What is immutable object? Can you write immutable object?/Що таке immutable object? Як його створити?",
 //                Immutable classes are Java classes whose objects can not be modified once created. Any modification in Immutable object result in new object. For example is String is immutable in Java. Mostly Immutable are also final in Java, in order to prevent sub class from overriding methods in Java which can compromise Immutability. You can achieve same functionality by making member as non final but private and not modifying them except in constructor.
                 "Does all property of immutable object needs to be final?",
-                "What is the difference between creating String as new() and literal?"
+                "What is the difference between creating String as new() and literal?",
 //                When we create string with new() Operator, it’s created in heap and not added into string pool while String created using literal are created in String pool itself which exists in PermGen area of heap.
 //                String s = new String("Test");
 //        does not  put the object in String pool , we need to call String.intern() method which is used to put  them into String pool explicitly. its only when you create String object as String literal e.g. String s = "Test" Java automatically put that into String pool.
+                "How does substring () inside String works?",
+//        “Substring creates new object out of source string by taking a portion of original string”
         };
 
         public static String[] javaEe = {
-                "What is the flaw with the Stack class?/В чому проблема класу Stack?"
+                "What is the flaw with the Stack class?/В чому проблема класу Stack?",
 //                One problem is that Stack is a class, not an interface. This diverges from the design of the collection framework, where your noun is typically represented as an interface (e.g., List, Tree, Set, etc.), and there are specific implementations (e.g., ArrayList, LinkedList). If Java could avoid backward compatibility, then a more proper design would be to have a Stack interface, then VectorStack as an implementation.
 //
 //        A second problem is that Stack is now bound to Vector, which is generally avoided in favour of ArrayLists and the like.
@@ -537,6 +698,7 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        A third problem is that you cannot easily provide your own stack implementation, and that stacks support very non-stack operations like getting an element from a specific index, including the potential for index exceptions. As a user, you may also have to know if the top of the stack is at index 0 or at index n. The interface also exposes implementation details such as capacity.
 //
 //        Of all the decisions in the original Java class library, I consider this one of the more peculiar ones. I doubt that Aggregation would have been much more expensive than inheritance.
+                "what is the difference between an abstract class and an interface"
         };
 
         public static String[] javaScript = {
@@ -552,7 +714,7 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        var isIt = new Boolean;
 //        var names = new Array;
 //        var car = new Object;
-                "What is the difference between undefined and null?"
+                "What is the difference between undefined and null?",
 //                The value of a variable with no value is undefined (i.e., it has not been initialized). Variables can be emptied by setting their value to null. You can test for each using the === (three equal signs) or == (two equal signs) for comparison checking. The big difference is the latter uses coercion, which can have some odd results — it returns true for a null or undefined comparison if they are either.
 //
 //        if (nullExample === null) { // executes this block only if null }
@@ -561,11 +723,14 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                    You can be more exact with a comparison by using the typeof to return an object’s type.
 //
 //                    If (typeof variable ==="undefined")  { // executes this block of if undefined }
+                "What is JavaScript’s this keyword?",
+//                JavaScript’s this keyword normally refers to the object that owns the method, but it depends on how a function is called. Basically, it points to the currently in scope object that owns where you are in the code. When working within a Web page, this usually refers to the Window object. If you are in an object created with the new keyword, the this keyword refers to the object being created. When working with event handlers, JavaScript’s this keyword will point to the object that generated the event.
         };
 
         public static String[] javaSe = {
-                "What is the difference between an interface and abstract class?/В чому різниця між інтерфейсом та абстрактним класом?"
+                "What is the difference between an interface and abstract class?/В чому різниця між інтерфейсом та абстрактним класом?",
 //                An abstract class can have instance methods that implement a default behavior. An Interface can only declare constants and instance methods, but cannot implement default behavior and all methods are implicitly abstract. An interface has all public members and no implementation. An abstract class is a class which may have the usual flavors of class members (private, protected, etc.), but has some abstract methods. An excellent comparison between interfaces and abstract classes can be found at http://mindprod.com/jgloss/interfacevsabstract.html
+                "Explain polymorphism"
         };
 
         public static String[] javaWebTechnologies = {
@@ -573,11 +738,13 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] jBoss = {
-                "What's the difference between Hibernate and EJB 3 ? Don't you think EJB 3 is just a clone of Hibernate ?"
+                "What's the difference between Hibernate and EJB 3 ? Don't you think EJB 3 is just a clone of Hibernate ?",
 //                The perception of EJB3 as being a simple clone of Hibernate is primarily based on developer familiarity with Hibernate and a similarity of naming, as well as common purpose, and that Hibernate is morphing itself into an EJB3 implementation based on the work going into the specification, not the other way around.
 //                EJBs are supposed to be components, in the sense that they're not just one class, but a set of classes, descriptors and usage and management contracts. All of this in order to allow a container (JBoss,
 //                Weblogic, etc.) to provide services to those components, and to be able to reuse and distribute this components. This services are, among others, transactions, concurrent access control, security, instance pooling, etcetera.
 //        Hibernat is "just" an ORM (Object/Relational Mapping) tool. Quick and dirty, this means you can store an object tree belonging to an class hierarchy in a relational DB without writing a single SQL query. Quite cool, IMO. But no transaction control, no instance pooling, no concurrency control, and certainly no security.
+                "Which Hibernate object wraps the JDBC Connection ?",
+//                The Session interface wraps a JDBC Connection. This interface is a single threaded object which represents a single unit of work with application and persistent database. It's retrieved by the SessionFactory's openSession() method
         };
 
         public static String[] jdbc = {
@@ -606,7 +773,8 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        DOM manipulation with querying and chaining is Wonderful & Robust. It is simple, concise and clear enough.
 //        Hence jQuery is definitely faster, easier and more productive than previous traditional JavaScript that we use, hence its so popular.
                 "What is jQuery UI?",
-                "What are various jQuery Features?"
+                "What are various jQuery Features?",
+                "Is jQuery replacement of Java Script?"
         };
 
         public static String[] js = {
@@ -626,7 +794,32 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] jsp = {
-                "What is a output comment?"
+                "What is a output comment?",
+//                A comment that is sent to the client in the viewable page source.The JSP engine handles an output comment as uninterpreted HTML text, returning the comment in the HTML output sent to the client. You can see the comment by viewing the page source from your Web browser.
+//                JSP Syntax
+//                <!-- comment [ <%= expression %> ] -->
+//
+//        Example 1
+//        <!-- This is a commnet sent to client on
+//        <%= (new java.util.Date()).toLocaleString() %>
+//                -->
+//
+//        Displays in the page source:
+//        <!-- This is a commnet sent to client on January 24, 2004 -->
+                "What is a Hidden Comment?",
+//                A comments that documents the JSP page but is not sent to the client. The JSP engine ignores a hidden comment, and does not process any code within hidden comment tags. A hidden comment is not sent to the client, either in the displayed JSP page or the HTML page source. The hidden comment is useful when you want to hide or "comment out" part of your JSP page.
+//                You can use any characters in the body of the comment except the closing --%> combination. If you need to use --%> in your comment, you can escape it by typing --%\>.
+//        JSP Syntax
+//        <%-- comment --%>
+//
+//        Examples
+//                <%@ page language="java" %>
+//        <html>
+//        <head><title>A Hidden Comment </title></head>
+//        <body>
+//        <%-- This comment will not be visible to the colent in the page source --%>
+//        </body>
+//        </html>
         };
 
         public static String[] junit = {
@@ -691,7 +884,7 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                With respect to multi-threading, synchronization is the capability to control the access of multiple threads to shared resources. Without synchronization, it is possible for one Java thread to modify a shared variable while another thread is in the process of using or updating same shared variable. This usually leads to erroneous behavior or program.
                 "Explain different way of using thread?",
 //                A Java thread could be implemented by using Runnable interface or by extending the Thread class. The Runnable is more advantageous, when you are going for multiple inheritance.
-    };
+        };
 
         public static String[] mySql = {
                 "How do you start and stop MySQL on Windows?/Як стартувати та зупиняти MySQL у Windows?",
@@ -731,13 +924,15 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        Objects – A class is like a blue print of a building. An object is the building itself. Technically speaking, an object is the real entity of a specific class, which involves in real operations of an OOP application.
 //
 //                Inheritance: The properties of one class can be used by another class in a best way, and the class can be extended as the need may be. This feature is known as Inheritance.
+                "What is a Class?",
         };
 
         public static String[] oracle = {
                 "Explain the difference between a hot backup and a cold backup and the benefits associated with each.",
 //                A hot backup is basically taking a backup of the database while it is still up and running and it must be in archive log mode. A cold backup is taking a backup of the database while it is shut down and does not require being in archive log mode. The benefit of taking a hot backup is that the database is still available for use while the backup is occurring and you can recover the database to any point in time. The benefit of taking a cold backup is that it is typically easier to administer the backup and recovery process. In addition, since you are taking cold backups the database does not require being in archive log mode and thus there will be a slight performance gain as the database is not cutting archive logs to disk.
-                "You have just had to restore from backup and do not have any control files. How would you go about bringing up this database?"
+                "You have just had to restore from backup and do not have any control files. How would you go about bringing up this database?",
 //                I would create a text based backup control file, stipulating where on disk all the data files were and then issue the recover command with the using backup control file clause.
+                "How do you switch from an init.ora file to a spfile?"
         };
 
         public static String[] pascal = {
@@ -762,13 +957,34 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        Design Patterns In Java  (buy from Amazon.com)
         };
 
+        public static String[] perl = {
+                "Difference between the variables in which chomp function work ?"
+//                Scalar: It is denoted by $ symbol. Variable can be a number or a string.
+//        Array: Denoted by @ symbol prefix. Arrays are indexed by numbers.
+        };
+
         public static String[] php = {
-                "What is PHP?/Що таке PHP?"
+                "What is PHP?/Що таке PHP?",
 //                PHP is a web language based on scripts that allows developers to dynamically create generated web pages.
+                "What does the initials of PHP stand for?"
+//                PHP means PHP: Hypertext Preprocessor.
+        };
+
+        public static String[] plSql = {
+                "What special operators does Oracle provide for dealing with NULLs?"
+//                NVL - Converts a NULL to another specified value, as in: my_var := NVL (your_var, 'Hello');
+// IS NULL and IS NOT NULL
         };
 
         public static String[] postgreSql = {
-                "What are the different data types supported by PostgreSQL?"
+                "What are the different data types supported by PostgreSQL?",
+//                Arbitrary precision numeric?s
+//                2) Geometric primitives
+//        3) Arrays
+//        4) XML etc
+//        Users can create their own indexes and make them indexed.
+                "Explain about pgadmin? ",
+//                Pgadmin forms a graphical front end administration tool. This feature is available under free software released under Artistic License. Pgadmin iii is the new database administration tool released under artistic license.
         };
 
         public static String[] proposals = {
@@ -796,15 +1012,17 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] servlets = {
-                "Explain the life cycle methods of a Servlet./Life cycle сервлету."
+                "Explain the life cycle methods of a Servlet./Life cycle сервлету.",
 //                The javax.servlet.Servlet interface defines the three methods known as life-cycle method.
 //        public void init(ServletConfig config) throws ServletException
 //        public void service( ServletRequest req, ServletResponse res) throws ServletException, IOException
 //        public void destroy()
 //        First the servlet is constructed, then initialized wih the init() method.
 //        Any request from client are handled initially by the service() method before delegating to the doXxx() methods in the case of HttpServlet.
-//
 //        The servlet is removed from service, destroyed with the destroy() methid, then garbaged collected and finalized.
+                "What is the difference between the getRequestDispatcher(String path) method of javax.servlet.ServletRequest interface and javax.servlet.ServletContext interface?",
+//                The getRequestDispatcher(String path) method of javax.servlet.ServletRequest interface accepts parameter the path to the resource to be included or forwarded to, which can be relative to the request of the calling servlet. If the path begins with a "/" it is interpreted as relative to the current context root.
+//        The getRequestDispatcher(String path) method of javax.servlet.ServletContext interface cannot accepts relative paths. All path must sart with a "/" and are interpreted as relative to curent context root.
         };
 
         public static String[] soa = {
@@ -830,8 +1048,10 @@ public enum InterviewQuestions implements StringTypeInterface {
 
         public static String[] springMvc = {
                 "What is spring framework? Why Java programmer should use Spring framework",
-                "What is default scope of bean in Spring framework?/Який дефолтний scope біна у Spring framework?"
+                "What is default scope of bean in Spring framework?/Який дефолтний scope біна у Spring framework?",
 //        default scope of bean is Singleton
+                "Does Spring singleton beans are thread-safe ?",
+//                No, Spring singleton beans are not thread-safe. Singleton doesn't mean bean would be thread-safe.
         };
 
         public static String[] sql = {
@@ -839,8 +1059,9 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                an inner join will only return rows in which there is a match based on the join predicate. In this case, what that means is anytime the Employee and Location table share an Employee ID, a row will be generated in the results to show the match. Looking at the original tables, one can see that those Employee ID’s that are shared by those tables are displayed in the results. But, with a left or right outer join, the result set will retain all of the rows from either the left or right table.It will be a good idea to read up a database designing fundamentals text book.
                 "In SQL, what are the differences between primary, foreign, and unique keys?",
 //                The one thing that primary, unique, and foreign keys all have in common is the fact that each type of key can consist of more than just one column from a given table. In other words, foreign, primary, and unique keys are not restricted to having just one column from a given table – each type of key can cover multiple columns. Of course, the database programmer is the one who will define which columns are covered by a foreign, primary, or unique key. That is one similarity all those keys share, but there are some major differences that exist between primary, unique, and foreign keys. Let’s go over those differences. We also give a thorough explanation of why foreign keys are necessary in some situations.
-                "Can a table have multiple unique, foreign, and/or primary keys?"
+                "Can a table have multiple unique, foreign, and/or primary keys?",
 //                A table can have multiple unique and foreign keys. However, a table can have only one primary key.
+                "What is DBMS?"
         };
 
         public static String[] swing = {
@@ -878,15 +1099,86 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                No. If you can edit Tomcat's startup scripts, you can add "-D" options to Java. But there is no way to add such properties in web.xml or the webapp's context.
         };
 
+        public static String[] uml = {
+                "Define UML?",
+//                Unified Modeling Language, a standard language for designing and documenting a system in an object-oriented manner. It has nine diagrams which can be used in design document to express design of software architecture.
+        };
+
         public static String[] unixShellScripting = {
                 "What is shell scripting?/Що таке shell scripting?"
 //                Shell scripting is used to program command line of an operating system. Shell Scripting is also used to program the shell which is the base for any operating system. Shell scripts often refer to programming UNIX. Shell scripting is mostly used to program operating systems of windows, UNIX, Apple, etc. Also this script is used by companies to develop their own operating system with their own features.
         };
 
+        public static String[] weblogic = {
+                "How do I provide user credentials for starting a server?",
+//                When you create a domain, the Configuration Wizard prompts you to provide the
+//                username and password for an initial administrative user. If you create the
+//        domain in development mode, the wizard saves the username and encrypted password
+//        in a boot identity file. A WebLogic Server instance can refer to a boot identity
+//        file during its startup process. If a server instance does not find such a file,
+//        it prompts you to enter credentials.
+//        If you create a domain in production mode, or if you want to change user
+//        credentials in an existing boot identity file, you can create a new boot
+//        identity file.
+        };
+
+        public static String[] webServices = {
+                "Define Web Service?",
+//                A web service is a kind of software that is accessible on the Internet. It makes use of the XML messaging system and offers an easy to understand, interface for the end users.
+        };
+
+        public static String[] winApi = {
+                "How windows differs from DOS and what is the advantage of GUI based program?",
+//                Yes, you can, then the class belongs to global namespace which has no name. For commercial products, naturally, you wouldn’t want global namespace.
+        };
+
+        public static String[] winForms = {
+                "Can you write a class without specifying namespace? Which namespace does it belong to by default?? ",
+//                Yes, you can, then the class belongs to global namespace which has no name. For commercial products, naturally, you wouldn’t want global namespace.
+        };
+
+        public static String[] wsdl = {
+                "What is the Simple Structure Of WSDL Program?",
+//                <definitions>
+//
+//        <types>
+//
+//        definition of types........
+//
+//        </types>
+//
+//        <message>
+//
+//        definition of a message....
+//
+//        </message>
+//
+//        <portType>
+//
+//        definition of a port.......
+//
+//        </portType>
+//
+//        <binding>
+//
+//        definition of a binding....
+//
+//        </binding>
+//
+//        </definitions>
+        };
+
+        public static String[] xhtml = {
+                "What is XHTML?",
+//                XHTML is a more formal, stricter version of HTML. XHTML is defined by an XML dtd which makes it much easier to handle.
+        };
+
         public static String[] xml = {
                 "Describe the differences between XML and HTML.",
-                "Describe the role that XSL can play when dynamically generating HTML pages from a relational database./Опиши роль, що XSL може грати під час динамічної генерації HTML сторінок з бази даних."
+                "Describe the role that XSL can play when dynamically generating HTML pages from a relational database./Опиши роль, що XSL може грати під час динамічної генерації HTML сторінок з бази даних.",
 //                Even if candidates have never participated in a project involving this type of architecture, they should recognize it as one of the common uses of XML. Querying a database and then formatting the result set so that it can be validated as an XML document allows developers to translate the data into an HTML table using XSLT rules. Consequently, the format of the resulting HTML table can be modified without changing the database query or application code since the document rendering logic is isolated to the XSLT rules.
+                "Give a few examples of types of applications that can benefit from using XML.",
+//                There are literally thousands of applications that can benefit from XML technologies. The point of this question is not to have the candidate rattle off a laundry list of projects that they have worked on, but, rather, to allow the candidate to explain the rationale for choosing XML by citing a few real world examples. For instance, one appropriate answer is that XML allows content management systems to store documents independently of their format, which thereby reduces data redundancy. Another answer relates to B2B exchanges or supply chain management systems. In these instances, XML provides a mechanism for multiple companies to exchange data according to an agreed upon set of rules. A third common response involves wireless applications that require WML to render data on hand held devices.
         };
 
     }
