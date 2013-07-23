@@ -10,24 +10,27 @@ package testpackage.content.repetition.stringlists;
 public enum InterviewQuestions implements StringTypeInterface {
 
     ACTION_SCRIPT(getActionScript()), AJAX(getAjax()), ANDROID(getAndroid()), ANT(getAnt()),
-    APACHE_AXIS(getApacheAxis()), ARCHITECTURE(getArchitecture()), AUTO_IT(getAutoIt()), C(getC()),
-    COLLECTIONS(getCollections()), CONCURRENCY(getConcurrency()), CPLUSPLUS(getCPlusPlus()),
+    APACHE_AXIS(getApacheAxis()), ARCHITECTURE(getArchitecture()), AUTO_IT(getAutoIt()), BASH(getBash()), C(getC()),
+    COLLECTIONS(getCollections()), CONCURRENCY(getConcurrency()), CPLUSPLUS(getCPlusPlus()), CQ5(getCq5()),
     CRYPTOGRAPHY(getCryptography()), CRYSTAL_REPORT(getCrystalReport()), CSHARP(getCSharp()), CSS(getCss()),
     DB(getDb()), DEBUGGING(getDebugging()), DELPHI_ACTIVEX(getDelphiActiveX()), DELPHI_API(getDelphiApi()),
     DELPHI_COM(getDelphiCom()), DELPHI_COM_PLUS(getDelphiComPlus()), DELPHI_DCOM(getDelphiDCom()),
     DELPHI_OLE(getDelphiOle()), DELPHI_TCP(getDelphiTcp()), DELPHI_UDP(getDelphiUdpSockets()), EJB(getEjb()),
-    EXT_JS(getExtJs()), FIREBIRD(getFirebird()), FREEMARKER(getFreeMarker()), HIBERNATE(getHibernate()),
-    HTML(getHtml()), INFORMIX(getInformix()), IBATIS(getIBatis()), IOS(getIos()), J2EE(getJ2ee()), JAVA(getJava()),
-    JAVA_EE(getJavaEe()), JAVASCRIPT(getJavaScript()), JAVA_SE(getJavaSe()),
-    JAVA_WEB_TECHNOLOGIES(getJavaWebTechnologies()), JBOSS(getJBoss()), JDBC(getJdbc()), JQUERY(getJQuery()),
-    JS(getJs()), JS_FRAMEWORKS(getJsFrameworks()), JSON(getJson()), JSP(getJsp()), JUNIT(getJunit()), LINUX(getLinux()),
-    MAVEN(getMaven()), MULTITHREADING(getMultithreading()), MYSQL(getMySql()), OOP(getOop()), ORACLE(getOracle()),
-    PASCAL(getPascal()), PATTERNS(getPatterns()), PERL(getPerl()), PHP(getPhp()), PL_SQL(getPlSql()),
-    POSTGRESQL(getPostgreSql()), PROPOSALS(getProposals()), QT(getQt()), RUBY(getRuby()), SCRUM(getScrum()),
-    SELENIUM(getSelenium()), SERVLETS(getServlets()), SOA(getSoa()), SPRING(getSpring()), SPRING_MVC(getSpringMvc()),
+    EXT_JS(getExtJs()), FELIX(getFelix()), FIREBIRD(getFirebird()), FREEMARKER(getFreeMarker()), GRAILS(getGrails()),
+    GROOVY(getGroovy()),
+    HIBERNATE(getHibernate()), HTML(getHtml()), INFORMIX(getInformix()), IBATIS(getIBatis()), IOS(getIos()),
+    J2EE(getJ2ee()), JAVA(getJava()), JAVA_EE(getJavaEe()), JAVASCRIPT(getJavaScript()), JAVA_SE(getJavaSe()),
+    JAVA_WEB_TECHNOLOGIES(getJavaWebTechnologies()), JBOSS(getJBoss()), JDBC(getJdbc()), JMS(getJms()),
+    JQUERY(getJQuery()), JS_FRAMEWORKS(getJsFrameworks()), JSON(getJson()), JSP(getJsp()), JSTL(getJstl()),
+    JUNIT(getJunit()), LINUX(getLinux()), MAVEN(getMaven()), MOBILE_DEVELOPMENT(getMobileDevelopment()), MONGO_DB(getMongoDb()),
+    MS_SQL_SERVER(getMsSqlServer()), MULTITHREADING(getMultithreading()), MYSQL(getMySql()), OOP(getOop()),
+    ORACLE(getOracle()), PASCAL(getPascal()), PATTERNS(getPatterns()), PERL(getPerl()), PHP(getPhp()),
+    PL_SQL(getPlSql()), POSTGRESQL(getPostgreSql()), PROPOSALS(getProposals()), PYTHON(getPython()), QT(getQt()),
+    RUBY(getRuby()), SCRUM(getScrum()), SELENIUM(getSelenium()), SERVLETS(getServlets()), SLING(getSling()), SOA(getSoa()),
+    SPRING(getSpring()), SPRING_IOC(getSpringIoc()), SPRING_MVC(getSpringMvc()),
     SQL(getSql()), SWING(getSwing()), TOMCAT(getTomcat()), UML(getUml()), UNIX_SHELL_SCRIPTING(getUnixShellScripting()),
-    WEBLOGIC(getWeblogic()), WEB_SERVICES(getWebServices()), WIN_API(getWinApi()), WIN_FORMS(getWinForms()),
-    WSDL(getWsdl()),XHTML(getXhtml()), XML(getXml());
+    WEB_DEVELOPMENT(getWebDevelopment()), WEBLOGIC(getWeblogic()), WEB_SERVICES(getWebServices()), WIN_API(getWinApi()),
+    WIN_FORMS(getWinForms()), WSDL(getWsdl()), XHTML(getXhtml()), XML(getXml());
 
     InterviewQuestions(String[] list) {
         this.list = list;
@@ -68,6 +71,10 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.autoIt;
     }
 
+    public static String[] getBash() {
+        return StringListHolder.bash;
+    }
+
     public static String[] getC() {
         return StringListHolder.c;
     }
@@ -82,6 +89,10 @@ public enum InterviewQuestions implements StringTypeInterface {
 
     public static String[] getCPlusPlus() {
         return StringListHolder.cPlusPlus;
+    }
+
+    public static String[] getCq5() {
+        return StringListHolder.cq5;
     }
 
     public static String[] getCryptography() {
@@ -148,12 +159,24 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.extJs;
     }
 
+    public static String[] getFelix() {
+        return StringListHolder.felix;
+    }
+
     public static String[] getFirebird() {
         return StringListHolder.firebird;
     }
 
     public static String[] getFreeMarker() {
         return StringListHolder.freeMarker;
+    }
+
+    public static String[] getGrails() {
+        return StringListHolder.grails;
+    }
+
+    public static String[] getGroovy() {
+        return StringListHolder.groovy;
     }
 
     public static String[] getHibernate() {
@@ -208,12 +231,12 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.jdbc;
     }
 
-    public static String[] getJQuery() {
-        return StringListHolder.jQuery;
+    public static String[] getJms() {
+        return StringListHolder.jms;
     }
 
-    public static String[] getJs() {
-        return StringListHolder.js;
+    public static String[] getJQuery() {
+        return StringListHolder.jQuery;
     }
 
     public static String[] getJsFrameworks() {
@@ -228,6 +251,10 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.jsp;
     }
 
+    public static String[] getJstl() {
+        return StringListHolder.jstl;
+    }
+
     public static String[] getJunit() {
         return StringListHolder.junit;
     }
@@ -238,6 +265,18 @@ public enum InterviewQuestions implements StringTypeInterface {
 
     public static String[] getMaven() {
         return StringListHolder.maven;
+    }
+
+    public static String[] getMobileDevelopment() {
+        return StringListHolder.mobileDevelopment;
+    }
+
+    public static String[] getMongoDb() {
+        return StringListHolder.mongoDb;
+    }
+
+    public static String[] getMsSqlServer() {
+        return StringListHolder.msSqlServer;
     }
 
     public static String[] getMultithreading() {
@@ -284,6 +323,10 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.proposals;
     }
 
+    public static String[] getPython() {
+        return StringListHolder.python;
+    }
+
     public static String[] getQt() {
         return StringListHolder.qt;
     }
@@ -304,12 +347,20 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.servlets;
     }
 
+    public static String[] getSling() {
+        return StringListHolder.sling;
+    }
+
     public static String[] getSoa() {
         return StringListHolder.soa;
     }
 
     public static String[] getSpring() {
         return StringListHolder.spring;
+    }
+
+    public static String[] getSpringIoc() {
+        return StringListHolder.springIoc;
     }
 
     public static String[] getSpringMvc() {
@@ -334,6 +385,10 @@ public enum InterviewQuestions implements StringTypeInterface {
 
     public static String[] getUnixShellScripting() {
         return StringListHolder.unixShellScripting;
+    }
+
+    public static String[] getWebDevelopment() {
+        return StringListHolder.webDevelopment;
     }
 
     public static String[] getWeblogic() {
@@ -388,6 +443,8 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                AJAX is not well integrated with any browser.
 //                ActiveX requests are enabled only in IE 5 and IE6
 //                Data of all requests is URL-encoded, which increases the size of the request.
+                "Who’s Using Ajax ?",
+//
         };
 
         public static String[] android = {
@@ -395,6 +452,14 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                It is an open-sourced operating system that is used primarily on mobile devices, such as cell phones and tablets. It is a Linux kernel-based system that’s been equipped with rich components that allows developers to create and run apps that can perform both basic and advanced functions.
                 "What Is the Google Android SDK?",
 //                The Google Android SDK is a toolset that developers need in order to write apps on Android enabled devices. It contains a graphical interface that emulates an Android driven handheld environment, allowing them to test and debug their codes.
+                "What is the Android Architecture?",
+//                Android Architecture is made up of 4 key components:
+//                - Linux Kernel
+//                - Libraries
+//                - Android Framework
+//                - Android Applications
+                "Describe the Android Framework.",
+//                The Android Framework is an important aspect of the Android Architecture. Here you can find all the classes and methods that developers would need in order to write applications on the Android environment.
         };
 
         public static String[] ant = {
@@ -454,6 +519,11 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                Platforms Windows
         };
 
+        public static String[] bash = {
+                "What is shell scripting?"
+//                Shell scripting is used to program command line of an operating system. Shell Scripting is also used to program the shell which is the base for any operating system. Shell scripts often refer to programming UNIX. Shell scripting is mostly used to program operating systems of windows, UNIX, Apple, etc. Also this script is used by companies to develop their own operating system with their own features.
+        };
+
         public static String[] c = {
                 "What is C language?"
 //                The C programming language is a standardized programming language
@@ -489,6 +559,11 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        C/C++ ? explicitly managed
         };
 
+        public static String[] cq5 = {
+                "What is CQ5 ? Give some points about CQ5"
+//                Adobe Communique 5, or CQ5, is a java based large-scale web content management system. It combines web content management, digital asset management, and social collaboration to deliver a solution that allows to manage incredible amounts of information, multiple internal and external websites, a myriad of media assets, and detailed workflow.
+        };
+
         public static String[] cryptography = {
                 "What is a Block Cipher?/Що таке Block Cipher?",
 //                A block cipher transforms a fixed-length block of plaintext data into a block of ciphertext data of the same length. This transformation takes place under the action of a user-provided secret key. Decryption is performed by applying the reverse transformation to the ciphertext block using the same secret key. The fixed length is called the block size, and for many block ciphers, the block size is 64 bits.
@@ -497,7 +572,9 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] crystalReport = {
-                "Is it possible to join more than one universe in Business ObjectsBOE XI? If its so Please explain how is that possible?"
+                "Is it possible to join more than one universe in Business ObjectsBOE XI? If its so Please explain how is that possible?",
+                "What is Crystal Report? ",
+//                Crystal report is a report generation tool. Generally have interface with VB6. Crystal report basically generates dynamic data. You can format the data in whichever way you feel like.
         };
 
         public static String[] cSharp = {
@@ -526,6 +603,22 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        In most legacy browsers, a table's width is by default determined by its content. In CSS-conformant browsers, the complete width of any element (including tables) defaults to the full width of its parent element's content area. As browser become more conformant, authors will need to be aware of the potential impact on their designs.
                 "If background and color should always be set together, why do they exist as separate properties?",
 //                There are several reasons for this. First, style sheets become more legible -- both for humans and machines. The background property is already the most complex property in CSS1 and combining it with color would make it even more complex. Second, color inherits, but background doesn't and this would be a source of confusion.
+                "What is class?",
+//                Class is a group of 1) instances of the same element to which an unique style can be attached or 2) instances of different elements to which the same style can be attached.
+//                1) The rule P {color: red} will display red text in all paragraphs. By classifying the selector P different style can be attached to each class allowing the display of some paragraphs in one style and some other paragraphs in another style.
+//                2) A class can also be specified without associating a specific element to it and then attached to any element which is to be styled in accordance with it's declaration. All elements to which a specific class is attached will have the same style.
+//        To classify an element add a period to the selector followed by an unique name. The name can contain characters a-z, A-Z, digits 0-9, period, hyphen, escaped characters, Unicode characters 161-255, as well as any Unicode character as a numeric code, however, they cannot start with a dash or a digit. (Note: in HTML the value of the CLASS attribute can contain more characters). (Note: text between /* and */ are my comments).
+//        CSS
+//        P.name1 {color: red} /* one class of P selector */
+//        P.name2 {color: blue} /* another class of P selector */
+//        .name3 {color: green} /* can be attached to any element */
+//        HTML
+//                <P class=name1>This paragraph will be red</P>
+//        <P class=name2>This paragraph will be blue</P>
+//        <P class=name3>This paragraph will be green</P>
+//        <LI class=name3>This list item will be green</LI>
+//        It is a good practice to name classes according to their function than their appearance; e.g. P.fotnote and not P.green. In CSS1 only one class can be attached to a selector. CSS2 allows attaching more classes, e.g.:
+//        P.name1.name2.name3 {declaration} <P class="name1 name2 name2">This paragraph has three classes attached</P>
         };
 
         public static String[] db = {
@@ -609,6 +702,17 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        The javascript Libraries now must provide a rich set of UI Widgets.
         };
 
+        public static String[] felix = {
+                "When I update my bundle, why are my bundle's old classes still being used?",
+//                Updating a bundle does not necessarily cause the new classes to be used immediately, it depends on two factors:
+//        If the classes are from a private package or an exported package.
+//        If the classes are from an exported package, whether or not they are being used by another bundle.
+//        Regarding (1), if the classes come from a private package (i.e., it is not exported), then the new classes will become available immediately. However, if they are from an exported package, then their visibility depends on whether any other bundles are using the exported packages.
+//        If no other bundles are using the exported packages, then the new classes will become available immediately since the old version of the classes are no longer needed. On the other hand, if any other bundles are using the exported packages, then the new classes will not become available immediately since the old version is still required by any dependent bundles. In this case, the new classes will not be made available until PackageAdmin.refreshPackages() is called (this can be invoked in the Felix shell using the refresh command).
+//        There is one partial exception to this latter case, it occurs when the exporting bundle does not also import its own exported packages (see "Should a bundle import its own exported packages?" below for more information on this topic). In this case, the new classes become immediately accessible to the updated exporting bundle, but not to the dependent bundles; the dependent bundles continue to see the old version of the classes. This situation generally requires PackageAdmin.refreshPackages() to be invoked to bring the bundles back to a useful state.
+//        This is the normal update process as defined by the OSGi specification. Updating a bundle is a two-step process, where older versions of exported packages are kept around until explicitly refreshed. This is done to reduce disruption when performing several updates.
+        };
+
         public static String[] firebird = {
                 "How to activate all indexes in Firebird?"
 //                If you run Firebird 1.x which doesn't have EXECUTE BLOCK, you can run the following query:
@@ -622,6 +726,27 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "What is FreeMarker?"
         };
 
+        public static String[] grails = {
+                "I have a parameter in my Config.groovy file named layer1.prop1. How can I access this in a controller? How can I access this in a service?",
+//                In a controller, I can inject grailsApplication via def grailsApplication and access this variable via grailsApplication.config.layer1.prop.
+//                Anywhere else, I can use the ConfigurationHolder and access it via ConfigurationHolder.config.layer1.prop1
+                "How do I edit the web.xml file of my grails application?",
+//                First, I need to generate the template files via grails install-templates. The web.xml template will be under src/templates/war directory.
+//                Alternatively, I could also create a plugin and use the doWithWebDescriptor method to add or remove nodes from my web.xml file.
+        };
+
+        public static String[] groovy = {
+                "What is Groovy?",
+//                Groovy is a powerful high level language for the Java platform which compiles down to Java bytecode.
+//                Think of it as a Ruby or Python like language that is tightly integrated with the Java platform – allowing you the same powerful and concise coding syntax as Ruby or Pyton but allowing you to stay on the JVM and protect your investment in J2SE, J2EE and all the plethora of great useful Java code out there.
+                "Why Groovy? Why don’t you just use Jython, JRuby, bsh, rhino, pnuts, …",
+//                Firstly ports of existing languages like Python, Ruby, Smalltalk and JavaScript to the JVM are a good thing and we welcome them. If you already use and/or are fond of these languages please be our guests to use the Java-port of them.One of the main design goals of Groovy is to be a scripting language for Java developers to use. So we wanted to reuse both Java’s semantics and the whole set of J2SE APIs rather than introduce a port of a different language with different semantics and APIs to learn and implement/maintain.
+//        e.g. in Groovy, java.lang.Object is the root of the object hierarchy, Object.equals(), Object.hashCode() and Comparable are used for comparions and lookups of objects, that java.util.List and java.util.Map are used for collections, Java Beans are fully supported and that Java and Groovy classes are interchangable inside the
+//        VM. Groovy is built on top of the J2SE APIs, rather than having 2 parallel platforms etc.
+//        In other words we wanted the Groovy language to be very easy to pick up if you’re already a Java developer and for there to be a very small number of new APIs to learn. By this statement we’re not implying that Python / Ruby / JavaScript are hard to learn per se – its just there’s more to know, things are more different and there’s more APIs to learn
+//        Think of Groovy as a Ruby or Python like language that is tightly integrated with the Java platform (as opposed to the Unix/Posix command shell and C-libraries) – allowing you the same powerful and concise coding syntax as Ruby or Pyton but allowing you to stay on the JVM and protect your investment in J2SE, J2EE and all the plethora of great useful Java code out there without any adapter layers or parallel API sets etc. There is a more detailed set of comparisio ther languages here
+        };
+
         public static String[] hibernate = {
                 "What is ORM?/Що таке ORM?",
 //                ORM stands for object/relational mapping. ORM is the automated persistence of objects in a Java application to the tables in a relational database.
@@ -630,6 +755,8 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                Hibernate is a popular framework of Java which allows an efficient Object Relational mapping using configuration files in XML format. After java objects mapping to database tables, database is used and handled using Java objects without writing complex database queries.
                 "How properties of a class are mapped to the columns of a database table in Hibernate?",
 //                Mappings between class properties and table columns are specified in XML file as in the below example:
+                "Difference between get and load in Hibernate?",
+//                get vs load is one of the most frequently asked Hibernate Interview question, since correct understanding of both get() and load() is require to effectively using Hibernate. Main difference between get and load is that, get will hit the database if object is not found in the cache and returned completely initialized object, which may involve several database call while load() method can return proxy, if object is not found in cache and only hit database if any method other than getId() is called. This can save lot of performance in some cases. You can also see difference between get and load in Hibernate for more differences and detailed discussion on this question.
         };
 
         public static String[] html = {
@@ -653,9 +780,13 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "Can I put markup in ALT text?",
 //                No. Character entities (&copy;, &#nnn; and such) are permitted, though.
 //        If you want to know how to write good ALT texts without markup, please see Alan Flavell's essay on choosing ALT texts.
-                "How do I include one file in another?"
+                "How do I include one file in another?",
 //                Use server-side includes, if your server supports them. Ask your Webmaster if this is the case, and if so, what the exact syntax is for your server.
 //        Since server-side includes make the document slower, they are not always desirable. If your documents only have a static footer, which doesn't change every day, you might be better off by using an editor which can insert files in the current document, or a preprocessor. The C preprocessor can do this, but there are also several HTML-specific preprocessors available.
+                "How do I get scrolling text in the status bar?",
+//                Check any page which has this feature, and copy the script from the source.
+//                This script has two big problems. One, usually it uses the decrement operator (c--) at some ball. The "--" sequence in a comment actually closes it on some browsers, so your code may "leak" on those browsers. The same goes for ">".
+//        Second, keep in mind that many people consider this even worse than <BLINK>, and that it also suppresses the status information which normally appears there. It prevents people from knowing where a link goes to.
         };
 
         public static String[] informix = {
@@ -687,6 +818,12 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        does not  put the object in String pool , we need to call String.intern() method which is used to put  them into String pool explicitly. its only when you create String object as String literal e.g. String s = "Test" Java automatically put that into String pool.
                 "How does substring () inside String works?",
 //        “Substring creates new object out of source string by taking a portion of original string”
+                "What does the static keyword mean, and where can it be used?",
+//                static can be used in four ways:
+//        static variables are shared by the entire class, not a specific instance (unlike normal member variables)
+//        static methods are also shared by the entire class
+//        static classes are inner classes that aren’t tied to their enclosing classes
+//        static can be used around a block of code in a class to specify code that runs when the virtual machine is first started up, before instances of the class are created.
         };
 
         public static String[] javaEe = {
@@ -725,6 +862,8 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                    If (typeof variable ==="undefined")  { // executes this block of if undefined }
                 "What is JavaScript’s this keyword?",
 //                JavaScript’s this keyword normally refers to the object that owns the method, but it depends on how a function is called. Basically, it points to the currently in scope object that owns where you are in the code. When working within a Web page, this usually refers to the Window object. If you are in an object created with the new keyword, the this keyword refers to the object being created. When working with event handlers, JavaScript’s this keyword will point to the object that generated the event.
+                "What is event bubbling?",
+//                Event bubbling describes the behavior of events in child and parent nodes in the Document Object Model (DOM); that is, all child node events are automatically passed to its parent nodes. The benefit of this method is speed, because the code only needs to traverse the DOM tree once. This is useful when you want to place more than one event listener on a DOM element since you can put just one listener on all of the elements, thus code simplicity and reduction. One application of this is the creation of one event listener on a page’s body element to respond to any click event that occurs within the page’s body.
         };
 
         public static String[] javaSe = {
@@ -750,7 +889,18 @@ public enum InterviewQuestions implements StringTypeInterface {
         public static String[] jdbc = {
                 "What is the JDBC?/Що таке JDBC?",
 //                Java Database Connectivity (JDBC) is a standard Java API to interact with relational databases form Java. JDBC has set of classes and interfaces which can use from Java application and talk to database without learning RDBMS details and using Database Specific JDBC Drivers.
-                "What are the new features added to JDBC 4.0?"
+                "What are the new features added to JDBC 4.0?",
+                "What are the main steps in java to make JDBC connectivity?",
+//                Load the Driver: First step is to load the database specific driver which communicates with database.
+//        ·          Make Connection: Next step is get connection from the database using connection object, which is used to send SQL statement also and get result back from the database.
+//        ·          Get Statement object: From connection object we can get statement object which is used to query the database
+//        ·          Execute the Query:Using statement object we execute the SQL or database query and get result set from the query.
+//        ·          Close the connection:After getting resultset and all required operation performed the last step should be closing the database connection.
+        };
+
+        public static String[] jms = {
+                "What is JMS?",
+//                JMS is an acronym used for Java Messaging Service. It is Java's answer to creating software using asynchronous messaging. It is one of the official specifications of the J2EE technologies and is a key technology.
         };
 
         public static String[] jQuery = {
@@ -774,12 +924,8 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        Hence jQuery is definitely faster, easier and more productive than previous traditional JavaScript that we use, hence its so popular.
                 "What is jQuery UI?",
                 "What are various jQuery Features?",
-                "Is jQuery replacement of Java Script?"
-        };
-
-        public static String[] js = {
-                "What is the concept of “functions as objects” and how does this affect variable scope?/Що таке концепція функцій як об’єктів? Як вона впливає на variables scope?"
-//        “What it can suggest is that the person really ‘gets’ JavaScript and the way it works as opposed to just having copied syntax and code from the web without understanding it,” Weinberg says. “It can also show that the person has at least some understanding of basic programming concepts, which in my experience means they will be better equipped to come up with good solutions to hard problems.”
+                "Is jQuery replacement of Java Script?",
+                "Is jQuery a library for client scripting or server scripting?",
         };
 
         public static String[] jsFrameworks = {
@@ -790,7 +936,9 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "What is The JSON(JavaScript Object Notation)?",
                 "Who is the Father or creater of JSON?/Хто створив JSON?",
 //                Douglas Crockford called as the Father of JSON
-                "what the file extension of JSON"//.json
+                "what the file extension of JSON",//.json
+                "Explain Json with php",
+//                Json is too much easy with php There is no installation needed to use these functions; they are part of the PHP core. nothing more need to know just only use { ,[ and create json format string and use three php function json_encode() to get JSON representation of a value, json_decode() for Decodes a JSON string, ¦json_last_error() to get the last error occurred in process.
         };
 
         public static String[] jsp = {
@@ -820,13 +968,26 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        <%-- This comment will not be visible to the colent in the page source --%>
 //        </body>
 //        </html>
+                "What are the advantages of JSP over Servlet?",
+//JSP is a serverside technology to make content generation a simple appear.The advantage of JSP is that they are document-centric. Servlets, on the other hand, look and act like programs. A Java Server Page can contain Java program fragments that instantiate and execute Java classes, but these occur inside an HTML template file and are primarily used to generate dynamic content. Some of the JSP functionality can be achieved on the client, using JavaScript. The power of JSP is that it is server-based and provides a framework for Web application development.
+        };
+
+        public static String[] jstl = {
+                "What about JSTL and JavaServer Faces? ",
+//                JSTL, the JavaServer Standard Tag Library, is a set of JSP tags that are designed to make it easier to develop Web applications. JavaServer Faces (JSF) is a specification for a new technology that promises to make it easier to write MVC applications, both for the Web and for the desktop.
+//                The inventor of Struts, Craig McClanahan, is the specification co-lead for JavaServer Faces (JSR 127), and architect of the reference implemenation as well as Java Studio Creator. Both JSTL and JSF are complementary to Struts.
+//        The mainstay of the Struts framework is the controller components, which can be used with any Java presentation technology. As new technologies become available, it is certain that new "glue" components will also appear to help these technologies work as well with Struts.
+//        Struts originally came bundled with a set of custom JSP tags. Today, several extensions are available to help you use Struts with other popular presentation technologies, like XSLT and Velocity. Likewise, extensions for JSTL and JSF are now available as well.
+//        The JSTL reference implementation is available through the Jakarta Taglibs site. A JSTL taglibs for Struts, Struts-El , is available and distributed with Struts beginning with the 1.1 release. The JSF specification and reference implementation is available through Sun's The JSF specification and reference implementation is available through Sun's Java ServerFaces page. An early-release JavaServer Faces taglib for Struts, Struts-Faces, is also in early release and available through the nightly build. The Struts Faces taglib is expected to work with any compliant JSF implementation, including MyFaces.
         };
 
         public static String[] junit = {
                 "What Is JUnit?",
-                "Who Should Use JUnit, Developers or Testers?/Хто повинен використовувати JUnit, девелопери, чи тестери?"
+                "Who Should Use JUnit, Developers or Testers?/Хто повинен використовувати JUnit, девелопери, чи тестери?",
 //                I should say that JUnit is mostly used by developers. JUnit is designed for unit testing, which is really a coding process, not a testing process.
 //        But many testers or QA engineers, are also required to use JUnit for unit testing. For example, I found this job title on the Internet: Lead QA Engineer - Java / J2EE / whitebox / SAP / Junit
+                "What is testing?",
+//                Testing is the process of checking the functionality of the application whether it is working as per requirements.
         };
 
         public static String[] linux = {
@@ -834,8 +995,15 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                Linux is an operating system based on UNIX, and was first introduced by Linus Torvalds. It is based on the Linux Kernel, and can run on different hardware platforms manufactured by Intel, MIPS, HP, IBM, SPARC and Motorola. Another popular element in Linux is its mascot, a penguin figure named Tux.
                 "What is the difference between UNIX and LINUX?/Яка різниця між UNIX та LINUX?",
 //                Unix originally began as a propriety operating system from Bell Laboratories, which later on spawned into different commercial versions. On the other hand, Linux is free, open source and intended as a non-propriety operating system for the masses.
-                "What is BASH?"
+                "What is BASH?",
 //                BASH is short for Bourne Again SHell. It was written by Steve Bourne as a replacement to the original Bourne Shell (represented by /bin/sh). It combines all the features from the original version of Bourne Shell, plus additional functions to make it easier and more convenient to use. It has since been adapted as the default shell for most systems running Linux.
+                "What is GRUB",
+//                Ans GNU GRUB is a Multiboot boot loader. It was derived from GRUB, the GRand Unified Bootloader,
+//                which was originally designed and implemented by Erich Stefan Boleyn.
+//                Briefly, a boot loader is the first software program that runs when a computer starts. It is
+//                responsible for loading and transferring control to the operating system kernel software
+//                (such as the Hurd or Linux). The kernel, in turn, initializes the rest of the operating
+//        system (e.g. GNU)
         };
 
         public static String[] maven = {
@@ -875,8 +1043,35 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        <tag>value1</tag>
 //        <tag>value2</tag>
 //        </tags>
-                "How should I point a path for maven 2 to use a certain version of JDK when I have different versions of JDK installed on my PC and my JAVA_HOME already set? "
+                "How should I point a path for maven 2 to use a certain version of JDK when I have different versions of JDK installed on my PC and my JAVA_HOME already set? ",
 //                If you don't want to change your system JAVA_HOME, set it in maven script instead.
+                "What are the steps involved in project deployment?",
+//                Check-in the code from all projects in progress into the SVN or source code repository and tag it.
+//                Download the complete source code from SVN.
+//                Build the application.
+//                Store the build output either WAR or EAR file to a common network location.
+//                Get the file from network and deploy the file to the production site.
+//                Updated the documentation with date and updated version number of the application.
+                "What is Maven?",
+//Maven is a project management and comprehension tool. Maven provides developers a complete build lifecycle framework. Development team can automate the project's build infrastructure in almost no time as Maven uses a standard directory layout and a default build lifecycle.
+        };
+
+        public static String[] mobileDevelopment = {
+                "What was the last thing you built that you think is really great, and why are you proud of it?",
+//                Cook hopes to hear enthusiasm in the answer, and to find people who think of developing mobile software not just as a job or as a major, but as a hobby.
+        };
+
+        public static String[] mongoDb = {
+                "What makes Mongodb best?",
+//                Document-oriented
+//                High performance
+//                High availability
+//                Easy scalability
+//                Rich query language
+        };
+
+        public static String[] msSqlServer = {
+                "CREATE TABLE",
         };
 
         public static String[] multithreading = {
@@ -988,8 +1183,15 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] proposals = {
-                "Can you give an overview of the process of creating a proposal?/Можеш описати процес створення proposal?"
+                "Can you give an overview of the process of creating a proposal?/Можеш описати процес створення proposal?",
 //                Proposals involve a myriad of strategy, planning, organization, research, and, of course, writing processes. The value of creating these standard, or boilerplate, files will multiply across subsequent proposals. With minor modifications related to the particular proposal, well-researched and professionally written standard files provide the proposal process with an immediate degree of completion, enabling management and proposal organizers more time for critical proposal analysis, creative solutions, and custom product modifications.
+                "How is a request for a proposal generated?",
+//When an organization requires a product and/or service from a contractor or outside vendor, it describes that need, and response requirements, in a Request for Proposal (RFP). Interested vendors who, presumably, can accommodate the RFP requirements, respond with their proposal. Within the RFP is a section typically called Terms and Conditions (T&C), which, as evidenced by the obvious title, details the exact parameters of the request and expected response. This section was, at one time, known as the "boilerplate" section. Payment schedules and other basic details were part of the section. Today, "boilerplate" can indicate almost any information or language, including images files, charts, diagrams, fonts, and styles, that can be, and often is, replicated across multiple proposals. Similarly, boilerplate is utilized in almost every industry, with the legal community among the prominent-replicated language is used in most court responses, pleadings, etc.
+        };
+
+        public static String[] python = {
+                "How are arguments passed – by reference of by value?",
+//                The short answer is “neither”, actually it is called “call by object” or “call by sharing”(you can check here for more info). The longer one starts with the fact that this terminology is probably not the best one to describe how Python works. In Python everything is an object and all variables hold references to objects. The values of these references are to the functions. As result you can not change the value of the reference but you can modify the object if it is mutable. Remember numbers, strings and tuples are immutable, list and dicts are mutable.
         };
 
         public static String[] qt = {
@@ -1025,6 +1227,15 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        The getRequestDispatcher(String path) method of javax.servlet.ServletContext interface cannot accepts relative paths. All path must sart with a "/" and are interpreted as relative to curent context root.
         };
 
+        public static String[] sling = {
+                "What is CQ5? What is a Content Management System?",
+//                CQ5 is a java based content management system from adobe, previously Day CQ5.
+//                1)    It is based on a content repository(i.e it uses a content repository to store the content of a website) and use JCR(java content repository) specification to access the content repository.
+//                2)    It uses RESTful Apache Sling framework to map request url to the corresponding node in content repository
+//        3)    it uses powerful OSGi framework internally to allow modular application development. It means  individual pieces of your application(called bundles in terms of OSGi) can be independently started and stopped. CQ5 uses Apache Felix as the OSGi container. Therefore different parts of cq5 can be independently started and stopped.
+//        Coming to why a content management system is required? Some websites are very dynamic in nature, content needs to be updated frequently, so it is easier to manage the content of such websites using a CMS.
+        };
+
         public static String[] soa = {
                 "What is SOA?",
                 "In SOA do we need to build systems from scratch?/В SOA: чи потрібно будувати системи з нуля?"
@@ -1043,7 +1254,14 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        <constructor-arg value="stockmarket.com" />  //your domain
 //        <constructor-arg value="ldap://stockmarket.com/" />  //ldap url
 //        </bean>
-                "How do you control concurrent Active session using Spring Security?"
+                "How do you control concurrent Active session using Spring Security?",
+                " What is IOC (or Dependency Injection)? ",
+//                The basic concept of the Inversion of Control pattern (also known as dependency injection) is that you do not create your objects but describe how they should be created. You don't directly connect your components and services together in code but describe which services are needed by which components in a configuration file. A container (in the case of the Spring framework, the IOC container) is then responsible for hooking it all up.
+//                i.e., Applying IoC, objects are given their dependencies at creation time by some external entity that coordinates each object in the system. That is, dependencies are injected into objects. So, IoC means an inversion of responsibility with regard to how an object obtains references to collaborating objects.
+        };
+
+        public static String[] springIoc = {
+                "How do you setup LDAP Authentication using Spring Security?",
         };
 
         public static String[] springMvc = {
@@ -1052,6 +1270,9 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        default scope of bean is Singleton
                 "Does Spring singleton beans are thread-safe ?",
 //                No, Spring singleton beans are not thread-safe. Singleton doesn't mean bean would be thread-safe.
+                "Explain Spring MVC framework with an example ?",
+//                The MVC is a standard software architecture that aims to separate business logic from presentation logic, enabling the development, testing and maintenance of both isolated . (1) The user triggers an event through the UI (click a button on the page or something).
+//                (2) The controller receives the event and coordinates how things will happen on the server side, i.e. the flow goes to the objects required to perform the business rule..
         };
 
         public static String[] sql = {
@@ -1061,12 +1282,16 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                The one thing that primary, unique, and foreign keys all have in common is the fact that each type of key can consist of more than just one column from a given table. In other words, foreign, primary, and unique keys are not restricted to having just one column from a given table – each type of key can cover multiple columns. Of course, the database programmer is the one who will define which columns are covered by a foreign, primary, or unique key. That is one similarity all those keys share, but there are some major differences that exist between primary, unique, and foreign keys. Let’s go over those differences. We also give a thorough explanation of why foreign keys are necessary in some situations.
                 "Can a table have multiple unique, foreign, and/or primary keys?",
 //                A table can have multiple unique and foreign keys. However, a table can have only one primary key.
-                "What is DBMS?"
+                "What is DBMS?",
+                "SQL Query to find second highest salary of Employee",
+//                select MAX(Salary) from Employee WHERE Salary NOT IN (select MAX(Salary) from Employee );
         };
 
         public static String[] swing = {
                 "What is Event-Driven-Thread (EDT) in Swing?",
 //                Event-Driven-Thread or EDT is a special thread in Swing and AWT. Event-Driven Thread is used to draw graphics and listen for events in Swing. You will get a bonus point if you able to highlight that time consuming operations like connecting to database, opening a file or connecting to network should not be done on EDT thread because it could lead to freezing GUI because of blocking and time consuming nature of these operations instead they should be done on separate thread and EDT can just be used to spawn those thread on a button click or mouse click.
+                "Does Swing is thread safe? What do you mean by swing is not thread-safe?",
+//                Since Swing components are not thread-safe it means you can not update these components in any thread other than Event-Driven-Thread. If you do so you will get unexpected behavior. Some time interviewer will also ask what are thread-safe methods in swing which can be safely called from any thread only few like repaint() and revalidate().
         };
 
         public static String[] tomcat = {
@@ -1095,8 +1320,46 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        Properties p = new Properties();
 //        p.load(is);
 //        is.close();
-                "Can I set Java system properties differently for each webapp?"
+                "Can I set Java system properties differently for each webapp?",
 //                No. If you can edit Tomcat's startup scripts, you can add "-D" options to Java. But there is no way to add such properties in web.xml or the webapp's context.
+                "How do I configure Tomcat to work with IIS and NTLM?",
+//                Follow the standard instructions for when the isapi_redirector.dll
+//                Configure IIS to use "integrated windows security"
+//                In server.xml, make sure you disable tomcat authentication:
+//        <Connector port="8009" enableLookups="false" redirectPort="8443" protocol="AJP/1.3" tomcatAuthentication="false" />
+                "How can I access members of a custom Realm or Principal?",
+//                When you create a custom subclass of RealmBase or GenericPrincipal and attempt to use those classes in your webapp code, you'll probably have problems with ClassCastException. This is because the instance returned by request.getUserPrincipal() is of a class loaded by the server's classloader, and you are trying to access it through you webapp's classloader. While the classes maybe otherwise exactly the same, different (sibling) classloaders makes them different classes.
+//                This assumes you created a My Principal class, and put in Tomcat's server/classes (or lib) directory, as well as in your webapp's WEB-INF/classes (or lib) directory. Normally, you would put custom realm and principal classes in the server directory because they depend on other classes there.
+//                Here's what you would like to do, but it throws ClassCastException:
+//        MyPrincipal p = request.getUserPrincipal();
+//        String emailAddress = p.getEmailAddress();
+//        Here are 4 ways you might get around the classloader boundary:
+//        Reflection
+//        Principal p = request.getUserPrincipal();
+//        String emailAddress = p.getClass().getMethod("getEmailAddress", null).invoke(p, null);
+//        Move classes to a common classloader
+//        You could put your custom classes in a classloader that is common to both the server and your webapp - e.g., either the "common" or bootstrap classloaders. To do this, however, you would also need to move the classes that your custom classes depend on up to the common classloader, and that seems like a bad idea, because there a many of them and they a core server classes.
+//        Common Interfaces
+//        Rather than move the implementing custom classes up, you could define interfaces for your customs classes, and put the interfaces in the common directory. You\'re code would look like this:
+//        public interface MyPrincipalInterface extends java.security.Principal {
+//            public String getEmailAddress();
+//        }
+//        public class MyPrincipal implements MyPrincipalInterface {
+//            ...
+//            public String getEmailAddress() {
+//                return emailAddress;
+//            }
+//        }
+//        public class MyServlet implements Servlet {
+//            protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
+//                    ServletException, IOException {
+//                MyPrincipalInterface p = (MyPrincipalInterface)request.getUserPrincipal();
+//                String emailAddress = p.getEmailAddress();
+//                ...
+//            }
+//            Notice that this method gives you pretty much the webapp code you wanted in the first place
+//            Serializing / Deserializing
+//            You might want to try serializing the response of 'request.getUserPrincipal()' and deserialize it to an instance of [webapp]MyPrincipal.
         };
 
         public static String[] uml = {
@@ -1106,6 +1369,11 @@ public enum InterviewQuestions implements StringTypeInterface {
 
         public static String[] unixShellScripting = {
                 "What is shell scripting?/Що таке shell scripting?"
+//                Shell scripting is used to program command line of an operating system. Shell Scripting is also used to program the shell which is the base for any operating system. Shell scripts often refer to programming UNIX. Shell scripting is mostly used to program operating systems of windows, UNIX, Apple, etc. Also this script is used by companies to develop their own operating system with their own features.
+        };
+
+        public static String[] webDevelopment = {
+                "What’s the difference between primary key and unique key?"
 //                Shell scripting is used to program command line of an operating system. Shell Scripting is also used to program the shell which is the base for any operating system. Shell scripts often refer to programming UNIX. Shell scripting is mostly used to program operating systems of windows, UNIX, Apple, etc. Also this script is used by companies to develop their own operating system with their own features.
         };
 
@@ -1179,6 +1447,8 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                Even if candidates have never participated in a project involving this type of architecture, they should recognize it as one of the common uses of XML. Querying a database and then formatting the result set so that it can be validated as an XML document allows developers to translate the data into an HTML table using XSLT rules. Consequently, the format of the resulting HTML table can be modified without changing the database query or application code since the document rendering logic is isolated to the XSLT rules.
                 "Give a few examples of types of applications that can benefit from using XML.",
 //                There are literally thousands of applications that can benefit from XML technologies. The point of this question is not to have the candidate rattle off a laundry list of projects that they have worked on, but, rather, to allow the candidate to explain the rationale for choosing XML by citing a few real world examples. For instance, one appropriate answer is that XML allows content management systems to store documents independently of their format, which thereby reduces data redundancy. Another answer relates to B2B exchanges or supply chain management systems. In these instances, XML provides a mechanism for multiple companies to exchange data according to an agreed upon set of rules. A third common response involves wireless applications that require WML to render data on hand held devices.
+                "What is DOM and how does it relate to XML?",
+//                The Document Object Model (DOM) is an interface specification maintained by the W3C DOM Workgroup that defines an application independent mechanism to access, parse, or update XML data. In simple terms it is a hierarchical model that allows developers to manipulate XML documents easily Any developer that has worked extensively with XML should be able to discuss the concept and use of DOM objects freely. Additionally, it is not unreasonable to expect advanced candidates to thoroughly understand its internal workings and be able to explain how DOM differs from an event-based interface like SAX.
         };
 
     }

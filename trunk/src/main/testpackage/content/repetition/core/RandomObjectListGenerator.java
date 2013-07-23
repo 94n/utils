@@ -20,6 +20,15 @@ public class RandomObjectListGenerator {
         return generatedList;
     }
 
+    public static <T> List<T> generateRandomList(T[] orderedArray) {
+        final Random random = new Random();
+        final List<T> generatedList = new ArrayList<T>();
+        for (int i = 0; i < orderedArray.length; i++) {
+            generatedList.add(orderedArray[random.nextInt(orderedArray.length)]);
+        }
+        return generatedList;
+    }
+
     public static <T> List<T> generateRandomListWithUniqueElements(T[] orderedArray, int expectedLength) {
         final List<T> list = Arrays.asList(orderedArray);
         Collections.shuffle(list);
@@ -28,6 +37,12 @@ public class RandomObjectListGenerator {
         } else {
             return list.subList(0, expectedLength);
         }
+    }
+
+    public static <T> List<T> generateRandomListWithUniqueElements(T[] orderedArray) {
+        final List<T> list = Arrays.asList(orderedArray);
+        Collections.shuffle(list);
+        return list;
     }
 
 }

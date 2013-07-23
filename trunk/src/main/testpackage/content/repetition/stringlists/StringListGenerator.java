@@ -20,8 +20,22 @@ public class StringListGenerator {
         }
     }
 
+    public static void shufflePrintStrings(StringTypeInterface stringType) {
+        final List<String> randomStringList = getRandomStringList(stringType);
+        for (String s : randomStringList) {
+            System.out.println(s);
+        }
+    }
+
     public static void shufflePrintStringsWithUniqueElements(StringType stringType, int numberOfStrings) {
         final List<String> randomStringList = getRandomStringListWithUniqueElements(stringType, numberOfStrings);
+        for (String s : randomStringList) {
+            System.out.println(s);
+        }
+    }
+
+    public static void shufflePrintStringsWithUniqueElements(StringType stringType) {
+        final List<String> randomStringList = getRandomStringListWithUniqueElements(stringType);
         for (String s : randomStringList) {
             System.out.println(s);
         }
@@ -41,9 +55,19 @@ public class StringListGenerator {
         return RandomObjectListGenerator.generateRandomList(strings, numberOfStrings);
     }
 
+    public static List<String> getRandomStringList(StringTypeInterface stringType) {
+        final String[] strings = stringType.getList();
+        return RandomObjectListGenerator.generateRandomList(strings);
+    }
+
     public static List<String> getRandomStringListWithUniqueElements(StringType stringType, int numberOfStrings) {
         final String[] strings = stringType.getList();
         return RandomObjectListGenerator.generateRandomListWithUniqueElements(strings, numberOfStrings);
+    }
+
+    public static List<String> getRandomStringListWithUniqueElements(StringType stringType) {
+        final String[] strings = stringType.getList();
+        return RandomObjectListGenerator.generateRandomListWithUniqueElements(strings);
     }
 
     public static List<String> getRandomStringListWithUniqueElementsAndTypeName(StringTypeInterface stringType, int numberOfStrings) {
