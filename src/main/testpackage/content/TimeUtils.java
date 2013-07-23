@@ -107,6 +107,11 @@ public class TimeUtils {
         System.out.println((endDate - startDate)/DAY);
     }
 
+    public static void printMinuteDifference(long startDate, long endDate){
+        final long fullDiff = endDate - startDate;
+        System.out.println(fullDiff/MINUTE);
+    }
+
     public static void printHalfTimeOfDay(Date start) {
         final long dayEnd = getWorkingDayEndTime() - HOUR;//dinner
         final long difference = dayEnd - start.getTime();

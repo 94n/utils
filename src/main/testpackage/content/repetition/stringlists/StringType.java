@@ -9,9 +9,9 @@ import java.util.EnumSet;
  */
 public enum StringType implements StringTypeInterface {
 
-    BOOKS(getBooks()), ENGLISH_BOOKS(getEnglishBooks()), FOOD(getFood()), GAMES(getGames()), MEAT(getMeat()),
-    PASSIVE_BALANCE_PROGRAM(getPassiveBalanceProgram()), SALADS(getSalads()), SECOND_COURSES(getSecondCourses()),
-    SOUPS(getSoups()), TRAINING(getTraining()), ZAYTSEV_GAMES(getZaytsevGames());
+    TEMP(getTemp()), BOOKS(getBooks()), ENGLISH_BOOKS(getEnglishBooks()), LOGIC_BOOKS(getLogicBooks()), FOOD(getFood()), GAMES(getGames()), MEAT(getMeat()),
+    BALANCE_PROGRAM(getBalanceProgram()), RECIPES(getRecipes()), SALADS(getSalads()),
+    SECOND_COURSES(getSecondCourses()), SOUPS(getSoups()), TRAINING(getTraining()), ZAYTSEV_GAMES(getZaytsevGames());
 
     public static final EnumSet<StringType> DISH_TYPES = EnumSet.of(SALADS, SOUPS, SECOND_COURSES, MEAT);
 
@@ -33,6 +33,10 @@ public enum StringType implements StringTypeInterface {
         return StringListHolder.englishBooks;
     }
 
+    public static String[] getLogicBooks() {
+        return StringListHolder.logicBooks;
+    }
+
     public static String[] getFood() {
         return StringListHolder.food;
     }
@@ -45,8 +49,12 @@ public enum StringType implements StringTypeInterface {
         return StringListHolder.meat;
     }
 
-    public static String[] getPassiveBalanceProgram() {
-        return StringListHolder.passiveBalanceProgram;
+    public static String[] getBalanceProgram() {
+        return StringListHolder.balanceProgram;
+    }
+
+    public static String[] getRecipes() {
+        return StringListHolder.recipes;
     }
 
     public static String[] getSalads() {
@@ -69,10 +77,26 @@ public enum StringType implements StringTypeInterface {
         return StringListHolder.zaytsev;
     }
 
+    public static String[] getTemp() {
+        return StringListHolder.temp;
+    }
+
     private static class StringListHolder {
 
+        public static String[] temp = {
+                "Варфоломей Надежда",
+                "Петренко Татьяна",
+                "Пузраков Андрей",
+                "Щелинский Евгений",
+                "Хоменко Максим",
+                "Лида Николаева",
+                "Бородина Татьяна",
+                "Сытник Катя",
+                "Коля Белый",
+                "Влада Резникова"
+        };
+
         public static String[] books = {
-                "Лошадка",
                 "Зима",
                 "Белочка",
                 "В деревне",
@@ -97,16 +121,27 @@ public enum StringType implements StringTypeInterface {
                 "Вежливые слова",
                 "Лунтик",
                 "Маугли",
-                "Лесный зверята",
+                "Лесные зверята",
                 "Хрестоматия",
                 "Народные сказки",
-                "Читаем по слогам"
+                "Читаем по слогам",
+                "Трафарет",
+                "Шнуровочка",
+                "Баба-яга",
+                "Времена года"
         };
 
         public static String[] englishBooks = {
                 "Aline-caterpillar",
                 "The Cat and The Mouse",
-                "Folk tales"
+                "Folk tales",
+                "The brave little airplane",
+                "The little house"
+        };
+
+        public static String[] logicBooks = {
+                "Величина,11",
+                "Обучалочка,96",
         };
 
         public static String[] food = {
@@ -123,29 +158,10 @@ public enum StringType implements StringTypeInterface {
         };
 
         public static String[] games = {
-                "Разноцветные огоньки",
-                "Пять пальцев",
-                "Сорока-Белобока",
-                "ЗамОк",
-                "Ягодки",
-                "Рыбки",
-                "Этот сливку поднимает",
-                "У тебя есть рублик",
-                "башенки из пустых коробочек",
-                "Пальчиковые краски",
                 "Мячи",
-                "Колокольчик",
                 "Пирамида",
-                "Кукла нельзя",
-                "Поделиться",
-                "Помощь",
-                "дай возьми",
                 "Книжки",
-                "да",
-                "Лепка из теста (позже из пластилина)",
-                "игра посудой",
-                "переливание воды",
-                "пересыпание круп",
+                "Лепка из пластилина",
                 "Хлоп - шлёп 1",
                 "Хлоп - шлёп 2",
                 "Хлоп - шлёп 3",
@@ -156,28 +172,19 @@ public enum StringType implements StringTypeInterface {
                 "перерисовывание примера дорожки",
                 "аппликации",
                 "плетение ковриков из полосок бумаги",
-                "кубики 6-8 штук",
                 "конструктор",
-                "грузовик",
-                "Ку-ку",
-                "Рисование мелками",
                 "Раскрашивание",
                 "оригами",
-                "кораблики из губок",
-                "прыгаем - на воздухе",
                 "лупа - на воздухе",
                 "рамки-вкладыши (кубик с прорезями)",
-                "Игры из мягкого материала в ванну",
                 "Логический поезд",//1.5 - 3 года
                 "Детское лото распознавания",//1.5 - 3 года
                 "Детское лото заполнение",//1.5 - 3 года
                 "Детское лото дополнение",//1.5 - 3 года
-                "Это папа",
                 "Игра для различия цвета",
                 "Что лишнее?",
                 "Hайди паpу",
                 "Что плавает?",
-                "Входит и выходит",
                 "Ролевые игры",
                 "Ролевые игры общение с животным",
                 "Ролевые игры кормить куклу",
@@ -201,8 +208,6 @@ public enum StringType implements StringTypeInterface {
                 "Складушки Красноухова",
                 "Детское домино с цветными картинками (сопоставлять по признакам)",
                 "блоки Дьенеша (сопоставлять по признакам)",
-                "Тренажеры речевые",
-                "Разрезные картинки",
                 "Кто что ест",
                 "Веселая пантомима",
                 "спектакль с книгами-декорациями",
@@ -214,9 +219,6 @@ public enum StringType implements StringTypeInterface {
                 "Рыбалка",
                 "Где же лужа?",
                 "Поймай-ка!",
-                "как льется или капает вода из крана",
-                "как по-разному звенит чайная ложка в пустом стакане или чашке с водой",
-                "как громко пересыпается в стеклянный стакан горошек и тихо - манка",
                 "Вот идет мышка - на воздухе",
                 "Прокати мяч через тоннель - на воздухе",
                 "Бегом к дереву - на воздухе",
@@ -227,6 +229,69 @@ public enum StringType implements StringTypeInterface {
                 "Домики, норки и берлоги",
                 "прятки зверей",
                 "Рыба, птица, зверь",
+                "Велосипед",
+                "карандаши",
+                "мелки",
+                "танцевать под музыку",
+                "сочинять музыку",
+                "брать на концерты",
+                "музеи",
+                "ролевая игра врач",
+                "ролевая игра паркмахерская",
+                "детские спектакли",
+                "счет",
+                "Сказки-перевертыши",
+                "рисование Солнышко",
+                "рисование Ёжик",
+                "рисование Елка с шариками и огоньками",
+                "рисование Волшебные кляксы",
+                "Что там такое голубое?",
+                "Картинки-вкладыши",
+                "Разрезные картинки",
+                "Кубики с изображениями",
+                "пазлы",
+                "Забавная геометрия",
+                "У медведя во бору",
+                "Где живет ладья?",
+                "Кто быстрее вспомнит любимую историю",
+                "Читая вместе книжки, время от времени останавливайтесь и задавайте малышу вопросы о том, что вы уже прочитали.",
+                "когда малыш смотрит мультфильмы, время от времени останавливайтесь и задавайте малышу вопросы о том, что вы уже посмотрели",
+                "Побольше разговаривайте со своим ребенком об увиденном и услышанном",
+                "Придумай историю",
+                "рисовать комиксы",
+                "Кто лучше услышит?",
+                "мозаики",
+                "запоминать стихи и тексты, пользуясь пиктограммами",
+                "Тест Сказка",
+                "походы на выставки",
+                "вышивка",
+                "плетение",
+                "сортировать крупу",
+                "БИНОМ ФАНТАЗИИ",
+                "КРАСНАЯ ШАПОЧКА НА ВЕРТОЛЕТЕ",
+                "СКАЗКИ НАИЗНАНКУ",
+                "А ЧТО БЫЛО ПОТОМ?",
+                "САЛАТ ИЗ СКАЗОК",
+                "Разложи все по порядку",
+                "Волшебное сито",
+                "Смети, но не просыпь!",
+                "Пересыпаем ложкой",
+                "Готовим лекарства",
+                "Веселые дорожки",
+                "Лепим колобки, колбаски и блинчики",
+                "Открой и закрой",
+                "Веселый щенок",
+                "Прячемся и лепим",
+                "Домики",
+                "Спичечные коробки",
+                "Попляши!",
+                "Где чье?",
+                "Покорми куклу",
+                "Кто разбудил щенка?",
+                "Волшебный мешочек",
+                "Геометрическое лото",
+                "лото “Цвет и форма”",
+
         };
 
         public static String[] meat = {
@@ -283,17 +348,17 @@ public enum StringType implements StringTypeInterface {
                 "Шашлык куриный"
         };
 
-        public static String[] passiveBalanceProgram = {
-                "Горизонтальное верчение ничком",
-                "Горизонтальное верчение Левый бок",
-                "Горизонтальное верчение Правый бок",
-                "Покачивание вдвоём как в колыбели",
-                "Горизонтальное вращение на животе",
-                "Горизонтальное вращение на спине",
-                "Горизонтальное вращение за 2 руки",
-                "Покачивание вдвоём как на качелях",
-                "Ускорение",
-                "вниз головой (ложить на спину)"
+        public static String[] balanceProgram = {
+                "Перекатывание",
+                "Кувырок вперед",
+                "Хождение по балке"
+        };
+
+        public static String[] recipes = {
+                "Ванильные сырники 36",
+                "Необычный и вкусный бутерброд 45",
+                "Пицца на сковороде 27",
+                "Салат \"Мимоза\" 59"
         };
 
         public static String[] salads = {
@@ -382,57 +447,10 @@ public enum StringType implements StringTypeInterface {
                 "Life",
                 "Life",
                 "Life",
-                "Life",
-                "Life",
-                "Life",
-                "Life",
-                "Life",
-                "Life",
                 "health",
                 "health",
                 "health",
-                "health",
-                "health",
-                "health",
-                "health",
-                "health",
-                "health",
-                "eyes",
-                "eyes",
-                "eyes",
-                "eyes",
-                "eyes",
-                "eyes",
-                "eyes",
-                "eyes",
-                "Gifts",
-                "Gifts",
-                "Gifts",
-                "Gifts",
-                "Gifts",
-                "Gifts",
-                "Gifts",
-                "Intelligence",
-                "Intelligence",
-                "Intelligence",
-                "Intelligence",
-                "Intelligence",
-                "Intelligence",
-                "English",
-                "English",
-                "English",
-                "English",
-                "English",
-                "Children",
-                "Children",
-                "Children",
-                "Children",
-                "Book",
-                "Book",
-                "Book",
-                "porn",
-                "porn",
-                "vk"
+                "Children"
         };
 
         public static String[] zaytsev = {

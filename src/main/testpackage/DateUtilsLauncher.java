@@ -14,15 +14,8 @@ import java.util.GregorianCalendar;
 public class DateUtilsLauncher {
 
     public static void main(String[] args) {
-        final Calendar start = GregorianCalendar.getInstance();
-        start.set(Calendar.YEAR, 2011);
-        start.set(Calendar.MONTH, Calendar.JUNE);
-        start.set(Calendar.DAY_OF_MONTH, 29);
-        final Calendar end = GregorianCalendar.getInstance();
-        end.set(Calendar.YEAR, 2012);
-        end.set(Calendar.MONTH, Calendar.MARCH);
-        end.set(Calendar.DAY_OF_MONTH, 6);
-        TimeUtils.printDayDifference(start.getTimeInMillis(), end.getTimeInMillis());
+//        dateDifferenceInMinutes(2013, 7, 3, 13, 49, 2013, 7, 5, 13, 42);
+        dateDifferenceInDays(2013, 5, 23, 0, 0, 2013, 7, 22, 0, 0);
 //        System.out.println(TimeUtils.timeStampToDate(1335997506310l));
 //        System.out.println(TimeUtils.getDateByDayOfYear(592, 2012));
 //        halfTimeOfDay(9, 46);
@@ -33,6 +26,38 @@ public class DateUtilsLauncher {
         start.set(Calendar.DAY_OF_MONTH, 22);
         start.set(Calendar.MONTH, Calendar.FEBRUARY);
         TimeUtils.printDayDifference(start.getTimeInMillis()); //529*/
+    }
+
+    static void dateDifferenceInDays(int startYear, int startMonth, int startDay, int startHour, int startMinute, int endYear, int endMonth, int endDay, int endHour, int endMinute) {
+        final Calendar start = GregorianCalendar.getInstance();
+        start.set(Calendar.YEAR, startYear);
+        start.set(Calendar.MONTH, startMonth - 1);
+        start.set(Calendar.DAY_OF_MONTH, startDay);
+        start.set(Calendar.HOUR_OF_DAY, startHour);
+        start.set(Calendar.MINUTE, startMinute);
+        final Calendar end = GregorianCalendar.getInstance();
+        end.set(Calendar.YEAR, endYear);
+        end.set(Calendar.MONTH, endMonth - 1);
+        end.set(Calendar.DAY_OF_MONTH, endDay);
+        end.set(Calendar.HOUR_OF_DAY, endHour);
+        end.set(Calendar.MINUTE, endMinute);
+        TimeUtils.printDayDifference(start.getTimeInMillis(), end.getTimeInMillis());
+    }
+
+    static void dateDifferenceInMinutes(int startYear, int startMonth, int startDay, int startHour, int startMinute, int endYear, int endMonth, int endDay, int endHour, int endMinute) {
+        final Calendar start = GregorianCalendar.getInstance();
+        start.set(Calendar.YEAR, startYear);
+        start.set(Calendar.MONTH, startMonth - 1);
+        start.set(Calendar.DAY_OF_MONTH, startDay);
+        start.set(Calendar.HOUR_OF_DAY, startHour);
+        start.set(Calendar.MINUTE, startMinute);
+        final Calendar end = GregorianCalendar.getInstance();
+        end.set(Calendar.YEAR, endYear);
+        end.set(Calendar.MONTH, endMonth - 1);
+        end.set(Calendar.DAY_OF_MONTH, endDay);
+        end.set(Calendar.HOUR_OF_DAY, endHour);
+        end.set(Calendar.MINUTE, endMinute);
+        TimeUtils.printMinuteDifference(start.getTimeInMillis(), end.getTimeInMillis());
     }
 
     static void halfTimeOfDay(Date date) {

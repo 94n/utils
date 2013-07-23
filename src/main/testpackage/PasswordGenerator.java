@@ -7,8 +7,12 @@ package testpackage;
  */
 public class PasswordGenerator {
 
+    private static final int LENGTH = 3
+            ;
+
     public static void main(String[] args) {
-        System.out.println(testpackage.content.repetition.PasswordGenerator.getPassword(8));
+        System.out.println(testpackage.content.repetition.PasswordGenerator.getPassword(LENGTH));
+        System.out.println("copy for saving only");
     }
 
 }
