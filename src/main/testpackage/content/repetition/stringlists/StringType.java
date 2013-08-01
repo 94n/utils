@@ -136,7 +136,8 @@ public enum StringType implements StringTypeInterface {
                 "The Cat and The Mouse",
                 "Folk tales",
                 "The brave little airplane",
-                "The little house"
+                "The little house",
+                "turnip"
         };
 
         public static String[] logicBooks = {
