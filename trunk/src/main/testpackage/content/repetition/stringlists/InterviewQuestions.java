@@ -13,24 +13,24 @@ public enum InterviewQuestions implements StringTypeInterface {
     APACHE_AXIS(getApacheAxis()), ARCHITECTURE(getArchitecture()), AUTO_IT(getAutoIt()), BASH(getBash()), C(getC()),
     COLLECTIONS(getCollections()), CONCURRENCY(getConcurrency()), CPLUSPLUS(getCPlusPlus()), CQ5(getCq5()),
     CRYPTOGRAPHY(getCryptography()), CRYSTAL_REPORT(getCrystalReport()), CSHARP(getCSharp()), CSS(getCss()),
-    DB(getDb()), DEBUGGING(getDebugging()), DELPHI_ACTIVEX(getDelphiActiveX()), DELPHI_API(getDelphiApi()),
+    DB(getDb()), DEBUGGING(getDebugging()), DELPHI(getDelphi()), DELPHI_ACTIVEX(getDelphiActiveX()), DELPHI_API(getDelphiApi()),
     DELPHI_COM(getDelphiCom()), DELPHI_COM_PLUS(getDelphiComPlus()), DELPHI_DCOM(getDelphiDCom()),
-    DELPHI_OLE(getDelphiOle()), DELPHI_TCP(getDelphiTcp()), DELPHI_UDP(getDelphiUdpSockets()), EJB(getEjb()),
-    EXT_JS(getExtJs()), FELIX(getFelix()), FIREBIRD(getFirebird()), FREEMARKER(getFreeMarker()), GRAILS(getGrails()),
-    GROOVY(getGroovy()),
-    HIBERNATE(getHibernate()), HTML(getHtml()), INFORMIX(getInformix()), IBATIS(getIBatis()), IOS(getIos()),
-    J2EE(getJ2ee()), JAVA(getJava()), JAVA_EE(getJavaEe()), JAVASCRIPT(getJavaScript()), JAVA_SE(getJavaSe()),
+    DELPHI_OLE(getDelphiOle()), DELPHI_TCP(getDelphiTcp()), DELPHI_UDP(getDelphiUdpSockets()), ECLIPSE(getEclipse()),
+    EJB(getEjb()), EXT_JS(getExtJs()), FELIX(getFelix()), FIREBIRD(getFirebird()), FREEMARKER(getFreeMarker()),
+    GIT(getGit()), GRAILS(getGrails()), GROOVY(getGroovy()), HIBERNATE(getHibernate()), HTML(getHtml()),
+    HTML5(getHtml5()), INFORMIX(getInformix()), IBATIS(getIBatis()), IOS(getIos()), J2EE(getJ2ee()), JAVA(getJava()),
+    JAVA_EE(getJavaEe()), JAVASCRIPT(getJavaScript()), JAVA_SE(getJavaSe()),
     JAVA_WEB_TECHNOLOGIES(getJavaWebTechnologies()), JBOSS(getJBoss()), JDBC(getJdbc()), JMS(getJms()),
     JQUERY(getJQuery()), JS_FRAMEWORKS(getJsFrameworks()), JSON(getJson()), JSP(getJsp()), JSTL(getJstl()),
-    JUNIT(getJunit()), LINUX(getLinux()), MAVEN(getMaven()), MOBILE_DEVELOPMENT(getMobileDevelopment()), MONGO_DB(getMongoDb()),
-    MS_SQL_SERVER(getMsSqlServer()), MULTITHREADING(getMultithreading()), MYSQL(getMySql()), OOP(getOop()),
-    ORACLE(getOracle()), PASCAL(getPascal()), PATTERNS(getPatterns()), PERL(getPerl()), PHP(getPhp()),
+    JUNIT(getJunit()), LINUX(getLinux()), MAVEN(getMaven()), MOBILE_DEVELOPMENT(getMobileDevelopment()),
+    MONGO_DB(getMongoDb()), MS_SQL_SERVER(getMsSqlServer()), MULTITHREADING(getMultithreading()), MYSQL(getMySql()),
+    OOP(getOop()), ORACLE(getOracle()), PASCAL(getPascal()), PATTERNS(getPatterns()), PERL(getPerl()), PHP(getPhp()),
     PL_SQL(getPlSql()), POSTGRESQL(getPostgreSql()), PROPOSALS(getProposals()), PYTHON(getPython()), QT(getQt()),
-    RUBY(getRuby()), SCRUM(getScrum()), SELENIUM(getSelenium()), SERVLETS(getServlets()), SLING(getSling()), SOA(getSoa()),
-    SPRING(getSpring()), SPRING_IOC(getSpringIoc()), SPRING_MVC(getSpringMvc()),
-    SQL(getSql()), SWING(getSwing()), TOMCAT(getTomcat()), UML(getUml()), UNIX_SHELL_SCRIPTING(getUnixShellScripting()),
+    RUBY(getRuby()), SCRUM(getScrum()), SELENIUM(getSelenium()), SERVLETS(getServlets()), SLING(getSling()),
+    SOA(getSoa()), SPRING(getSpring()), SPRING_IOC(getSpringIoc()), SPRING_MVC(getSpringMvc()), SQL(getSql()),
+    SWING(getSwing()), TOMCAT(getTomcat()), UML(getUml()), UNIX_SHELL_SCRIPTING(getUnixShellScripting()),
     WEB_DEVELOPMENT(getWebDevelopment()), WEBLOGIC(getWeblogic()), WEB_SERVICES(getWebServices()), WIN_API(getWinApi()),
-    WIN_FORMS(getWinForms()), WSDL(getWsdl()), XHTML(getXhtml()), XML(getXml());
+    WINDOWS(getWindows()), WIN_FORMS(getWinForms()), WSDL(getWsdl()), XHTML(getXhtml()), XML(getXml());
 
     InterviewQuestions(String[] list) {
         this.list = list;
@@ -119,6 +119,10 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.debugging;
     }
 
+    public static String[] getDelphi() {
+        return StringListHolder.delphi;
+    }
+
     public static String[] getDelphiActiveX() {
         return StringListHolder.delphiActiveX;
     }
@@ -151,6 +155,10 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.delphiUdpSockets;
     }
 
+    public static String[] getEclipse() {
+        return StringListHolder.eclipse;
+    }
+
     public static String[] getEjb() {
         return StringListHolder.ejb;
     }
@@ -171,6 +179,10 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.freeMarker;
     }
 
+    public static String[] getGit() {
+        return StringListHolder.git;
+    }
+
     public static String[] getGrails() {
         return StringListHolder.grails;
     }
@@ -185,6 +197,10 @@ public enum InterviewQuestions implements StringTypeInterface {
 
     public static String[] getHtml() {
         return StringListHolder.html;
+    }
+
+    public static String[] getHtml5() {
+        return StringListHolder.html5;
     }
 
     public static String[] getInformix() {
@@ -403,6 +419,10 @@ public enum InterviewQuestions implements StringTypeInterface {
         return StringListHolder.winApi;
     }
 
+    public static String[] getWindows() {
+        return StringListHolder.windows;
+    }
+
     public static String[] getWinForms() {
         return StringListHolder.winForms;
     }
@@ -547,7 +567,7 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] cPlusPlus = {
-                "Difference between stack memory and heap memory?/Різниця між stack memory і heap memory?"
+                "Difference between stack memory and heap memory?/Різниця між stack memory і heap memory?",
 //                Stack = region of memory for temporaries
 //        Stack pointer pushed on function entry
 //        Popped on function exit
@@ -557,6 +577,8 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        Allocate persistent data on heap with new keyword
 //        Dynamically allocated memory (heap)exists until it is released either explicitly by the programmer
 //        C/C++ ? explicitly managed
+                "basic data structures"
+//
         };
 
         public static String[] cq5 = {
@@ -619,6 +641,24 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        <LI class=name3>This list item will be green</LI>
 //        It is a good practice to name classes according to their function than their appearance; e.g. P.fotnote and not P.green. In CSS1 only one class can be attached to a selector. CSS2 allows attaching more classes, e.g.:
 //        P.name1.name2.name3 {declaration} <P class="name1 name2 name2">This paragraph has three classes attached</P>
+                "What is grouping ?",
+//                Grouping is gathering (1) into a comma separated list two or more selectors that share the same style or (2) into a semicolon separated list two or more declarations that are attached to the same selector (2).
+//
+//                1. The selectors LI, P with class name .first and class .footnote share the same style, e.g.:
+//        LI {font-style: italic}
+//        P.first {font-style: italic}
+//        .footnote {font-style: italic}
+//
+//        To reduce the size of style sheets and also save some typing time they can all be grouped in one list.
+//                LI, P.first, .footnote {font-style: italic}
+//
+//        2. The declarations {font-style: italic} and {color: red} can be attached to one selector, e.g.:
+//        H2 {font-style: italic}
+//        H2 {color: red}
+//        and can also be grouped into one list:
+//        H2 {font-style: italic; color: red}
+                "What is external Style Sheet? How to link? ",
+//External Style Sheet is a template/document/file containing style information which can be linked with any number of HTML documents. This is a very convenient way of formatting the entire site as well as restyling it by editing just one file. The file is linked with HTML documents via the LINK element inside the HEAD element. Files containing style information must have extension .css, e.g. style.css. <HEAD> <LINK REL=STYLESHEET HREF="style.css" TYPE="text/css"> </HEAD>
         };
 
         public static String[] db = {
@@ -659,6 +699,19 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "A program has a bug. How would you debug it?",
         };
 
+        public static String[] delphi = {
+                "What are the different types of pointers used in Delphi?",
+//                - There are typed pointers types that are being provided by Delphi like PChar and PExtended.
+
+//                - These points work with the Inc and Dec functions and don’t have any issue with the use of it.
+//
+//        - They can increment the Pint64 pointer type and add the SizeOf(Int64) bytes at the pointer address location.
+//
+//                - This way it allows the pointing of the pointer to point to the next memory location in the memory.
+//
+//        - There are generic pointers that are used to point to anything and very useful in case of dynamic memory allocation.
+        };
+
         public static String[] delphiActiveX = {
                 "How to save images or make copy of a database with Delphi?"
         };
@@ -689,6 +742,11 @@ public enum InterviewQuestions implements StringTypeInterface {
 
         public static String[] delphiUdpSockets = {
                 "What is the target load order?"
+        };
+
+        public static String[] eclipse = {
+                "What is an IDE?",
+//                An IDE or Integrated Development Environment is a software program that is designed to help programmers and developers build software.
         };
 
         public static String[] ejb = {
@@ -726,6 +784,15 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "What is FreeMarker?"
         };
 
+        public static String[] git = {
+                "How do I clone a local Git Repository?",
+//                This worked for me:
+//                git clone file:////<host>/<share>/<path>
+//        For example, if your main machine has the IP 192.168.10.51 and the computer name main, and it has a share named code which itself is a git repository, the both of the following commands should work equally:
+//        git clone file:////main/code
+//        git clone file:////192.168.10.51/code
+        };
+
         public static String[] grails = {
                 "I have a parameter in my Config.groovy file named layer1.prop1. How can I access this in a controller? How can I access this in a service?",
 //                In a controller, I can inject grailsApplication via def grailsApplication and access this variable via grailsApplication.config.layer1.prop.
@@ -748,7 +815,7 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] hibernate = {
-                "What is ORM?/Що таке ORM?",
+                "What is ORM?",
 //                ORM stands for object/relational mapping. ORM is the automated persistence of objects in a Java application to the tables in a relational database.
                 "What does ORM consists of?",
                 "What’s Hibernate?",
@@ -757,11 +824,17 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                Mappings between class properties and table columns are specified in XML file as in the below example:
                 "Difference between get and load in Hibernate?",
 //                get vs load is one of the most frequently asked Hibernate Interview question, since correct understanding of both get() and load() is require to effectively using Hibernate. Main difference between get and load is that, get will hit the database if object is not found in the cache and returned completely initialized object, which may involve several database call while load() method can return proxy, if object is not found in cache and only hit database if any method other than getId() is called. This can save lot of performance in some cases. You can also see difference between get and load in Hibernate for more differences and detailed discussion on this question.
+                "What are the ORM levels ?",
+//                The ORM levels are:
+//                Pure relational (stored procedure.)
+//                Light objects mapping (JDBC)
+//                Medium object mapping
+//                Full object Mapping (composition,inheritance, polymorphism, persistence by reachability)
         };
 
         public static String[] html = {
                 "How do I indent the first line in my paragraphs?",
-                "How do I indent a lot of text?/Як вирівняти багато тексту, вставити пробіл типу абзац?",
+                "How do I indent a lot of text?",
 //                Again, there is no reliable way to do this. Netscape will indent text inside a <BLOCKQUOTE>, but other browsers don't have to do this. These could show the text in italics, or perhaps with quotation marks around the text. This could come out very strange.
 //        An alternative is to use <DL> without <DT> and <DD>, which is invalid HTML, but several browsers work around this error by indenting the text inside it. This is not guaranteed to work.
 //
@@ -787,6 +860,20 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                Check any page which has this feature, and copy the script from the source.
 //                This script has two big problems. One, usually it uses the decrement operator (c--) at some ball. The "--" sequence in a comment actually closes it on some browsers, so your code may "leak" on those browsers. The same goes for ">".
 //        Second, keep in mind that many people consider this even worse than <BLINK>, and that it also suppresses the status information which normally appears there. It prevents people from knowing where a link goes to.
+                "How do I hide my source?",
+//                You can't. The source is necessary for the browser to display your document. You have to send the complete, unencrypted source to the browser. Even if a particular browser doesn't have a "View source" option, there are many that do, and you can always retrieve the document by hand (using telnet) to get its source. Or check the browser's cache.
+//                You can of course put a few hundred empty lines above the actual source, then newbies who don't see the scrollbars will think there is nothing there.
+                "How can I make a custom rule, or a list with custom bullets?",
+//                There was a proposal in the now-expired HTML 3 draft to handle exactly this: just add SRC to the <HR> or <UL> tag, indicating where the image can be found. But until this is more widely supported, you have to use <IMG> for the rule, with a lot of "--" characters as ALT text for text browsers, and using a <DL> with only <DD> tags for each item. Make sure you use ALIGN for the image, which should go at the beginning of the item, of course. This isn't as beautiful as a "real" list.
+//                An alternative is using a two column table, with the bullets in the left column, and the text in the right. But this won't work well on non-table supporting browsers.
+        };
+
+        public static String[] html5 = {
+                "What's new HTML 5 DocType and Charset?",
+//                As HTML 5 is now not a subset of SGML, its DocType is simplified as follows:
+//        <!doctype html>
+//        And HTML 5 uses UTF-8 encoding as follows:
+//        <meta charset="UTF-8">
         };
 
         public static String[] informix = {
@@ -824,6 +911,11 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        static methods are also shared by the entire class
 //        static classes are inner classes that aren’t tied to their enclosing classes
 //        static can be used around a block of code in a class to specify code that runs when the virtual machine is first started up, before instances of the class are created.
+                "How do you deal with dependency issues?",
+//                It can refer to solving the dependency injection problem
+//It can also refer to project dependencies — using external, third-party libraries. Tools like Maven and Gradle help manage them.
+                "You want to create a simple class that just has three member variables. Tell me how you’d do this.",
+//                experienced programmer will recognize that it’s necessary to know how to correctly override the hashCode() and equals() methods (using, for example, EqualsBuilder and HashCodeBuilder, in the Apache Commons library).
         };
 
         public static String[] javaEe = {
@@ -864,6 +956,17 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                JavaScript’s this keyword normally refers to the object that owns the method, but it depends on how a function is called. Basically, it points to the currently in scope object that owns where you are in the code. When working within a Web page, this usually refers to the Window object. If you are in an object created with the new keyword, the this keyword refers to the object being created. When working with event handlers, JavaScript’s this keyword will point to the object that generated the event.
                 "What is event bubbling?",
 //                Event bubbling describes the behavior of events in child and parent nodes in the Document Object Model (DOM); that is, all child node events are automatically passed to its parent nodes. The benefit of this method is speed, because the code only needs to traverse the DOM tree once. This is useful when you want to place more than one event listener on a DOM element since you can put just one listener on all of the elements, thus code simplicity and reduction. One application of this is the creation of one event listener on a page’s body element to respond to any click event that occurs within the page’s body.
+                "Do you have a JavaScript framework preference? What are your thoughts on using frameworks?",
+                "How are errors gracefully handled in JavaScript?",
+//                Exceptions that occur at runtime can be handled via try/catch/finally blocks; this allows you to avoid those unfriendly error messages. The finally block is optional, as the bare minimum to use is try/catch. Basically, you try to run code (in the try block between the braces), and execution is transferred to the catch block of code when/if runtime errors occur. When the try/catch block is finally done, code execution transfers to the finally code block. This is the same way it works in other languages like C# and Java.
+//        try {
+//// do something
+//        } catch (e) {
+//// do something with the exception
+//        } finally {
+//// This code block always executes whether there is an exception or not.
+//        }
+//        You can give bonus points to any candidate who discusses the onerror event handler tied to the Window object in the browser -- this allows it to monitor all errors on a page. This allows you to properly handle code syntax errors and runtime exceptions.
         };
 
         public static String[] javaSe = {
@@ -887,7 +990,7 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] jdbc = {
-                "What is the JDBC?/Що таке JDBC?",
+                "What is the JDBC?",
 //                Java Database Connectivity (JDBC) is a standard Java API to interact with relational databases form Java. JDBC has set of classes and interfaces which can use from Java application and talk to database without learning RDBMS details and using Database Specific JDBC Drivers.
                 "What are the new features added to JDBC 4.0?",
                 "What are the main steps in java to make JDBC connectivity?",
@@ -896,6 +999,8 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        ·          Get Statement object: From connection object we can get statement object which is used to query the database
 //        ·          Execute the Query:Using statement object we execute the SQL or database query and get result set from the query.
 //        ·          Close the connection:After getting resultset and all required operation performed the last step should be closing the database connection.
+                "What is the mean of “dirty read“ in database?",
+//                This kind of JDBC interview question is asked on 2 to 4 years experience Java programmer, they are expected to familiar with database transaction and isolation level etc. As the name it self convey the meaning of dirty read “read the value which may or may not be correct”. in database when one transaction is executing and changing some field value same time some another transaction comes and read the change field value before first transaction commit or rollback the value ,which cause invalid value for that field, this scenario is known as dirty read.
         };
 
         public static String[] jms = {
@@ -934,11 +1039,20 @@ public enum InterviewQuestions implements StringTypeInterface {
 
         public static String[] json = {
                 "What is The JSON(JavaScript Object Notation)?",
-                "Who is the Father or creater of JSON?/Хто створив JSON?",
+                "Who is the Father or creater of JSON?",
 //                Douglas Crockford called as the Father of JSON
                 "what the file extension of JSON",//.json
                 "Explain Json with php",
 //                Json is too much easy with php There is no installation needed to use these functions; they are part of the PHP core. nothing more need to know just only use { ,[ and create json format string and use three php function json_encode() to get JSON representation of a value, json_decode() for Decodes a JSON string, ¦json_last_error() to get the last error occurred in process.
+                "Why Use JSON over XML",
+//Lighter and faster than XML as on-the-wire data format
+//        • JSON objects are typed while XML data is typeless
+//        > JSON types: string, number, array, boolean,
+//                > XML data are all string
+//        • Native data form for JavaScript code
+//        > Data is readily accessible as JSON objects in your JavaScript
+//        code vs. XML data needed to be parsed and assigned to variables through tedious DOM APIs
+//        > Retrieving values is as easy as reading from an object property in your JavaScript code
         };
 
         public static String[] jsp = {
@@ -970,6 +1084,16 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        </html>
                 "What are the advantages of JSP over Servlet?",
 //JSP is a serverside technology to make content generation a simple appear.The advantage of JSP is that they are document-centric. Servlets, on the other hand, look and act like programs. A Java Server Page can contain Java program fragments that instantiate and execute Java classes, but these occur inside an HTML template file and are primarily used to generate dynamic content. Some of the JSP functionality can be achieved on the client, using JavaScript. The power of JSP is that it is server-based and provides a framework for Web application development.
+                "What is the life-cycle of JSP?",
+//When a request is mapped to a JSP page for the first time, it translates the JSP page into a servlet class and compiles the class. It is this servlet that services the client requests.
+//                A JSP page has seven phases in its lifecycle, as listed below in the sequence of occurrence:
+//        Translation
+//                Compilation
+//        Loading the class
+//                Instantiating the class
+//                jspInit() invocation
+//                          _jspService() invocation
+//        jspDestroy() invocation
         };
 
         public static String[] jstl = {
@@ -983,11 +1107,13 @@ public enum InterviewQuestions implements StringTypeInterface {
 
         public static String[] junit = {
                 "What Is JUnit?",
-                "Who Should Use JUnit, Developers or Testers?/Хто повинен використовувати JUnit, девелопери, чи тестери?",
+                "Who Should Use JUnit, Developers or Testers?",
 //                I should say that JUnit is mostly used by developers. JUnit is designed for unit testing, which is really a coding process, not a testing process.
 //        But many testers or QA engineers, are also required to use JUnit for unit testing. For example, I found this job title on the Internet: Lead QA Engineer - Java / J2EE / whitebox / SAP / Junit
                 "What is testing?",
 //                Testing is the process of checking the functionality of the application whether it is working as per requirements.
+                "What is unit testing?",
+//                Unit testing is the testing of single entity (class or method). Unit testing is very essential to every software company to give a quality product to their customers.
         };
 
         public static String[] linux = {
@@ -1004,10 +1130,12 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                responsible for loading and transferring control to the operating system kernel software
 //                (such as the Hurd or Linux). The kernel, in turn, initializes the rest of the operating
 //        system (e.g. GNU)
+                "Explain Linux Boot Process",
+//                BIOS, MBR, GRUB, Kernel, Init, Runlevel programs
         };
 
         public static String[] maven = {
-                "Is there a way to use the current date in the POM?/Як можна використовувати поточний час у POM?",
+                "Is there a way to use the current date in the POM?",
 //                Take a look at the buildnumber plugin. It can be used to generate a build date each time I do a build, as follows:
 //        <plugin>
 //        <groupId>org.codehaus.mojo</groupId>
@@ -1054,6 +1182,18 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                Updated the documentation with date and updated version number of the application.
                 "What is Maven?",
 //Maven is a project management and comprehension tool. Maven provides developers a complete build lifecycle framework. Development team can automate the project's build infrastructure in almost no time as Maven uses a standard directory layout and a default build lifecycle.
+                "What does it mean when you say Maven uses Convention over Configuration?",
+//                Maven uses Convention over Configuration which means developers are not required to create build process themselves. Developers do not have to mention each and every configuration details.
+                "What are the aspects Maven manages?",
+//                Maven provides developers ways to manage following:
+//                Builds
+//                Documentation
+//                Reporting
+//                Dependencies
+//                SCMs
+//                Releases
+//                Distribution
+//                mailing list
         };
 
         public static String[] mobileDevelopment = {
@@ -1082,12 +1222,17 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] mySql = {
-                "How do you start and stop MySQL on Windows?/Як стартувати та зупиняти MySQL у Windows?",
+                "How do you start and stop MySQL on Windows?",
 //                net start MySQL, net stop MySQL
                 "How do you start MySQL on Linux?",
 //                        /etc/init.d/mysql start
-                "Explain the difference between mysql and mysqli interfaces in PHP?"
+                "Explain the difference between mysql and mysqli interfaces in PHP?",
 //                mysqli is the object-oriented version of mysql library functions.
+                "What is MySQL?",
+//MySQL is an open source DBMS which is built, supported and distributed by MySQL AB (now acquired by Oracle)
+                "Explain advantages of MyISAM over InnoDB?",
+//                Much more conservative approach to disk space management – each MyISAM table is stored in a separate file, which could be compressed then with myisamchk if needed.
+//                With InnoDB the tables are stored in tablespace and not much further optimization is possible. All data except for TEXT and BLOB can occupy 8,000 bytes at most. No full text indexing is available for InnoDB. The COUNT(*)s execute slower than in MyISAM due to tablespace complexity.
         };
 
         public static String[] oop = {
@@ -1138,7 +1283,7 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] patterns = {
-                "What is a software design pattern?/Що таке дизайн паттерн?"
+                "What is a software design pattern?",
 //                A design pattern is a solution to a general software problem within a particular context.
 //
 //                Context : A recurring set of situations where the pattern applies.
@@ -1150,6 +1295,9 @@ public enum InterviewQuestions implements StringTypeInterface {
 //        Head First Design Patterns  (buy from Amazon.com) (Highly recommended by most of the readers)
 //        Design Patterns: Elements of Reusable Object-Oriented Software  (buy from Amazon.com)
 //        Design Patterns In Java  (buy from Amazon.com)
+                "Why is the study of patterns important?",
+//                As initial software designs are implemented and deployed, programmers often discover improvements which make the designs more adaptable to change. Design patterns capture solutions that have evolved over time as developers strive for greater flexibility in their software, and they document the solutions in a way which facilitates their reuse in other, possibly unrelated systems. Design patterns allow us to reuse the knowledge of experienced software designers.
+//                Moreover, the study of design patterns provides a common vocabulary for communication and documentation, and it provides a framework for evolution and improvement of existing patterns. As an analogy, consider that during a discussion among programmers, the words “stack” and “tree” can be used freely without explanation. Software developers understand fundamental data structures such as a “stack” because these data structures are well-documented in textbooks and are taught in computer science courses. The study of design patterns will have a similar (but more profound) effect by allowing designers to say “composite pattern” or “observer pattern” in a particular design context, without having to describe all classes, relationships, and collaborations which make up the pattern. Patterns raise the level of abstraction when discussing and documenting software designs.
         };
 
         public static String[] perl = {
@@ -1161,8 +1309,10 @@ public enum InterviewQuestions implements StringTypeInterface {
         public static String[] php = {
                 "What is PHP?/Що таке PHP?",
 //                PHP is a web language based on scripts that allows developers to dynamically create generated web pages.
-                "What does the initials of PHP stand for?"
+                "What does the initials of PHP stand for?",
 //                PHP means PHP: Hypertext Preprocessor.
+                "What is Object Oriented Programming?"
+//                You should understand classes (objects are instantiated classes), abstract classes, interfaces, methods, properties,inheritance, multiple inheritance as well as why OOP is helpful as compared to procedural programming.
         };
 
         public static String[] plSql = {
@@ -1225,6 +1375,8 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "What is the difference between the getRequestDispatcher(String path) method of javax.servlet.ServletRequest interface and javax.servlet.ServletContext interface?",
 //                The getRequestDispatcher(String path) method of javax.servlet.ServletRequest interface accepts parameter the path to the resource to be included or forwarded to, which can be relative to the request of the calling servlet. If the path begins with a "/" it is interpreted as relative to the current context root.
 //        The getRequestDispatcher(String path) method of javax.servlet.ServletContext interface cannot accepts relative paths. All path must sart with a "/" and are interpreted as relative to curent context root.
+                "What is the Servlet?",
+//A servlet is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-	response programming model.
         };
 
         public static String[] sling = {
@@ -1258,6 +1410,12 @@ public enum InterviewQuestions implements StringTypeInterface {
                 " What is IOC (or Dependency Injection)? ",
 //                The basic concept of the Inversion of Control pattern (also known as dependency injection) is that you do not create your objects but describe how they should be created. You don't directly connect your components and services together in code but describe which services are needed by which components in a configuration file. A container (in the case of the Spring framework, the IOC container) is then responsible for hooking it all up.
 //                i.e., Applying IoC, objects are given their dependencies at creation time by some external entity that coordinates each object in the system. That is, dependencies are injected into objects. So, IoC means an inversion of responsibility with regard to how an object obtains references to collaborating objects.
+                "What are the different types of IOC (dependency injection) ?",
+//There are three types of dependency injection: <ul>
+//                <li><b>Constructor Injection</b> (e.g. Pico container, Spring etc): Dependencies are provided as constructor parameters.</li>
+//        <li><b>Setter Injection</b> (e.g. Spring): Dependencies are assigned through JavaBeans properties (ex: setter methods).</li>
+//        <li><b>Interface Injection </b>(e.g. Avalon): Injection is done through an interface.</li></p>
+//        <em>  Note: Spring supports only Constructor and Setter Injection
         };
 
         public static String[] springIoc = {
@@ -1285,6 +1443,27 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "What is DBMS?",
                 "SQL Query to find second highest salary of Employee",
 //                select MAX(Salary) from Employee WHERE Salary NOT IN (select MAX(Salary) from Employee );
+                "What is the difference between JOIN and UNION?",
+//                SQL JOIN allows us to “lookup” records on other table based on the given conditions between two tables. For example, if we have the department ID of each employee, then we can use this department ID of the employee table to join with the department ID of department table to lookup department names.
+//                UNION operation allows us to add 2 similar data sets to create resulting data set that contains all the data from the source data sets. Union does not require any condition for joining. For example, if you have 2 employee tables with same structure, you can UNION them to create one result set that will contain all the employees from both of the tables.
+//        SELECT * FROM EMP1
+//        UNION
+//        SELECT * FROM EMP2;
+                "What is the difference between UNION and UNION ALL?",
+//                UNION and UNION ALL both unify for add two structurally similar data sets, but UNION operation returns only the unique records from the resulting data set whereas UNION ALL will return all the rows, even if one or more rows are duplicated to each other.
+//                In the following example, I am choosing exactly the same employee from the emp table and performing UNION and UNION ALL. Check the difference in the result.
+//                SELECT * FROM EMPLOYEE WHERE ID = 5
+//                UNION ALL
+//                SELECT * FROM EMPLOYEE WHERE ID = 5
+//                ID	MGR_ID	DEPT_ID	NAME	SAL	DOJ
+//                5.0	2.0	2.0	Anno	80.0	01-Feb-2012
+//                5.0	2.0	2.0	Anno	80.0	01-Feb-2012
+//                SELECT * FROM EMPLOYEE WHERE ID = 5
+//                UNION
+//                SELECT * FROM EMPLOYEE WHERE ID = 5
+//                ID	MGR_ID	DEPT_ID	NAME	SAL	DOJ
+//                5.0	2.0	2.0	Anno	80.0	01-Feb-2012
+
         };
 
         public static String[] swing = {
@@ -1295,7 +1474,7 @@ public enum InterviewQuestions implements StringTypeInterface {
         };
 
         public static String[] tomcat = {
-                "How do you create multiple virtual hosts?/Як створити більше одного віртуального хоста?",
+                "How do you create multiple virtual hosts?",
 //                If you want tomcat to accept requests for different hosts e.g., www.myhostname.com then you must 0. create ${catalina.home}/www/appBase , ${catalina.home}/www/deploy, and ${catalina.home}/conf/Catalina/www.myhostname.com
 //        1. add a host entry in the server.xml file
 //        <Host appBase="www/appBase" name="www.myhostname.com"/>
@@ -1360,6 +1539,52 @@ public enum InterviewQuestions implements StringTypeInterface {
 //            Notice that this method gives you pretty much the webapp code you wanted in the first place
 //            Serializing / Deserializing
 //            You might want to try serializing the response of 'request.getUserPrincipal()' and deserialize it to an instance of [webapp]MyPrincipal.
+                "How do I override the default home page loaded by Tomcat?",
+//                After successfully installing Tomcat, you usually test it by loading http://localhost:8080 . The contents of that page are compiled into the index_jsp servlet. The page even warns against modifying the index.jsp files for this reason. Luckily, it is quite easy to override that page. Inside $TOMCAT_HOME/conf/web.xml there is a section called <welcome-file-list> and it looks like this:
+//
+//        <welcome-file-list>
+//        <welcome-file>index.html</welcome-file>
+//        <welcome-file>index.htm</welcome-file>
+//        <welcome-file>index.jsp</welcome-file>
+//        </welcome-file-list>
+//        The default servlet attempts to load the index.* files in the order listed. You may easily override the index.jsp file by creating an index.html file at $TOMCAT_HOME/webapps/ROOT. It's somewhat common for that file to contain a new static home page or a redirect to a servlet's main page. A redirect would look like:
+//
+//        <html>
+//
+//        <head>
+//        <meta http-equiv="refresh" content="0;URL=http://mydomain.com/some/path/to/servlet/homepage/">
+//        </head>
+//
+//        <body>
+//        </body>
+//
+//        </html>
+//        This change takes effect immediately and does not require a restart of Tomcat.
+                "How do I enable Server Side Includes (SSI)?",
+//                Two things have to be done for tomcat to aknowledge SSI scripts:
+//                Rename $CATALINA_BASE/server/lib/servlets-ssi.renametojar to $CATALINA_BASE/server/lib/servlets-ssi.jar.
+//                Uncomment the section of web.xml found in $CATALINA_BASE/conf/web.xml that deals with SSI. it looks like this when it is uncommented:
+//        <servlet>
+//        <servlet-name>ssi</servlet-name>
+//        <servlet-class>org.apache.catalina.ssi.SSIServlet</servlet-class>
+//        <init-param>
+//        <param-name>buffered</param-name>
+//        <param-value>1</param-value>
+//        </init-param>
+//        <init-param>
+//        <param-name>debug</param-name>
+//        <param-value>0</param-value>
+//        </init-param>
+//        <init-param>
+//        <param-name>expires</param-name>
+//        <param-value>666</param-value>
+//        </init-param>
+//        <init-param>
+//        <param-name>isVirtualWebappRelative</param-name>
+//        <param-value>0</param-value>
+//        </init-param>
+//        <load-on-startup>4</load-on-startup>
+//        </servlet>
         };
 
         public static String[] uml = {
@@ -1398,6 +1623,11 @@ public enum InterviewQuestions implements StringTypeInterface {
         public static String[] winApi = {
                 "How windows differs from DOS and what is the advantage of GUI based program?",
 //                Yes, you can, then the class belongs to global namespace which has no name. For commercial products, naturally, you wouldn’t want global namespace.
+        };
+
+        public static String[] windows = {
+                "What is Active Directory?",
+// Active Directory is a Meta Data. Active Directory is a data base which store a data base like your user information, computer information and also other network object info. It has capabilities to manage and administor the complite Network which connect with AD. - See more at: http://www.01world.in/p/windows.html#sthash.umBpgGRM.dpuf
         };
 
         public static String[] winForms = {
@@ -1449,6 +1679,19 @@ public enum InterviewQuestions implements StringTypeInterface {
 //                There are literally thousands of applications that can benefit from XML technologies. The point of this question is not to have the candidate rattle off a laundry list of projects that they have worked on, but, rather, to allow the candidate to explain the rationale for choosing XML by citing a few real world examples. For instance, one appropriate answer is that XML allows content management systems to store documents independently of their format, which thereby reduces data redundancy. Another answer relates to B2B exchanges or supply chain management systems. In these instances, XML provides a mechanism for multiple companies to exchange data according to an agreed upon set of rules. A third common response involves wireless applications that require WML to render data on hand held devices.
                 "What is DOM and how does it relate to XML?",
 //                The Document Object Model (DOM) is an interface specification maintained by the W3C DOM Workgroup that defines an application independent mechanism to access, parse, or update XML data. In simple terms it is a hierarchical model that allows developers to manipulate XML documents easily Any developer that has worked extensively with XML should be able to discuss the concept and use of DOM objects freely. Additionally, it is not unreasonable to expect advanced candidates to thoroughly understand its internal workings and be able to explain how DOM differs from an event-based interface like SAX.
+                "What is XML?",
+//                Extensible Markup Language (XML) is the universal language for data on the Web
+//                XML is a technology which allows us to create our own markup language.
+//                XML documents are universally accepted as a standard way of representing information in platform and language independent manner.
+//                XML is universal standard for information interchange.
+//        XML documents can be created in any language and can be used in any language.
+                "What is the difference between XML and HTML?",
+//                XML is no way clashes with HTML, since they are for two different purposes.
+//                HTML	XML
+//        HTML is for displaying purpose.	whereas  XML is for data representation.
+//        HTML is used to mark up text so it can be displayed to users.	XML is used to mark up data so it can be processed by computers.
+//        HTML describes both structure (e.g. <p>, <h2>, <em>) and appearance (e.g. <br>, <font>, <i>)	XML describes only content, or “meaning”
+//        HTML uses a fixed, unchangeable set of tags	In XML, you make up your own tags
         };
 
     }
