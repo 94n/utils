@@ -359,7 +359,7 @@ public enum StringType implements StringTypeInterface {
                 "Ванильные сырники 36",
                 "Необычный и вкусный бутерброд 45",
                 "Пицца на сковороде 27",
-                "Салат \"Мимоза\" 56"
+                "Салат \"Мимоза\" 56",
         };
 
         public static String[] salads = {
