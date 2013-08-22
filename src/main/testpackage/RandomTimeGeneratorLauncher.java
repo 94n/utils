@@ -19,7 +19,10 @@ public class RandomTimeGeneratorLauncher {
 //        System.out.println(calendar.getTime());
 //        final long end = calendar.getTimeInMillis();
 //        RandomTimeGenerator.printRandomTime(1, start, end);
-        RandomTimeGenerator.printSleepingTime();
+//        RandomTimeGenerator.printSleepingTime();
+        RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);//Anton Poluboiarynov1
+//        RandomTimeGenerator.printRandomTime(1);
+
     }
 
 }

@@ -18,6 +18,12 @@ public class RandomTimeGenerator {
         return getRandomTime(number, start, end);
     }
 
+    public static List<Long> getFixedWorkingDayRandomTimeFromNow(int number) {
+        final long start = new Date().getTime();
+        final long end = TimeUtils.getWorkingDayEndTime();
+        return getRandomTime(number, start, end);
+    }
+
     public static List<Long> getRandomTime(int number) {
         final long start = TimeUtils.getDayStartTime();
         final long end = TimeUtils.getDayEndTime();
@@ -42,6 +48,12 @@ public class RandomTimeGenerator {
 
     public static void printFixedWorkingDayRandomTime(int number) {
         for (Long time : getFixedWorkingDayRandomTime(number)) {
+            TimeUtils.printTimeByMillis(time);
+        }
+    }
+
+    public static void printFixedWorkingDayRandomTimeFromNow(int number) {
+        for (Long time : getFixedWorkingDayRandomTimeFromNow(number)) {
             TimeUtils.printTimeByMillis(time);
         }
     }
