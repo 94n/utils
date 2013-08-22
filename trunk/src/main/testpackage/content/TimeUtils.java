@@ -12,10 +12,12 @@ import java.util.GregorianCalendar;
  */
 public class TimeUtils {
 
-    private static final int WORKING_DAY_END_HOUR = 18;
-    private static final int WORKING_DAY_START_HOUR = 8;
+    private static final int WORKING_DAY_START_HOUR = 9;
     private static final int WORKING_DAY_START_MINUTE = 0;
+
+    private static final int WORKING_DAY_END_HOUR = 18;
     private static final int WORKING_DAY_END_MINUTE = WORKING_DAY_START_MINUTE;
+
     private static final long HOURS_IN_DAY = 24;
     private static final long MILLISECONS_IN_SECOND = 1000;
     private static final long MINUTES_IN_HOUR = 60;
