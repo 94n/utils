@@ -10,10 +10,10 @@ import testpackage.content.repetition.RandomNumber;
 public class RandomNumberGenerator {
 
     public static void main(String[] args) {
-        System.out.println(new RandomNumber().getFromRange(1, 340));
+//        System.out.println(new RandomNumber().getFromRange(1, 340));
 //        System.out.println(new RandomNumber().getFromRange(10000, 99999));//zip code
 //        System.out.println(new RandomNumber().getFromRange(0, 1280));//zip code
-        System.out.println(new RandomNumber().getFromRange(1, 76360));//wallpaper
+        System.out.println(new RandomNumber().getFromRange(1, 41273));//wallpaper
 //        for (int i : new RandomNumber().getFromRange(9, 23, 32)) {
 //            System.out.print(i + " ");
 //        }
