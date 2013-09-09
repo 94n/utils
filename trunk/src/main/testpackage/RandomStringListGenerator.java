@@ -59,13 +59,24 @@ public class RandomStringListGenerator {
         addQs(questions, InterviewQuestions.INTERMEDIATE_JAVA_WEB_DESKTOP);
 //        addQs(questions, InterviewQuestions.SENIOR_JAVA_WEB_DESKTOP);
         Collections.sort(questions);
+        final int firstEnglishQuestionNumber = new RandomNumber().getFromRange(1, questions.size() - 2);
+        final int i = 1;
         for (String s : questions) {
+            if (isInEnglishRange(firstEnglishQuestionNumber, i)) {
+                System.out.println("ENGLISH");
+            }
             System.out.println(s);
         }
     }
 
+    private static boolean isInEnglishRange(int firstEnglishQuestionNumber, int i) {
+        return i == firstEnglishQuestionNumber || i == firstEnglishQuestionNumber + 1 || i == firstEnglishQuestionNumber + 2;
+    }
+
     private static void addQs(List<String> questions, StringTypeInterface stringType) {
-        final int count = 32;//32 per hour
+        final int count = 40;//40 per hour
+        //мало 32,
+        //много 99, 64, 48
         questions.addAll(StringListGenerator.getRandomStringListWithUniqueElements(stringType, count));
     }
 
