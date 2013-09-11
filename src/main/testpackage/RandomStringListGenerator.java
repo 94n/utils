@@ -22,9 +22,9 @@ public class RandomStringListGenerator {
 //        System.out.println(StringType.TRAINING.getList().length);
 //        StringListGenerator.shufflePrintStrings(PuzataHataFood.ALL, 3);//3,1
 //                StringListGenerator.shufflePrintStringsWithUniqueElements(StringType.TEMP, 3);//3,1
-//        StringListGenerator.shufflePrintStringsWithUniqueElements(StringType.RECIPES);
+        StringListGenerator.shufflePrintStringsWithUniqueElements(StringType.RECIPES);
 //        printChildrenStuff();
-        printInterviewQuestions();
+//        printInterviewQuestions();
 //        StringListGenerator.shufflePrintStrings(StringType.BOOKS, 8);
 //        StringListGenerator.shufflePrintStrings(StringType.WORDS, 1);//1.1
 //        StringListGenerator.shufflePrintStrings(StringType.WALLPAPERS, 1);

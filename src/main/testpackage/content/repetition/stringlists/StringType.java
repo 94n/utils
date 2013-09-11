@@ -137,7 +137,8 @@ public enum StringType implements StringTypeInterface {
                 "Folk tales",
                 "The brave little airplane",
                 "The little house",
-                "turnip"
+                "turnip",
+                "the 3 little pigs"
         };
 
         public static String[] logicBooks = {
@@ -357,6 +358,7 @@ public enum StringType implements StringTypeInterface {
 
         public static String[] recipes = {
                 "Ванильные сырники 36",
+                "Ленивые вареники на завтрак 57",
                 "Необычный и вкусный бутерброд 45",
                 "Пицца на сковороде 27",
                 "Салат \"Мимоза\" 56",
