@@ -143,7 +143,6 @@ public enum StringType implements StringTypeInterface {
         };
 
         public static String[] logicBooks = {
-                "Величина,11",
                 "Обучалочка,96",
         };
 
@@ -339,9 +338,7 @@ public enum StringType implements StringTypeInterface {
         };
 
         public static String[] balanceProgram = {
-                "Перекатывание",
-                "Кувырок вперед",
-                "Хождение по балке"
+
         };
 
         public static String[] recipes = {
