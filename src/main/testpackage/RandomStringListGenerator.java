@@ -22,8 +22,8 @@ public class RandomStringListGenerator {
 //        System.out.println(StringType.TRAINING.getList().length);
 //        StringListGenerator.shufflePrintStrings(PuzataHataFood.ALL, 3);//3,1
 //                StringListGenerator.shufflePrintStringsWithUniqueElements(StringType.TEMP, 3);//3,1
-        StringListGenerator.shufflePrintStringsWithUniqueElements(StringType.RECIPES);
-//        printChildrenStuff();
+//        StringListGenerator.shufflePrintStringsWithUniqueElements(StringType.RECIPES);
+        printChildrenStuff();
 //        printInterviewQuestions();
 //        StringListGenerator.shufflePrintStrings(StringType.BOOKS, 8);
 //        StringListGenerator.shufflePrintStrings(StringType.WORDS, 1);//1.1
@@ -37,7 +37,7 @@ public class RandomStringListGenerator {
         final int count = 32;
         final List<String> zaytsev = StringListGenerator.getRandomStringList(StringType.ZAYTSEV_GAMES, count);
         final List<String> simpleGames = StringListGenerator.getRandomStringList(StringType.GAMES, count);
-        final List<String> passiveBalanceProgram = StringListGenerator.getRandomStringList(StringType.BALANCE_PROGRAM, count);
+//        final List<String> passiveBalanceProgram = StringListGenerator.getRandomStringList(StringType.BALANCE_PROGRAM, count);
         final List<String> russianBooks = StringListGenerator.getRandomStringList(StringType.BOOKS, count);
         final List<String> englishBooks = StringListGenerator.getRandomStringList(StringType.ENGLISH_BOOKS, count);
         final List<String> logicBooks = StringListGenerator.getRandomStringList(StringType.LOGIC_BOOKS, count);
@@ -45,7 +45,7 @@ public class RandomStringListGenerator {
             System.out.println((i + 1) + ") 1 2 3");
             System.out.println("   " + zaytsev.get(i));
             System.out.println("   " + simpleGames.get(i));
-            System.out.println("   " + passiveBalanceProgram.get(i));
+            System.out.println("   упражнения");
             System.out.println("   " + russianBooks.get(i) + " / " + englishBooks.get(i));
             final String logicBook = logicBooks.get(i);
             final int logicPage = new RandomNumber().getFromRange(1, Integer.parseInt(logicBook.substring(logicBook.indexOf(',') + 1)));
