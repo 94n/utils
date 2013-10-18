@@ -7,7 +7,7 @@ package testpackage;
  */
 public class PasswordGenerator {
 
-    private static final int LENGTH = 8
+    private static final int LENGTH = 6
             ;
 
     public static void main(String[] args) {

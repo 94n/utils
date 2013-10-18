@@ -1,76 +1,47 @@
 package testpackage.content.repetition.stringlists;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
- * User: makstitoff
- * Date: 16.09.13
- * Time: 21:48
+ * Created with IntelliJ IDEA. User: makstitoff Date: 16.09.13 Time: 21:48
  */
 public class Food {
 
-    public static final Map<String, Integer> food = new HashMap<String, Integer>();
+	public static final Map<String, Integer>	food	= new HashMap<String, Integer>();
 
-    static {
-        food.put("Вода", 1);
-        food.put("чай", 1);
-        food.put("какао", 1);
-        food.put("молоко", 1);
-        food.put("бульйон", 1);
-        food.put("яйця некруто відвареної рнс", 1);
-        food.put("риба річкова відварна", 1);
-        food.put("Кава ", 1);
-        food.put("какао з молоком", 1);
-        food.put("какао з вершками", 1);
-        food.put("яйця круто", 1);
-        food.put("яєшня", 1);
-        food.put("омлет", 1);
-        food.put("риба морська відварна", 1);
-        food.put("картопля відварна", 1);
-        food.put("телятина", 1);
-        food.put("хліб пшеничний", 1);
-        food.put("Відварна курка", 1);
-        food.put("відварна яловичина", 1);
-        food.put("хліб житній", 1);
-        food.put("яблука", 1);
-        food.put("морква", 1);
-        food.put("редис", 1);
-        food.put("шпинат", 1);
-        food.put("огірки", 1);
-        food.put("картопля смажена", 1);
-        food.put("ветчину", 1);
-        food.put("Смажене м'ясо", 1);
-        food.put("дичину", 1);
-        food.put("оселедець", 1);
-        food.put("пюре горохове", 1);
-        food.put("тушковані боби", 1);
-        food.put("Шпик", 1);
-        food.put("гриби", 1);
-        food.put("мучное", 1);
-        food.put("Овочі", 1);
-        food.put("фрукти", 1);
-        food.put("Олія", 1);
-        food.put("Масло", 1);
-        food.put("цукор", 1);
-        food.put("ягоди", 1);
-        food.put("макарони", 1);
-        food.put("крупы", 1);
-        food.put("виноград", 1);
-        final List<String> foodList = new ArrayList<String>();
-        for (Map.Entry<String, Integer> foodItem : food.entrySet()) {
-            for (Integer i = 0; i <= foodItem.getValue(); i++) {
-                foodList.add(foodItem.getKey());
-            }
-        }
-        Collections.shuffle(foodList);
-        for(String foodItem : foodList){
-            System.out.print(foodItem + ",");
-        }
-    }
+	static {
+		food.put("zernovuye", 1);
+		food.put("ovoschi", 1);
+		food.put("fruits", 1);
+		food.put("milk", 1);
+		food.put("meat", 1);
+		food.put("boby", 1);
+		food.put("oliya", 1);
+		food.put("meat", 1);
+		food.put("eggs", 1);
+		food.put("zerno", 1);
+		food.put("boby", 1);
+		food.put("milk", 1);
+		food.put("cheeze", 1);
+		food.put("soya", 1);
+		final List<String> foodList = new ArrayList<String>();
+		for (Map.Entry<String, Integer> foodItem : food.entrySet()) {
+			for (Integer i = 0; i < foodItem.getValue(); i++) {
+				foodList.add(foodItem.getKey());
+			}
+		}
+		Collections.shuffle(foodList);
+		for (String foodItem : foodList) {
+			System.out.print(foodItem + ",");
+		}
+	}
 
-    public static void main(String args []){
+	public static void main(String args[]) {
 
-    }
+	}
 
 }
