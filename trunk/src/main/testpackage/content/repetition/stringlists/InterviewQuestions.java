@@ -9,7 +9,8 @@ package testpackage.content.repetition.stringlists;
  */
 public enum InterviewQuestions implements StringTypeInterface {
 
-    JUNIOR_JAVA_WEB_DESKTOP(getJuniorJavaWebDesktop()), JUNIOR_ANDROID(getJuniorAndroid()), INTERMEDIATE_JAVA_DESKTOP(getIntermediateJavaDesktop()),
+    JUNIOR_JAVA_WEB_DESKTOP(getJuniorJavaWebDesktop()), JUNIOR_ANDROID(getJuniorAndroid()),
+    INTERMEDIATE_JAVA_DESKTOP(getIntermediateJavaDesktop()),
     INTERMEDIATE_JAVA_WEB_DESKTOP(getIntermediateJavaWebDesktop()),
     INTERMEDIATE_JAVA_WEB_DESKTOP_ANDROID(getIntermediateJavaWebDesktopAndroid()),
     SENIOR_JAVA_WEB_DESKTOP(getSeniorJavaWebDesktop());
@@ -1680,6 +1681,8 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "Construction - Rest Web Services - Java:New features of JAX-RS 2.0:Create custom interceptors: motivation, order of execution",
                 "Construction - Rest Web Services - Java:New features of JAX-RS 2.0:Server-side Asynchronous HTTP"
         };
+
+
 
     }
 
