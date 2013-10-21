@@ -1,4 +1,4 @@
-package testpackage.content.repetition.stringlists;
+﻿package testpackage.content.repetition.stringlists;
 
 import java.util.EnumSet;
 
@@ -129,7 +129,8 @@ public enum StringType implements StringTypeInterface {
                 "Шнуровочка",
                 "Баба-яга",
                 "Времена года",
-                "азбука с пазлами"
+                "азбука с пазлами",
+                "арифметика"
         };
 
         public static String[] englishBooks = {
@@ -139,7 +140,15 @@ public enum StringType implements StringTypeInterface {
                 "The brave little airplane",
                 "The little house",
                 "turnip",
-                "the 3 little pigs"
+                "the 3 little pigs",
+                "Bob the puppy",
+                "Aline-butterfly",
+                "The magic porridge pot",
+                "Make detectives",
+                "Sister fox and brother wolf",
+                "The bun",
+                "Mary and jack",
+                "Mary"
         };
 
         public static String[] logicBooks = {
