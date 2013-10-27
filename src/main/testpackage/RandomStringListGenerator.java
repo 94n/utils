@@ -53,7 +53,7 @@ public class RandomStringListGenerator {
             System.out.println(russianBooks.get(i) + " / " + englishBooks.get(i));
             final String logicBook = logicBooks.get(i);
             final int logicPage = new RandomNumber().getFromRange(1, Integer.parseInt(logicBook.substring(logicBook.indexOf(',') + 1)));
-            System.out.println("   " + logicBooks.get(i) + "." + logicPage);
+            System.out.println(logicBooks.get(i) + "." + logicPage);
         }
     }
 
