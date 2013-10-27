@@ -42,7 +42,11 @@ public class RandomStringListGenerator {
         final List<String> englishBooks = StringListGenerator.getRandomStringList(StringType.ENGLISH_BOOKS, count);
         final List<String> logicBooks = StringListGenerator.getRandomStringList(StringType.LOGIC_BOOKS, count);
         for (int i = 0; i < count; i++) {
-            System.out.println((i + 1) + ") 1 2 3");
+            System.out.println((i + 1) + ")");
+            System.out.println("карточки");
+            System.out.println("счет");
+            System.out.println("сложи квадрат");
+            System.out.println("кубики деревянные");
             System.out.println("   " + zaytsev.get(i));
             System.out.println("   " + simpleGames.get(i));
             System.out.println("   " + russianBooks.get(i) + " / " + englishBooks.get(i));
