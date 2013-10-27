@@ -43,13 +43,14 @@ public class RandomStringListGenerator {
         final List<String> logicBooks = StringListGenerator.getRandomStringList(StringType.LOGIC_BOOKS, count);
         for (int i = 0; i < count; i++) {
             System.out.println((i + 1) + ")");
-            System.out.println("РєР°СЂС‚РѕС‡РєРё");
-            System.out.println("СЃС‡РµС‚");
-            System.out.println("СЃР»РѕР¶Рё РєРІР°РґСЂР°С‚");
-            System.out.println("РєСѓР±РёРєРё РґРµСЂРµРІСЏРЅРЅС‹Рµ");
-            System.out.println("   " + zaytsev.get(i));
-            System.out.println("   " + simpleGames.get(i));
-            System.out.println("   " + russianBooks.get(i) + " / " + englishBooks.get(i));
+            System.out.println("карточки");
+            System.out.println("сложи квадрат");
+            System.out.println("счет");
+            System.out.println("кубики еревянные");
+            System.out.println("цвет");
+            System.out.println(zaytsev.get(i));
+            System.out.println(simpleGames.get(i));
+            System.out.println(russianBooks.get(i) + " / " + englishBooks.get(i));
             final String logicBook = logicBooks.get(i);
             final int logicPage = new RandomNumber().getFromRange(1, Integer.parseInt(logicBook.substring(logicBook.indexOf(',') + 1)));
             System.out.println("   " + logicBooks.get(i) + "." + logicPage);
@@ -78,8 +79,8 @@ public class RandomStringListGenerator {
 
     private static void addQs(List<String> questions, StringTypeInterface stringType) {
         final int count = 40;//40 per hour
-        //РјР°Р»Рѕ 32,
-        //РјРЅРѕРіРѕ 99, 64, 48
+        //мало 32,
+        //много 99, 64, 48
         questions.addAll(StringListGenerator.getRandomStringListWithUniqueElements(stringType, count));
     }
 
