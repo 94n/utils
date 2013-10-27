@@ -132,7 +132,8 @@ public enum StringType implements StringTypeInterface {
                 "Баба-яга",
                 "Времена года",
                 "азбука с пазлами",
-                "арифметика"
+                "арифметика",
+                "стишки о зверятах"
         };
 
         public static String[] englishBooks = {
