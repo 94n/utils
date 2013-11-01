@@ -17,7 +17,7 @@ public class RandomNumberGenerator {
 //        for (int i : new RandomNumber().getFromRange(9, 23, 32)) {
 //            System.out.print(i + " ");
 //        }
-        System.out.println(new RandomNumber().getFromRange(1, 43040));//wallpaper
+        System.out.println(new RandomNumber().getFromRange(1, 8));//wallpaper
 //        for (int i : new RandomNumber().getFromRange(9, 23, 32)) {
 //            System.out.print(i + " ");
 //        }
