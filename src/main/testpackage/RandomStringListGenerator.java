@@ -43,11 +43,9 @@ public class RandomStringListGenerator {
         final List<String> logicBooks = StringListGenerator.getRandomStringList(StringType.LOGIC_BOOKS, count);
         for (int i = 0; i < count; i++) {
             System.out.println((i + 1) + ")");
+            System.out.println("перехват");
             System.out.println("карточки");
-            System.out.println("сложи квадрат");
             System.out.println("счет");
-            System.out.println("кубики еревянные");
-            System.out.println("цвет");
             System.out.println(zaytsev.get(i));
             System.out.println(simpleGames.get(i));
             System.out.println(russianBooks.get(i) + " / " + englishBooks.get(i));
