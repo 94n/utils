@@ -11,8 +11,7 @@ public class PasswordGenerator {
             ;
 
     public static void main(String[] args) {
-        System.out.println(testpackage.content.repetition.PasswordGenerator.getPassword(LENGTH));
-        System.out.println("copy for saving only");
+        System.out.println(testpackage.content.repetition.StringGenerator.getName(LENGTH));
     }
 
 }

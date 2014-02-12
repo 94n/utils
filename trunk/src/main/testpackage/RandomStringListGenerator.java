@@ -23,8 +23,8 @@ public class RandomStringListGenerator {
 //        StringListGenerator.shufflePrintStrings(PuzataHataFood.ALL, 3);//3,1
 //                StringListGenerator.shufflePrintStringsWithUniqueElements(StringType.TEMP, 3);//3,1
 //        StringListGenerator.shufflePrintStringsWithUniqueElements(StringType.RECIPES);
-        printChildrenStuff();
-//        printInterviewQuestions();
+//        printChildrenStuff();
+        printInterviewQuestions();
 //        StringListGenerator.shufflePrintStrings(StringType.BOOKS, 8);
 //        StringListGenerator.shufflePrintStrings(StringType.WORDS, 1);//1.1
 //        StringListGenerator.shufflePrintStrings(StringType.WALLPAPERS, 1);
@@ -76,7 +76,7 @@ public class RandomStringListGenerator {
     }
 
     private static void addQs(List<String> questions, StringTypeInterface stringType) {
-        final int count = 40;//40 per hour
+        final int count = 20;//40 per hour
         //мало 32,
         //много 99, 64, 48
         questions.addAll(StringListGenerator.getRandomStringListWithUniqueElements(stringType, count));
