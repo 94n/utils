@@ -18,12 +18,20 @@ import java.util.Random;
  * Date: 10/26/11
  * Time: 1:41 PM
  */
-public class PasswordGenerator {
+public class StringGenerator {
 
     /**
      * Minimum length of password.
      */
     private static final int MIN_LENGTH = 8;
+
+    private static final Character[] NAME_CHARACTERS = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c',
+            'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+
+    private static final Character[] PASSWORD_CHARACTERS = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C',
+            'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
+            'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+            't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
     //17k6G5oW
     //
@@ -37,17 +45,22 @@ public class PasswordGenerator {
      */
     private static final int MAX_LENGTH = 10;
 
+    public static String getName(int length) {
+        return getString(length, NAME_CHARACTERS);
+    }
+
     public static String getPassword() {
         final int length = 6;//getLength(MIN_LENGTH, MAX_LENGTH);
-        return getPassword(length);
+        return getString(length, PASSWORD_CHARACTERS);
     }
 
     public static String getPassword(int length) {
+        return getString(length, PASSWORD_CHARACTERS);
+    }
+
+    public static String getString(int length, Character[] characters) {
         System.out.println("length = " + length);
-        final Character[] characters = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C',
-                'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-                'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-                't', 'u', 'v', 'w', 'x', 'y', 'z'};
+
         final StringBuilder stringBuilder = new StringBuilder();
         final List<Character> randomCharacterList = RandomObjectListGenerator.generateRandomList(characters, length);
         for (Character character : randomCharacterList) {
