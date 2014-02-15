@@ -59,8 +59,6 @@ public class StringGenerator {
     }
 
     public static String getString(int length, Character[] characters) {
-        System.out.println("length = " + length);
-
         final StringBuilder stringBuilder = new StringBuilder();
         final List<Character> randomCharacterList = RandomObjectListGenerator.generateRandomList(characters, length);
         for (Character character : randomCharacterList) {
