@@ -8,18 +8,10 @@ import testpackage.content.repetition.RandomTimeGenerator;
 public class TimeGenerator {
 
 	public static void main(String[] args) {
-		// final Calendar calendar = GregorianCalendar.getInstance();
-		// calendar.set(Calendar.HOUR_OF_DAY, 12);
-		// calendar.set(Calendar.MINUTE, 0);
-		// System.out.println(calendar.getTime());
-		// final long start = calendar.getTimeInMillis();
-		// calendar.set(Calendar.HOUR_OF_DAY, 17);
-		// System.out.println(calendar.getTime());
-		// final long end = calendar.getTimeInMillis();
-		// RandomTimeGenerator.printRandomTime(1, start, end);
-		// RandomTimeGenerator.printSleepingTime();
-		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);
-		//RandomTimeGenerator.printRandomTime(1);
+		//tennis
+//		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);
+		//music
+        RandomTimeGenerator.printRandomTime(2);
 	}
 
 }

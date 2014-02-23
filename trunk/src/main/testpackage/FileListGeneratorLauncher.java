@@ -11,7 +11,7 @@ import testpackage.content.filelists.MavenInstallJarCommandListGenerator;
 public class FileListGeneratorLauncher {
 
     public static void main(String[] args) {
-        FileListGenerator.generateRandomList("F:\\Docs\\Fiction\\Sugarloaf Key");
+        FileListGenerator.generateRandomList("F:\\Files\\install\\Games\\Коллекция игр Alawar Entertainment");
 //        MavenInstallJarCommandListGenerator.printMavenInstallJarCommandList();
     }
 
