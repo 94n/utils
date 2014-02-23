@@ -37,16 +37,17 @@ public class RandomStringListGenerator {
         final int count = 32;
         final List<String> zaytsev = StringListGenerator.getRandomStringList(StringType.ZAYTSEV_GAMES, count);
         final List<String> simpleGames = StringListGenerator.getRandomStringList(StringType.GAMES, count);
-//        final List<String> passiveBalanceProgram = StringListGenerator.getRandomStringList(StringType.BALANCE_PROGRAM, count);
+        final List<String> balanceProgram = StringListGenerator.getRandomStringList(StringType.BALANCE_PROGRAM, count);
         final List<String> russianBooks = StringListGenerator.getRandomStringList(StringType.BOOKS, count);
         final List<String> englishBooks = StringListGenerator.getRandomStringList(StringType.ENGLISH_BOOKS, count);
         final List<String> logicBooks = StringListGenerator.getRandomStringList(StringType.LOGIC_BOOKS, count);
         for (int i = 0; i < count; i++) {
             System.out.println((i + 1) + ")");
             System.out.println("перехват");
+            System.out.println(balanceProgram.get(i));
             System.out.println("карточки");
             System.out.println("счет");
-            System.out.println(zaytsev.get(i));
+            System.out.println(zaytsev.get(i) + " +");
             System.out.println(simpleGames.get(i));
             System.out.println(russianBooks.get(i) + " / " + englishBooks.get(i));
             final String logicBook = logicBooks.get(i);
