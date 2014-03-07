@@ -16,10 +16,16 @@ public class TimeUtils {
 	private static final int	WORKING_DAY_END_HOUR		= 18;
 	private static final int	WORKING_DAY_END_MINUTE		= WORKING_DAY_START_MINUTE;
 
+	private static final int	LIGHT_DAY_START_HOUR		= 7;
+	private static final int	LIGHT_DAY_START_MINUTE		= 30;
+
+	private static final int	LIGHT_DAY_END_HOUR			= 23;
+	private static final int	LIGHT_DAY_END_MINUTE		= 30;
+
 	private static final long	DAYS_IN_WEEK				= 7;
 	private static final long	HOURS_IN_DAY				= 24;
-	private static final long	MINUTES_IN_HOUR				= 60;
 	private static final long	SECONDS_IN_MINUTE			= 60;
+	public static final int		MINUTES_IN_HOUR				= 60;
 	public static final long	SECOND						= 1000;
 	public static final long	MINUTE						= SECOND * SECONDS_IN_MINUTE;
 	public static final long	HOUR						= SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR;
@@ -72,10 +78,17 @@ public class TimeUtils {
 		return calendar.getTimeInMillis();
 	}
 
-	public static long getWorkingDayEndTime() {
+	public static long getLightDayStartTime() {
 		final Calendar calendar = GregorianCalendar.getInstance();
-		calendar.set(Calendar.HOUR_OF_DAY, WORKING_DAY_END_HOUR);
-		calendar.set(Calendar.MINUTE, WORKING_DAY_END_MINUTE);
+		calendar.set(Calendar.HOUR_OF_DAY, LIGHT_DAY_START_HOUR);
+		calendar.set(Calendar.MINUTE, LIGHT_DAY_START_MINUTE);
+		return calendar.getTimeInMillis();
+	}
+
+	public static long getLightDayEndTime() {
+		final Calendar calendar = GregorianCalendar.getInstance();
+		calendar.set(Calendar.HOUR_OF_DAY, LIGHT_DAY_END_HOUR);
+		calendar.set(Calendar.MINUTE, LIGHT_DAY_END_MINUTE);
 		return calendar.getTimeInMillis();
 	}
 
@@ -83,6 +96,13 @@ public class TimeUtils {
 		final Calendar calendar = GregorianCalendar.getInstance();
 		calendar.set(Calendar.HOUR_OF_DAY, WORKING_DAY_START_HOUR);
 		calendar.set(Calendar.MINUTE, WORKING_DAY_START_MINUTE);
+		return calendar.getTimeInMillis();
+	}
+
+	public static long getWorkingDayEndTime() {
+		final Calendar calendar = GregorianCalendar.getInstance();
+		calendar.set(Calendar.HOUR_OF_DAY, WORKING_DAY_END_HOUR);
+		calendar.set(Calendar.MINUTE, WORKING_DAY_END_MINUTE);
 		return calendar.getTimeInMillis();
 	}
 

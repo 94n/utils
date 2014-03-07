@@ -8,10 +8,10 @@ import testpackage.content.repetition.RandomTimeGenerator;
 public class TimeGenerator {
 
 	public static void main(String[] args) {
-		//tennis
-//		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);
-		//music
-        RandomTimeGenerator.printRandomTime(2);
+		// tennis
+		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);
+		// intelligence
+		RandomTimeGenerator.printHour();
 	}
 
 }
