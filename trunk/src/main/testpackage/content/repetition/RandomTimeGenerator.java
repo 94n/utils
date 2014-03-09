@@ -86,7 +86,7 @@ public class RandomTimeGenerator {
 				span = left;
 			}
 			final long time = getLightDayRandomTime();
-			System.out.println(span + " min at " + TimeUtils.getTimeByMillis(time));
+			System.out.println(TimeUtils.getTimeByMillis(time) + " - " +span + " min");
 			left -= span;
 		} while (left > 0);
 	}
