@@ -7,11 +7,15 @@ package testpackage;
  */
 public class PasswordGenerator {
 
-    private static final int LENGTH = 1
+    private static final int LENGTH = 8
+            ;
+
+    //1 or 2
+    private static final int STRENGTH = 1
             ;
 
     public static void main(String[] args) {
-        System.out.println(testpackage.content.repetition.StringGenerator.getName(LENGTH));
+        System.out.println(testpackage.content.repetition.StringGenerator.getPassword(LENGTH, STRENGTH));
     }
 
 }

@@ -9,7 +9,7 @@ public class TimeGenerator {
 
 	public static void main(String[] args) {
 		// tennis
-		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);
+//		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);
 		// intelligence
 		RandomTimeGenerator.printHour();
 	}
