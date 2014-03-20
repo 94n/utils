@@ -80,15 +80,18 @@ public class RandomTimeGenerator {
 
 	public static void printHour() {
 		int left = TimeUtils.MINUTES_IN_HOUR;
+		final Map<Long, Integer> schedule = new TreeMap<Long, Integer>();
 		do {
 			int span = new RandomNumber().getFromRange(1, TimeUtils.MINUTES_IN_HOUR);
 			if (span > left) {
 				span = left;
 			}
-			final long time = getLightDayRandomTime();
-			System.out.println(TimeUtils.getTimeByMillis(time) + " - " +span + " min");
+			schedule.put(getLightDayRandomTime(), span);
 			left -= span;
 		} while (left > 0);
+		for (Long time : schedule.keySet()) {
+			System.out.println(TimeUtils.getTimeByMillis(time) + " - " + schedule.get(time) + " min");
+		}
 	}
 
 	public static void printRandomTime(int number) {

@@ -2,16 +2,17 @@ package testpackage;
 
 import testpackage.content.repetition.RandomTimeGenerator;
 
+import java.util.Date;
+
 /**
  * User: mtitov Date: 10/31/11 Time: 1:48 PM
  */
 public class TimeGenerator {
 
 	public static void main(String[] args) {
-		// tennis
-//		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);
-		// intelligence
-		RandomTimeGenerator.printHour();
+        System.out.println(new Date() + ":");
+//		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);// tennis
+		RandomTimeGenerator.printHour();// intelligence
 	}
 
 }
