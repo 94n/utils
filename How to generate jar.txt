@@ -1,2 +1,2 @@
-jar cf color.jar testpackage/RandomNumberGenerator.class testpackage/content/RandomNumber.class
-Main-Class: testpackage/RandomFileListGenerator
+jar cf color.jar my/RandomNumberGenerator.class my/content/RandomNumber.class
+Main-Class: my/RandomFileListGenerator
