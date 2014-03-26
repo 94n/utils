@@ -1356,7 +1356,7 @@ public enum InterviewQuestions implements StringTypeInterface {
                 "fDesign - Modeling:Class Diagram (Advanced)",
                 "fDesign - Modeling:Component Diagram",
                 "fDesign - Modeling:Composite Structures Diagram",
-                "fDesign - Modeling:Package Diagram",
+                "fDesign - Modeling:package my.Diagram",
                 "fDesign - Modeling:Deployment Diagram",
                 "fDesign - Modeling:Object Diagram",
                 "fDesign - Modeling:UML: Behavior Diagrams",
