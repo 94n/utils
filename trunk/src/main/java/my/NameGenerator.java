@@ -5,7 +5,6 @@ package my;
  */
 public class NameGenerator {
 
-    //TODO remove digits from strength1?
     private static final int LENGTH = 1
             ;
 
