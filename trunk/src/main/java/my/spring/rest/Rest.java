@@ -1,5 +1,6 @@
 package my.spring.rest;
 
+import my.core.repetition.RandomNumber;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,9 +10,8 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @ComponentScan
 @EnableAutoConfiguration
-public class Application {
+public class Rest {
 	public static void main(String[] args) {
-		args = new String[] { "--server.port=9000" };
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(Rest.class, args);
 	}
 }

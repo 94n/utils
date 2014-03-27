@@ -1,5 +1,6 @@
 package my.spring.schedule;
 
+import my.core.repetition.RandomNumber;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
@@ -9,8 +10,9 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
  * Time: 22:58
  */
 @EnableAutoConfiguration
-public class Application {
+public class Schedule {
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(ScheduledTasks.class);
+        args = new String[] { "--server.port=" + new RandomNumber().getFromRange(0, 65535)};
+        SpringApplication.run(new Object[]{Schedule.class, ScheduledTasks.class}, args);
     }
 }
