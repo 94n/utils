@@ -57,13 +57,13 @@ public class RandomTimeGenerator {
 
 	public static void printFixedWorkingDayRandomTime(int number) {
 		for (Long time : getFixedWorkingDayRandomTime(number)) {
-			TimeUtils.printTimeByMillis(time);
+			TimeUtils.printTimeByMillis(time, "");
 		}
 	}
 
-	public static void printFixedWorkingDayRandomTimeFromNow(int number) {
+	public static void printFixedWorkingDayRandomTimeFromNow(int number, String actionName) {
 		for (Long time : getFixedWorkingDayRandomTimeFromNow(number)) {
-			TimeUtils.printTimeByMillis(time);
+			TimeUtils.printTimeByMillis(time, actionName);
 		}
 	}
 
@@ -95,13 +95,13 @@ public class RandomTimeGenerator {
 
 	public static void printRandomTime(int number) {
 		for (Long time : getRandomTime(number)) {
-			TimeUtils.printTimeByMillis(time);
+			TimeUtils.printTimeByMillis(time, "");
 		}
 	}
 
 	public static void printRandomTime(int number, long start, long end) {
 		for (Long time : getRandomTime(number, start, end)) {
-			TimeUtils.printTimeByMillis(time);
+			TimeUtils.printTimeByMillis(time, "");
 		}
 	}
 
@@ -117,12 +117,12 @@ public class RandomTimeGenerator {
 		calendar.set(Calendar.SECOND, 0);
 		calendar.add(Calendar.MINUTE, -minutesToSleep);
 		System.out.println(minutesToSleep + " minutesToSleep: ");
-		TimeUtils.printTimeByMillis(calendar.getTimeInMillis());
+		TimeUtils.printTimeByMillis(calendar.getTimeInMillis(), "");
 	}
 
 	public static void printWorkingDayRandomTime(int number) {
 		for (Long time : getWorkingDayRandomTime(number)) {
-			TimeUtils.printTimeByMillis(time);
+			TimeUtils.printTimeByMillis(time, "");
 		}
 	}
 
@@ -134,6 +134,10 @@ public class RandomTimeGenerator {
 			final Long rangeEndTime = time + length;
 			System.out.println(TimeUtils.getTimeByMillis(time) + " - " + TimeUtils.getTimeByMillis(rangeEndTime));
 		}
+	}
+
+	private static void persist(String content, String table) {
+
 	}
 
 }
