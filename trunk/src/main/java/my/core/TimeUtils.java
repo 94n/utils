@@ -113,7 +113,7 @@ public class TimeUtils {
 	public static void printAddMinutes(int minutes) {
 		final Calendar calendar = GregorianCalendar.getInstance();
 		calendar.add(Calendar.MINUTE, minutes);
-		printTimeByMillis(calendar.getTimeInMillis());
+		printTimeByMillis(calendar.getTimeInMillis(), "");
 	}
 
 	public static void printAddTime(int startHour, int startMinute, int addHour, int addMinute) {
@@ -141,17 +141,21 @@ public class TimeUtils {
 		final long dayStart = getDayStartTime();
 		final Calendar calendar = GregorianCalendar.getInstance();
 		calendar.setTimeInMillis(dayStart + halfTime);
-		printTimeByMillis(calendar.getTimeInMillis());
+		printTimeByMillis(calendar.getTimeInMillis(), "");
 	}
 
-	public static void printTimeByMillis(long millis) {
-		System.out.println(getTimeByMillis(millis));
+	public static void printTimeByMillis(long millis, String actionName) {
+		String time = getTimeByMillis(millis);
+        String previousTime = DataSource.get(actionName);
+		DataSource.persist(time, actionName);
+		System.out.println(time);
+		System.out.println("previous: " + previousTime);
 	}
 
 	public static void printTimeDiff(int startHour, int startMinute, int endHour, int endMinute) {
 		final Date start = getDateByTime(startHour, startMinute);
 		final Date end = getDateByTime(endHour, endMinute);
-		printTimeByMillis(end.getTime() - start.getTime() - SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * 2);
+		printTimeByMillis(end.getTime() - start.getTime() - SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * 2, "");
 	}
 
 	/**
@@ -184,7 +188,7 @@ public class TimeUtils {
 	}
 
 	private static void printTimeByDate(Date date) {
-		printTimeByMillis(date.getTime());
+		printTimeByMillis(date.getTime(), "");
 	}
 
 }

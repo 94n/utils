@@ -9,10 +9,12 @@ import java.util.Date;
  */
 public class TimeGenerator {
 
+	private static final String	TENNIS	= "tennis";
+
 	public static void main(String[] args) {
-        System.out.println(new Date() + ":");
-//		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1);// tennis
-		RandomTimeGenerator.printHour();// intelligence
+		System.out.println(new Date() + ":");
+		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1, TENNIS);
+//		RandomTimeGenerator.printHour();// intelligence
 	}
 
 }
