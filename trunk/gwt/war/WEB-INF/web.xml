@@ -6,6 +6,14 @@
            version="2.5">
 
     <servlet>
+        <servlet-name>com.mySampleApplication.Login LoginService</servlet-name>
+        <servlet-class>com.mySampleApplication.server.LoginServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>com.mySampleApplication.Login LoginService</servlet-name>
+        <url-pattern>/MySampleApplication/LoginService</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>com.mySampleApplication.MySampleApplication MySampleApplicationService</servlet-name>
         <servlet-class>com.mySampleApplication.server.MySampleApplicationServiceImpl</servlet-class>
     </servlet>
@@ -13,4 +21,5 @@
         <servlet-name>com.mySampleApplication.MySampleApplication MySampleApplicationService</servlet-name>
         <url-pattern>/MySampleApplication/MySampleApplicationService</url-pattern>
     </servlet-mapping>
+
 </web-app>
