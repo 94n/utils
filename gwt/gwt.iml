@@ -3,7 +3,9 @@
   <component name="FacetManager">
     <facet type="gwt" name="GWT">
       <configuration>
-        <setting name="gwtSdkUrl" value="file://$MODULE_DIR$/../Software/gwt-2.6.0" />
+        <setting name="compilerMaxHeapSize" value="1024" />
+        <setting name="gwtScriptOutputStyle" value="DETAILED" />
+        <setting name="gwtSdkUrl" value="file://D:/gwt-2.6.0" />
         <setting name="webFacet" value="Web" />
       </configuration>
     </facet>
@@ -26,7 +28,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="gwt-user" level="project" />
+    <orderEntry type="library" name="gwt-user (2)" level="project" />
   </component>
 </module>
 
