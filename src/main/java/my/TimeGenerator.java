@@ -13,8 +13,8 @@ public class TimeGenerator {
 
 	public static void main(String[] args) {
 		System.out.println(new Date() + ":");
-		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1, TENNIS);
-//		RandomTimeGenerator.printHour();// intelligence
+//		RandomTimeGenerator.printFixedWorkingDayRandomTimeFromNow(1, TENNIS);
+		RandomTimeGenerator.printHour();// intelligence
 	}
 
 }
