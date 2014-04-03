@@ -146,10 +146,7 @@ public class TimeUtils {
 
 	public static void printTimeByMillis(long millis, String actionName) {
 		String time = getTimeByMillis(millis);
-        String previousTime = DataSource.get(actionName);
-		DataSource.persist(time, actionName);
 		System.out.println(time);
-		System.out.println("previous: " + previousTime);
 	}
 
 	public static void printTimeDiff(int startHour, int startMinute, int endHour, int endMinute) {
