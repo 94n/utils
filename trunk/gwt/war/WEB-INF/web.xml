@@ -9,16 +9,29 @@
         <servlet-name>com.mySampleApplication.Login LoginService</servlet-name>
         <servlet-class>com.mySampleApplication.server.LoginServiceImpl</servlet-class>
     </servlet>
+
+    <!--<servlet>-->
+        <!--<servlet-name>com.mySampleApplication.MySampleApplication MySampleApplicationService</servlet-name>-->
+        <!--<servlet-class>com.mySampleApplication.server.MySampleApplicationServiceImpl</servlet-class>-->
+    <!--</servlet>-->
+
+    <servlet>
+        <servlet-name>GwtHostingServlet</servlet-name>
+        <servlet-class>com.mySampleApplication.server.GwtHostingServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>com.mySampleApplication.Login LoginService</servlet-name>
         <url-pattern>/MySampleApplication/LoginService</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>com.mySampleApplication.MySampleApplication MySampleApplicationService</servlet-name>
-        <servlet-class>com.mySampleApplication.server.MySampleApplicationServiceImpl</servlet-class>
-    </servlet>
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>com.mySampleApplication.MySampleApplication MySampleApplicationService</servlet-name>-->
+        <!--<url-pattern>/MySampleApplication/MySampleApplicationService</url-pattern>-->
+    <!--</servlet-mapping>-->
+
     <servlet-mapping>
-        <servlet-name>com.mySampleApplication.MySampleApplication MySampleApplicationService</servlet-name>
+        <servlet-name>GwtHostingServlet</servlet-name>
         <url-pattern>/MySampleApplication/MySampleApplicationService</url-pattern>
     </servlet-mapping>
 

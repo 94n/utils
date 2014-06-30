@@ -141,25 +141,29 @@ public enum StringType implements StringTypeInterface {
                 "Корней Чуковский",
                 "На что похожи буквы",
                 "Грузовичок",
-                "Конёк-горбунок"
+                "Конёк-горбунок",
+                "Букварь",
+                "Маяковский",
+                "Аленький цветочек",
+                "Читаем по слогам"
         };
 
         public static String[] englishBooks = {
                 "Aline-caterpillar",
                 "The Cat and The Mouse",
-                "Folk tales",
-                "The brave little airplane",
-                "The little house",
-                "turnip",
-                "the 3 little pigs",
-                "Bob the puppy",
-                "Aline-butterfly",
-                "The magic porridge pot",
-                "Make detectives",
-                "Sister fox and brother wolf",
-                "The bun",
-                "Mary and jack",
-                "Mary"
+//                "Folk tales",
+//                "The brave little airplane",
+//                "The little house",
+//                "turnip",
+//                "the 3 little pigs",
+//                "Bob the puppy",
+//                "Aline-butterfly",
+//                "The magic porridge pot",
+//                "Make detectives",
+//                "Sister fox and brother wolf",
+//                "The bun",
+//                "Mary and jack",
+//                "Mary"
         };
 
         public static String[] logicBooks = {
