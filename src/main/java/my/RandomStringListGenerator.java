@@ -44,15 +44,15 @@ public class RandomStringListGenerator {
         for (int i = 0; i < count; i++) {
             System.out.println((i + 1) + ")");
             System.out.println("перехват");
-            System.out.println(balanceProgram.get(i));
+//            System.out.println(balanceProgram.get(i));
             System.out.println("карточки");
             System.out.println("счет");
             System.out.println(zaytsev.get(i) + " +");
             System.out.println(simpleGames.get(i));
             System.out.println(russianBooks.get(i) + " / " + englishBooks.get(i));
             final String logicBook = logicBooks.get(i);
-            final int logicPage = new RandomNumber().getFromRange(1, Integer.parseInt(logicBook.substring(logicBook.indexOf(',') + 1)));
-            System.out.println(logicBooks.get(i) + "." + logicPage);
+//            final int logicPage = new RandomNumber().getFromRange(1, Integer.parseInt(logicBook.substring(logicBook.indexOf(',') + 1)));
+//            System.out.println(logicBooks.get(i) + "." + logicPage);
         }
     }
 

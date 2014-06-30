@@ -10,6 +10,8 @@
 
 
     <!-- Specify the app servlets.                   -->
+    <servlet path='/*' class='com.mySampleApplication.server.GwtHostingServlet'/>
+    <servlet path='/LoginService' class='com.mySampleApplication.server.LoginServiceImpl'/>
     <servlet path='/MySampleApplicationService' class='com.mySampleApplication.server.MySampleApplicationServiceImpl'/>
 
 </module>

@@ -10,7 +10,7 @@ import my.core.repetition.RandomNumber;
 public class RandomNumberGenerator {
 
     public static void main(String[] args) {
-        System.out.println(new RandomNumber().getFromRange(1, 9));
+        System.out.println(new RandomNumber().getFromRange(1, 10));
     }
 
 }
