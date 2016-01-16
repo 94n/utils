@@ -1,2 +1,0 @@
-jar cf color.jar my/RandomNumberGenerator.class my/content/RandomNumber.class
-Main-Class: my/RandomFileListGenerator
