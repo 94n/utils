@@ -7,7 +7,7 @@ package my;
  */
 public class PasswordGenerator {
 
-    private static final int LENGTH = 6
+    private static final int LENGTH = 1
             ;
 
     //1 or 2

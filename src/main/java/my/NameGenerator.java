@@ -5,7 +5,7 @@ package my;
  */
 public class NameGenerator {
 
-    private static final int LENGTH = 5
+    private static final int LENGTH = 1
             ;
 
     public static void main(String[] args) {
