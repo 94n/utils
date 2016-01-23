@@ -84,4 +84,29 @@ public class DateUtilsLauncher {
 		System.out.println(TimeUtils.addDate(calendar.getTime(), -45));
 	}
 
+	private static void checkSeed(int daysFrom30IncludingBirthday) {
+		final Calendar start = GregorianCalendar.getInstance();
+		start.set(Calendar.YEAR, 2014);
+		start.set(Calendar.MONTH, 3);
+		start.set(Calendar.DAY_OF_MONTH, 11);
+		System.out.println(TimeUtils.addDate(start.getTime(), daysFrom30IncludingBirthday));
+	}
+
+	private static void print2WeekVacationStartDates() {
+		final Calendar workStart = GregorianCalendar.getInstance();
+		workStart.set(Calendar.DAY_OF_MONTH, 12);
+		workStart.set(Calendar.MONTH, Calendar.APRIL);
+		workStart.set(Calendar.YEAR, 2014);
+		Date vacationStartDate = workStart.getTime();
+		int numberOfVacationsToCalculate = 4;
+		double desiredVacationDays = 14;
+		double vacationDaysPerYear = 24;
+		int workDaysTillVacation = new Long(Math.round(desiredVacationDays / vacationDaysPerYear * 365.25)).intValue();
+		for (int i = 0; i < numberOfVacationsToCalculate; i++) {
+			vacationStartDate = TimeUtils.addDate(vacationStartDate, workDaysTillVacation);
+			System.out.println(vacationStartDate);
+		}
+
+	}
+
 }

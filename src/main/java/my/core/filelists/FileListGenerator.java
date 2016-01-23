@@ -14,10 +14,18 @@ import java.util.List;
  * Time: 7:40 PM
  */
 public class FileListGenerator {
+	
+	public static void generateFlatList(String path) {
+        try {
+            generateFile(searchFiles(path, true), false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void generateRandomList(String path) {
         try {
-            generateFile(searchFiles(path));
+            generateFile(searchFiles(path, false), true);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -27,9 +35,9 @@ public class FileListGenerator {
         try {
             List<File> files;
             if (path != null) {
-                files = searchFiles(path);
+                files = searchFiles(path, false);
             } else {
-                files = searchFiles(".");
+                files = searchFiles(".", false);
             }
             Collections.shuffle(files);
             System.out.println(files.size() + " files found:");
@@ -47,9 +55,11 @@ public class FileListGenerator {
         }
     }
 
-    private static void generateFile(List<File> files){
+    private static void generateFile(List<File> files, boolean random){
         try {
-            Collections.shuffle(files);
+            if(random) {
+                Collections.shuffle(files);
+            }
             System.out.println(files.size() + " files found:");
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             for (File file : files) {
@@ -65,26 +75,32 @@ public class FileListGenerator {
         }
     }
 
-    public static List<File> searchFiles(String path) throws Exception {
+    public static List<File> searchFiles(String path, boolean flat) throws Exception {
         if (path == null) {
             path = ".";
         }
         List<File> result = new ArrayList<File>();
-        File file = new File(path);
+        File folder = new File(path);
 
-        if (file.isFile()) {
-            result.add(file);
+        if (folder.isFile()) {
+            result.add(folder);
         } else {
-            File[] list = file.listFiles();
+            File[] list = folder.listFiles();
             if (list != null) {
-                for (File aList : list) {
-                    List<File> resTmp = searchFiles(aList.getAbsolutePath());
-                    for (File aResTmp : resTmp) {
-                        result.add(aResTmp);
+                if(flat) {
+                    for (File file : list) {
+                        result.add(file);
+                    }
+                } else {
+                    for (File aList : list) {
+                        List<File> resTmp = searchFiles(aList.getAbsolutePath(), false);
+                        for (File aResTmp : resTmp) {
+                            result.add(aResTmp);
+                        }
                     }
                 }
             } else {
-                System.out.println("I/O Errors in " + file.getAbsolutePath());
+                System.out.println("I/O Errors in " + folder.getAbsolutePath());
             }
         }
         return result;
