@@ -12,7 +12,7 @@ public class MavenInstallJarCommandListGenerator {
 
     public static void printMavenDependenciesFromJarDirectory() {
         try {
-            List<File> allFilesInDirectory = FileListGenerator.searchFiles("D:\\AgileAssets\\ams_dev\\trunk\\WEB-INF\\lib");
+            List<File> allFilesInDirectory = FileListGenerator.searchFiles("D:\\AgileAssets\\ams_dev\\trunk\\WEB-INF\\lib", true);
             for (File file : allFilesInDirectory) {
                 final String name = file.getName();
                 final int lastIndexOfDot = name.lastIndexOf('.');
@@ -31,7 +31,7 @@ public class MavenInstallJarCommandListGenerator {
 
     public static void printMavenInstallJarCommandList() {
         try {
-            List<File> allFilesInDirectory = FileListGenerator.searchFiles("D:\\AgileAssets\\ams_dev\\trunk\\WEB-INF\\lib");
+            List<File> allFilesInDirectory = FileListGenerator.searchFiles("D:\\AgileAssets\\ams_dev\\trunk\\WEB-INF\\lib", true);
             for (File file : allFilesInDirectory) {
                 final String name = file.getName();
                 final int lastIndexOfDot = name.lastIndexOf('.');
