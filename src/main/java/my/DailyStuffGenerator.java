@@ -1,9 +1,6 @@
 package my;
 
 import my.core.TimeUtils;
-import my.core.MenuGenerator;
-import my.core.repetition.RandomNumber;
-import my.core.repetition.RandomTimeGenerator;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -16,74 +13,33 @@ import java.util.GregorianCalendar;
  */
 public class DailyStuffGenerator {
 
-    private static final int TENNISS_MAX_COUNT = 2;//2.1
-
     public static void main(String[] args) {
-        generateRandomTennisTime();
-        System.out.println();
-        DateUtilsLauncher.halfTimeOfDay(new Date());//02.33
+        printPiDigitIndex();
+        printSportTimeCountingSecondPerDaySinceThirty();
     }
 
-    private static void generateMenu() {
-        System.out.println();
-        System.out.println("Menu:");
-        for (String dish : MenuGenerator.getMenu()) {
-            System.out.println(dish);
-        }
+    private static void printSportTimeCountingSecondPerDaySinceThirty() {
+        System.out.println("Sport time: " + TimeUtils.getSportTimeCountingSecondPerDaySinceThirty().toString());
     }
 
-    private static void generateMusicTime() {
-        System.out.println();
-        System.out.println("Music: ");
-        RandomTimeGenerator.printWorkingDayRandomTimeRange(1);
+    private static void printPiDigitIndex() {
+        System.out.println("pi digit index: " + TimeUtils.getDaySinceThirty());
     }
 
-    private static void generateRandomTennisTime() {
-        System.out.println();
-        System.out.println("Tennis: ");
-        long start = new Date().getTime();
-        final long dayEnd = TimeUtils.getWorkingDayEndTime() - 15 * TimeUtils.MINUTE;//Теннис за 15 минут до конца рабочего дня
-        final int count = new RandomNumber().getFromRange(1, TENNISS_MAX_COUNT);
-        for (int i = 0; i < count; i++) {
-            RandomTimeGenerator.printRandomTime(1, start, dayEnd);
-//            StringListGenerator.shufflePrintStrings(StringType.TENNIS_PARTNERS, 1);
-        }
-    }
-
-    private static void generateTennisTime() {
-        System.out.println();
-        System.out.println("Tennis: ");
-
-        final long dayEnd = TimeUtils.getWorkingDayEndTime() - 15 * TimeUtils.MINUTE;//Теннис за 15 минут до конца рабочего дня
-
-        final Calendar calendar = GregorianCalendar.getInstance();
-        calendar.add(Calendar.HOUR_OF_DAY, 2);
-        long start = calendar.getTimeInMillis();
-
-        calendar.add(Calendar.HOUR_OF_DAY, 1);
-        long end = calendar.getTimeInMillis();
-
-        if (end < dayEnd) {
-            RandomTimeGenerator.printRandomTime(1, start, end);
-        } else {
-            RandomTimeGenerator.printRandomTime(1, start, dayEnd);
-        }
-//        StringListGenerator.shufflePrintStrings(StringType.TENNIS_PARTNERS, 1);
-
-        final int period = 3;
-        while (end < dayEnd) {
-            start = end;
-            calendar.add(Calendar.HOUR_OF_DAY, period);
-            end = calendar.getTimeInMillis();
-
-            if (start < dayEnd) {
-                if (end < dayEnd) {
-                    RandomTimeGenerator.printRandomTime(1, start, end);
-                } else {
-                    RandomTimeGenerator.printRandomTime(1, start, dayEnd);
-                }
-//                StringListGenerator.shufflePrintStrings(StringType.TENNIS_PARTNERS, 1);
-            }
+    //TODO refactor to java 8 dates before using
+    private static void print2WeekVacationStartDates() {
+        final Calendar workStart = GregorianCalendar.getInstance();
+        workStart.set(Calendar.DAY_OF_MONTH, 12);
+        workStart.set(Calendar.MONTH, Calendar.APRIL);
+        workStart.set(Calendar.YEAR, 2014);
+        Date vacationStartDate = workStart.getTime();
+        int numberOfVacationsToCalculate = 4;
+        double desiredVacationDays = 14;
+        double vacationDaysPerYear = 24;
+        int workDaysTillVacation = new Long(Math.round(desiredVacationDays / vacationDaysPerYear * 365.25)).intValue();
+        for (int i = 0; i < numberOfVacationsToCalculate; i++) {
+            vacationStartDate = null;//TimeUtils.addDate(vacationStartDate, workDaysTillVacation);
+            System.out.println(vacationStartDate);
         }
     }
 
