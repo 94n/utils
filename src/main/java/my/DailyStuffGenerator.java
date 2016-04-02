@@ -2,9 +2,14 @@ package my;
 
 import my.core.TimeUtils;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 /**
  * User: mtitov
@@ -14,16 +19,25 @@ import java.util.GregorianCalendar;
 public class DailyStuffGenerator {
 
     public static void main(String[] args) {
+        printPiTimePoints();
         printPiDigitIndex();
         printSportTimeCountingSecondPerDaySinceThirty();
     }
 
-    private static void printSportTimeCountingSecondPerDaySinceThirty() {
-        System.out.println("Sport time: " + TimeUtils.getSportTimeCountingSecondPerDaySinceThirty().toString());
+    private static void printPiTimePoints() {
+        String seed = "314159265358";
+        List<LocalDateTime> timePoints = TimeUtils.getTimePoints(seed, LocalDate.of(2014, Month.APRIL, 12));
+        for (LocalDateTime timePoint : timePoints) {
+            System.out.println(timePoint.format(DateTimeFormatter.ofPattern("d MMMM yyyy H:m")));
+        }
     }
 
     private static void printPiDigitIndex() {
-        System.out.println("pi digit index: " + TimeUtils.getDaySinceThirty());
+        System.out.println("Pi digit index: " + TimeUtils.getDaySinceThirty());
+    }
+
+    private static void printSportTimeCountingSecondPerDaySinceThirty() {
+        System.out.println("Sport time: " + TimeUtils.getSportTimeCountingSecondPerDaySinceThirty().toString());
     }
 
     //TODO refactor to java 8 dates before using
