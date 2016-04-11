@@ -19,9 +19,19 @@ import java.util.List;
 public class DailyStuffGenerator {
 
     public static void main(String[] args) {
-        printPiTimePoints();
-        printPiDigitIndex();
-        printSportTimeCountingSecondPerDaySinceThirty();
+        //generateName(6);
+        generatePassword(8, 2);
+        //printPiTimePoints();
+        //printPiDigitIndex();
+        //printSportTimeCountingSecondPerDaySinceThirty();
+    }
+
+    private static void generatePassword(int length, int type) {
+        System.out.println(my.core.repetition.StringGenerator.getPassword(length, type));
+    }
+
+    private static void generateName(int length) {
+        System.out.println(my.core.repetition.StringGenerator.getName(length));
     }
 
     private static void printPiTimePoints() {
