@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -19,11 +20,22 @@ import java.util.List;
 public class DailyStuffGenerator {
 
     public static void main(String[] args) {
-        //generateName(6);
-        generatePassword(8, 2);
+        printInclusiveDateDifferenceInDays(LocalDate.of(2010, Month.DECEMBER, 16), LocalDate.now());
+        //printDateSince(LocalDate.of(2010, Month.DECEMBER, 16), 999);
+        //generateName(8);
+        //generatePassword(8, 2);
         //printPiTimePoints();
         //printPiDigitIndex();
         //printSportTimeCountingSecondPerDaySinceThirty();
+    }
+
+    //for 12.4.2014 and 13.4.2014 it prints 2
+    private static void printInclusiveDateDifferenceInDays(LocalDate start, LocalDate end) {
+        System.out.println(ChronoUnit.DAYS.between(start, end) + 1);
+    }
+
+    private static void printDateSince(LocalDate start, int daysToAdd) {
+        System.out.println(start.plusDays(daysToAdd));
     }
 
     private static void generatePassword(int length, int type) {
