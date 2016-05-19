@@ -20,16 +20,21 @@ import java.util.List;
 public class DailyStuffGenerator {
 
     public static void main(String[] args) {
-        printInclusiveDateDifferenceInDays(LocalDate.of(2010, Month.DECEMBER, 16), LocalDate.now());
+        //addDays(LocalDate.of(2016, Month.MAY, 20), 194);
+        //printInclusiveDateDifferenceInDays(LocalDate.now(), LocalDate.of(2016, Month.NOVEMBER, 29));
         //printDateSince(LocalDate.of(2010, Month.DECEMBER, 16), 999);
-        //generateName(8);
-        //generatePassword(8, 2);
+        //generateName(1);
+        generatePassword(1, 1);
         //printPiTimePoints();
         //printPiDigitIndex();
         //printSportTimeCountingSecondPerDaySinceThirty();
     }
 
-    //for 12.4.2014 and 13.4.2014 it prints 2
+    private static void addDays(LocalDate start, int days) {
+        System.out.println(start.plusDays(days));
+    }
+
+    //for (12.4.2014, 13.4.2014) it prints 2
     private static void printInclusiveDateDifferenceInDays(LocalDate start, LocalDate end) {
         System.out.println(ChronoUnit.DAYS.between(start, end) + 1);
     }
@@ -54,6 +59,7 @@ public class DailyStuffGenerator {
         }
     }
 
+    //STARTING FROM 1
     private static void printPiDigitIndex() {
         System.out.println("Pi digit index: " + TimeUtils.getDaySinceThirty());
     }

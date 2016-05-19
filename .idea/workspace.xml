@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/my/NameGenerator.java" line="15" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b6bc5b7-c7ed-4832-862a-748a5540d564" name="Default" comment="generatePassword">
+    <list default="true" id="7b6bc5b7-c7ed-4832-862a-748a5540d564" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/my/DailyStuffGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/my/DailyStuffGenerator.java" />
     </list>
@@ -32,41 +32,11 @@
       <file leaf-file-name="DailyStuffGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/DailyStuffGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="242">
+              <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/Integer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="931">
-              <caret line="764" column="26" selection-start-line="764" selection-start-column="26" selection-end-line="764" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocalDate.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/time/LocalDate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="1548" column="20" selection-start-line="1548" selection-start-column="20" selection-end-line="1548" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Month.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/time/Month.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="105" column="17" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -90,8 +60,8 @@
         <option value="$PROJECT_DIR$/src/main/java/my/NameGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/DateUtilsLauncher.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/core/repetition/RandomTimeGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/core/TimeUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/core/repetition/StringGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/core/TimeUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/DailyStuffGenerator.java" />
       </list>
     </option>
@@ -132,8 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,13 +268,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="filereader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="filelists" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -849,7 +845,12 @@
       <workItem from="1460573900173" duration="246000" />
       <workItem from="1461777113188" duration="1307000" />
       <workItem from="1462015319616" duration="2000" />
-      <workItem from="1462015326467" duration="1006000" />
+      <workItem from="1462015326467" duration="1723000" />
+      <workItem from="1462213280858" duration="611000" />
+      <workItem from="1462804399591" duration="655000" />
+      <workItem from="1462987158719" duration="811000" />
+      <workItem from="1463546805044" duration="169000" />
+      <workItem from="1463683668112" duration="880000" />
     </task>
     <task id="LOCAL-00001" summary="sd">
       <created>1453583328536</created>
@@ -900,11 +901,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460356636011</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="printInclusiveDateDifferenceInDays, printDateSince">
+      <created>1462016368996</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1462016368996</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33738000" />
+    <option name="totallyTimeSpent" value="37581000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -917,7 +925,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1134" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24451098" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -926,7 +934,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2245509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2235529" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28443113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -963,7 +971,8 @@
     <MESSAGE value="printPiDigitIndex();&#10;        printSportTimeCountingSecondPerDaySinceThirty();" />
     <MESSAGE value="printPiTimePoints" />
     <MESSAGE value="generatePassword" />
-    <option name="LAST_COMMIT_MESSAGE" value="generatePassword" />
+    <MESSAGE value="printInclusiveDateDifferenceInDays, printDateSince" />
+    <option name="LAST_COMMIT_MESSAGE" value="printInclusiveDateDifferenceInDays, printDateSince" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1233,7 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1452">
           <caret line="69" column="60" selection-start-line="69" selection-start-column="60" selection-end-line="69" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,16 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="1505" column="19" selection-start-line="1505" selection-start-column="19" selection-end-line="1505" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/core/TimeUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="50" column="97" selection-start-line="50" selection-start-column="97" selection-end-line="50" selection-end-column="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1280,7 +1278,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
+        <state relative-caret-position="16302">
           <caret line="764" column="26" selection-start-line="764" selection-start-column="26" selection-end-line="764" selection-end-column="26" />
           <folding />
         </state>
@@ -1288,16 +1286,24 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/time/LocalDate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
+        <state relative-caret-position="31900">
           <caret line="1548" column="20" selection-start-line="1548" selection-start-column="20" selection-end-line="1548" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/core/TimeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="24" column="79" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/DailyStuffGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="242">
+          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
