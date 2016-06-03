@@ -24,9 +24,9 @@ public class DailyStuffGenerator {
         //printInclusiveDateDifferenceInDays(LocalDate.now(), LocalDate.of(2016, Month.NOVEMBER, 29));
         //printDateSince(LocalDate.of(2010, Month.DECEMBER, 16), 999);
         //generateName(1);
-        generatePassword(1, 1);
+        //generatePassword(1, 1);
         //printPiTimePoints();
-        //printPiDigitIndex();
+        printOneBasedPiDigitIndex();
         //printSportTimeCountingSecondPerDaySinceThirty();
     }
 
@@ -60,7 +60,7 @@ public class DailyStuffGenerator {
     }
 
     //STARTING FROM 1
-    private static void printPiDigitIndex() {
+    private static void printOneBasedPiDigitIndex() {
         System.out.println("Pi digit index: " + TimeUtils.getDaySinceThirty());
     }
 
