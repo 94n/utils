@@ -9,7 +9,7 @@ public class NameGenerator {
             ;
 
     public static void main(String[] args) {
-        System.out.println(my.core.repetition.StringGenerator.getName(LENGTH));
+        System.out.println(my.core.repetition.StringGenerator.generateString(LENGTH, 1));
     }
 
 }

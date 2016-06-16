@@ -15,7 +15,7 @@ public class PasswordGenerator {
             ;
 
     public static void main(String[] args) {
-        System.out.println(my.core.repetition.StringGenerator.getPassword(LENGTH, STRENGTH));
+        System.out.println(my.core.repetition.StringGenerator.generateString(LENGTH, STRENGTH));
     }
 
 }

@@ -23,10 +23,10 @@ public class DailyStuffGenerator {
         //addDays(LocalDate.of(2016, Month.MAY, 20), 194);
         //printInclusiveDateDifferenceInDays(LocalDate.now(), LocalDate.of(2016, Month.NOVEMBER, 29));
         //printDateSince(LocalDate.of(2010, Month.DECEMBER, 16), 999);
-        //generateName(1);
-        //generatePassword(1, 1);
+        //generateString(1);
+        generatePassword(8, 4);
         //printPiTimePoints();
-        printOneBasedPiDigitIndex();
+        //printOneBasedPiDigitIndex();
         //printSportTimeCountingSecondPerDaySinceThirty();
     }
 
@@ -44,11 +44,11 @@ public class DailyStuffGenerator {
     }
 
     private static void generatePassword(int length, int type) {
-        System.out.println(my.core.repetition.StringGenerator.getPassword(length, type));
+        System.out.println(my.core.repetition.StringGenerator.generateString(length, type));
     }
 
-    private static void generateName(int length) {
-        System.out.println(my.core.repetition.StringGenerator.getName(length));
+    private static void generateName(int length, int type) {
+        System.out.println(my.core.repetition.StringGenerator.generateString(length, type));
     }
 
     private static void printPiTimePoints() {
