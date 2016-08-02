@@ -2,6 +2,7 @@ package my.core.repetition;
 
 import my.core.repetition.core.RandomObjectListGenerator;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -43,17 +44,27 @@ public class StringGenerator {
             'Y', 'Z', '[', '\\', ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
             'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~'};
 
+    StringChecker digitChecker = (s) -> !Collections.disjoint(list1, list2);;
+
     public static String generateString(int length, int type) {
+        return generateString(length, type, false);
+    }
+
+    public static String generateString(int length, int type, boolean includeAllKinds) {
+        String gen = null;
+        Character[] genBase = null;
         if (type == 1) {
-            return getString(length, CHARACTERS_STRENGTH_1);
+            genBase = CHARACTERS_STRENGTH_1;
         } else if (type == 2) {
-            return getString(length, CHARACTERS_STRENGTH_2);
+            genBase = CHARACTERS_STRENGTH_2;
         } else if (type == 3) {
-            return getString(length, CHARACTERS_STRENGTH_3);
+            genBase = CHARACTERS_STRENGTH_3;
         } else if (type == 4) {
-            return getString(length, CHARACTERS_STRENGTH_4);
+            genBase = CHARACTERS_STRENGTH_4;
         }
-        return null;
+        gen = getString(length, genBase);
+        while(includeAllKinds && !)
+        return gen;
     }
 
     public static String getString(int length, Character[] characters) {
