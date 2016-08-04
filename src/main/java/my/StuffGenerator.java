@@ -38,6 +38,10 @@ public interface StuffGenerator {
         System.out.println(my.core.repetition.StringGenerator.generateString(length, type));
     }
 
+    static void generatePassword(int length, int type, boolean includeAllSymbolTypes) {
+        System.out.println(my.core.repetition.StringGenerator.generateString(length, type, includeAllSymbolTypes));
+    }
+
     static void generateName(int length, int type) {
         System.out.println(my.core.repetition.StringGenerator.generateString(length, type));
     }

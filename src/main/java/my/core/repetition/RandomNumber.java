@@ -16,8 +16,8 @@ public class RandomNumber {
         return number;
     }
 
-    public int[] getFromRange(int numberOfNumbers, int min, int max) {
-        final int[] numbers = new int[numberOfNumbers];
+    public Integer[] getFromRange(int numberOfNumbers, int min, int max) {
+        final Integer[] numbers = new Integer[numberOfNumbers];
         for (int i = 0; i < numberOfNumbers; i++) {
             numbers[i] = getFromRange(min, max);
         }

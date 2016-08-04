@@ -2,7 +2,8 @@ package my.core.repetition;
 
 import my.core.repetition.core.RandomObjectListGenerator;
 
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -44,35 +45,40 @@ public class StringGenerator {
             'Y', 'Z', '[', '\\', ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
             'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~'};
 
-    StringChecker digitChecker = (s) -> !Collections.disjoint(list1, list2);;
+    private static StringChecker symbolChecker = (s, lowerSet, higherSet) -> {
+        List<Character> items = new ArrayList<>(Arrays.asList(higherSet));
+        items.removeAll(Arrays.asList(lowerSet));
+        for (Character symbol : items) {
+            if (s.contains(symbol.toString())) {
+                return true;
+            }
+        }
+        return false;
+    };
 
     public static String generateString(int length, int type) {
         return generateString(length, type, false);
     }
 
     public static String generateString(int length, int type, boolean includeAllKinds) {
-        String gen = null;
-        Character[] genBase = null;
-        if (type == 1) {
-            genBase = CHARACTERS_STRENGTH_1;
-        } else if (type == 2) {
-            genBase = CHARACTERS_STRENGTH_2;
-        } else if (type == 3) {
-            genBase = CHARACTERS_STRENGTH_3;
-        } else if (type == 4) {
-            genBase = CHARACTERS_STRENGTH_4;
+        Character[][] symbolSets = {CHARACTERS_STRENGTH_1, CHARACTERS_STRENGTH_2, CHARACTERS_STRENGTH_3, CHARACTERS_STRENGTH_4};
+        Character[] genBase = symbolSets[type - 1];
+        String gen = getString(length, genBase);
+        if (includeAllKinds && type > 1) {
+            while (!symbolChecker.check(gen, symbolSets[type - 2], genBase)) {
+                System.out.println(gen);
+                gen = getString(length, genBase);
+            }
+        } else {
+            return gen;
         }
-        gen = getString(length, genBase);
-        while(includeAllKinds && !)
         return gen;
     }
 
     public static String getString(int length, Character[] characters) {
         final StringBuilder stringBuilder = new StringBuilder();
         final List<Character> randomCharacterList = RandomObjectListGenerator.generateRandomList(characters, length);
-        for (Character character : randomCharacterList) {
-            stringBuilder.append(character);
-        }
+        randomCharacterList.forEach(stringBuilder::append);
         return stringBuilder.toString();
     }
 
