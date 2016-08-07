@@ -11,6 +11,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * User: mtitov
@@ -19,48 +20,52 @@ import java.util.List;
  */
 public interface StuffGenerator {
 
+    Consumer<Object> p = System.out::println;
+
     static void addDays(LocalDate start, int days) {
-        System.out.println(start.plusDays(days));
+        p.accept(start.plusDays(days));
     }
 
     //8 Interface improvements
+    //Additionally, more importantly, interfaces can now define default methods.
     //for (12.4.2014, 13.4.2014) it prints 2
     default void printInclusiveDateDifferenceInDays(LocalDate start, LocalDate end) {
-        System.out.println(ChronoUnit.DAYS.between(start, end) + 1);
+        p.accept(ChronoUnit.DAYS.between(start, end) + 1);
     }
 
     static void printDateSince(LocalDate start, int daysToAdd) {
-        System.out.println(start.plusDays(daysToAdd));
+        p.accept(start.plusDays(daysToAdd));
     }
 
     //8 Interface improvements
+    //Interfaces can now define static methods.
     static void generatePassword(int length, int type) {
-        System.out.println(my.core.repetition.StringGenerator.generateString(length, type));
+        p.accept(my.core.repetition.StringGenerator.generateString(length, type));
     }
 
     static void generatePassword(int length, int type, boolean includeAllSymbolTypes) {
-        System.out.println(my.core.repetition.StringGenerator.generateString(length, type, includeAllSymbolTypes));
+        p.accept(my.core.repetition.StringGenerator.generateString(length, type, includeAllSymbolTypes));
     }
 
     static void generateName(int length, int type) {
-        System.out.println(my.core.repetition.StringGenerator.generateString(length, type));
+        p.accept(my.core.repetition.StringGenerator.generateString(length, type));
     }
 
     static void printPiTimePoints() {
         String seed = "314159265358";
         List<LocalDateTime> timePoints = TimeUtils.getTimePoints(seed, LocalDate.of(2014, Month.APRIL, 12));
         for (LocalDateTime timePoint : timePoints) {
-            System.out.println(timePoint.format(DateTimeFormatter.ofPattern("d MMMM yyyy H:m")));
+            p.accept(timePoint.format(DateTimeFormatter.ofPattern("d MMMM yyyy H:m")));
         }
     }
 
     //STARTING FROM 1
     static void printOneBasedPiDigitIndex() {
-        System.out.println("Pi digit index: " + TimeUtils.getDaySinceThirty());
+        p.accept("Pi digit index: " + TimeUtils.getDaySinceThirty());
     }
 
     static void printSportTimeCountingSecondPerDaySinceThirty() {
-        System.out.println("Sport time: " + TimeUtils.getSportTimeCountingSecondPerDaySinceThirty().toString());
+        p.accept("Sport time: " + TimeUtils.getSportTimeCountingSecondPerDaySinceThirty().toString());
     }
 
     //TODO refactor to java 8 dates before using
@@ -76,7 +81,7 @@ public interface StuffGenerator {
         int workDaysTillVacation = new Long(Math.round(desiredVacationDays / vacationDaysPerYear * 365.25)).intValue();
         for (int i = 0; i < numberOfVacationsToCalculate; i++) {
             vacationStartDate = null;//TimeUtils.addDate(vacationStartDate, workDaysTillVacation);
-            System.out.println(vacationStartDate);
+            p.accept(vacationStartDate);
         }
     }
 
