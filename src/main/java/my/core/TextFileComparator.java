@@ -1,6 +1,7 @@
 package my.core;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
@@ -14,11 +15,60 @@ import java.util.*;
 public class TextFileComparator {
 
     public static void main(String[] args) {
-        final List<String> filePaths = new ArrayList<String>();
+        /*final List<String> filePaths = new ArrayList<String>();
         filePaths.add("F:\\Java\\TestProject\\2010.txt");
         filePaths.add("F:\\Java\\TestProject\\2011.txt");
         filePaths.add("F:\\Java\\TestProject\\2013.txt");
-        getUniqueLines(filePaths);
+        getUniqueLines(filePaths);*/
+        q();
+    }
+
+    private static void q() {
+        try {
+            final BufferedReader bufferedReader = new BufferedReader(new FileReader("F:\\temp\\4.txt"));
+            List<String> updated = new ArrayList<>();
+            String line;
+            try {
+                while ((line = bufferedReader.readLine()) != null) {
+                    String[] values = new String[11];
+                    values[0] = line.substring(ordinalIndexOf(line, ",", 10) + 1, ordinalIndexOf(line, ",", 12));
+                    values[1] = line.substring(ordinalIndexOf(line, ",", 12) + 1, ordinalIndexOf(line, ",", 14));
+                    values[2] = line.substring(ordinalIndexOf(line, ",", 14) + 1, ordinalIndexOf(line, ",", 16));
+                    values[3] = line.substring(ordinalIndexOf(line, ",", 16) + 1, ordinalIndexOf(line, ",", 17));
+                    values[4] = line.substring(ordinalIndexOf(line, ",", 17) + 1, ordinalIndexOf(line, ",", 19));
+                    values[5] = line.substring(ordinalIndexOf(line, ",", 19) + 1, ordinalIndexOf(line, ",", 20));
+                    values[6] = line.substring(ordinalIndexOf(line, ",", 20) + 1, ordinalIndexOf(line, ",", 21));
+                    values[7] = line.substring(ordinalIndexOf(line, ",", 21) + 1, ordinalIndexOf(line, ",", 22));
+                    values[8] = line.substring(ordinalIndexOf(line, ",", 22) + 1, ordinalIndexOf(line, ",", 23));
+                    values[9] = line.substring(ordinalIndexOf(line, ",", 23) + 1, ordinalIndexOf(line, ";", 1) - 1);
+                    /*if (line.substring(ordinalIndexOf(line, ",", 23) + 1, ordinalIndexOf(line, ",", 24)).equals("null")) {
+                        values[8] = line.substring(ordinalIndexOf(line, ",", 23) + 1, ordinalIndexOf(line, ",", 24));
+                        values[9] = line.substring(ordinalIndexOf(line, ",", 24) + 1, ordinalIndexOf(line, ",", 25));
+                        values[10] = line.substring(ordinalIndexOf(line, ",", 25) + 1, ordinalIndexOf(line, ",", 27));
+                        values[11] = line.substring(ordinalIndexOf(line, ",", 27) + 1, ordinalIndexOf(line, ";", 1) - 1);
+                    } else {
+                        values[8] = line.substring(ordinalIndexOf(line, ",", 23) + 1, ordinalIndexOf(line, ",", 25));
+                        values[9] = line.substring(ordinalIndexOf(line, ",", 25) + 1, ordinalIndexOf(line, ",", 26));
+                        values[10] = line.substring(ordinalIndexOf(line, ",", 26) + 1, ordinalIndexOf(line, ",", 28));
+                        values[11] = line.substring(ordinalIndexOf(line, ",", 28) + 1, ordinalIndexOf(line, ";", 1) - 1);
+                    }*/
+                    values[10] = line.substring(ordinalIndexOf(line, "id= ", 1) + 4, ordinalIndexOf(line, ",", 10));
+                    System.out.println("update CRITICALITY_CRITERIA_VALUE set END_DATE=" + values[0] + ",UPDATE_TIMESTAMP=" + values[1] + ",CREATE_TIMESTAMP=" + values[2] + ",ASSET_ID=" + values[3] + ",START_DATE=" + values[4] + ",SAFETY=" + values[5] + ",NETWORK_PERFORMANCE=" + values[6] + ",ENVIRONMENTAL=" + values[7] + ",FINANCIAL=" + values[8] + ",ACI=" + values[9] + " where id=" + values[10] + ";");
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //'95.05',to_date('06-MAR-2017','DD-MON-YYYY'),to_date('12-FEB-2017','DD-MON-YYYY'),null,59160,95,100,null,to_date('06-MAR-2017','DD-MON-YYYY'),7172,to_date('12-FEB-2017','DD-MON-YYYY'));
+    private static int ordinalIndexOf(String str, String substr, int n) {
+        int pos = str.indexOf(substr);
+        while (--n > 0 && pos != -1)
+            pos = str.indexOf(substr, pos + 1);
+        return pos;
     }
 
     public static Set<String> getUniqueLines(List<String> filePaths) {

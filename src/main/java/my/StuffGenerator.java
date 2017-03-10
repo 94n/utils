@@ -1,11 +1,13 @@
 package my;
 
 import my.core.TimeUtils;
+import my.core.repetition.RandomNumber;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
@@ -51,6 +53,10 @@ public interface StuffGenerator {
         p.accept(my.core.repetition.StringGenerator.generateString(length, type));
     }
 
+    static void generateNumber(int min, int max) {
+        p.accept(new RandomNumber().getFromRange(min, max));
+    }
+
     static void printPiTimePoints() {
         String seed = "314159265358";
         List<LocalDateTime> timePoints = TimeUtils.getTimePoints(seed, LocalDate.of(2014, Month.APRIL, 12));
@@ -60,8 +66,8 @@ public interface StuffGenerator {
     }
 
     //STARTING FROM 1
-    static void printOneBasedPiDigitIndex() {
-        p.accept("Pi digit index: " + TimeUtils.getDaySinceThirty());
+    static void printZeroBasedPiDigitIndex() {
+        p.accept("Pi digit index: " + TimeUtils.getDaySinceThirty() + ". Select this number of digits, first not selected one is today index");
     }
 
     static void printSportTimeCountingSecondPerDaySinceThirty() {
@@ -70,18 +76,14 @@ public interface StuffGenerator {
 
     //TODO refactor to java 8 dates before using
     static void print2WeekVacationStartDates() {
-        final Calendar workStart = GregorianCalendar.getInstance();
-        workStart.set(Calendar.DAY_OF_MONTH, 12);
-        workStart.set(Calendar.MONTH, Calendar.APRIL);
-        workStart.set(Calendar.YEAR, 2014);
-        Date vacationStartDate = workStart.getTime();
-        int numberOfVacationsToCalculate = 4;
+        LocalDate vacationStartDate = LocalDate.of(2016, Month.AUGUST, 11);
+        int numberOfVacationsToCalculate = 8;
         double desiredVacationDays = 14;
-        double vacationDaysPerYear = 24;
+        double vacationDaysPerYear = 28;
         int workDaysTillVacation = new Long(Math.round(desiredVacationDays / vacationDaysPerYear * 365.25)).intValue();
         for (int i = 0; i < numberOfVacationsToCalculate; i++) {
-            vacationStartDate = null;//TimeUtils.addDate(vacationStartDate, workDaysTillVacation);
-            p.accept(vacationStartDate);
+            vacationStartDate = vacationStartDate.plusDays(workDaysTillVacation);
+            p.accept(vacationStartDate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)));
         }
     }
 
