@@ -22,7 +22,7 @@ public class TimeUtils {
     }
 
     public static long getDaySinceThirty() {
-        return Duration.between(LocalDateTime.of(2014, Month.APRIL, 12, 0, 0), LocalDateTime.now()).toDays() + 1;
+        return Duration.between(LocalDateTime.of(2014, Month.APRIL, 12, 0, 0), LocalDateTime.now()).toDays();
     }
 
     private static LocalDateTime getNextPoint(String seed, List<LocalDateTime> timePoints, LocalDate datePoint, int i) {
