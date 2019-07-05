@@ -3,9 +3,7 @@ package my.core.filereader;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,7 +17,34 @@ public class FileReader {
     private static boolean show = true;
 
     public static void main(String args[]) {
-        buildTechMap();
+        //buildTechMap();
+        printTechList();
+    }
+
+    private static void printTechList() {
+        Map<String, Integer> tech = new HashMap<>();
+        tech.put("java", 220);
+        tech.put("git", 77);
+        tech.put("spring", 76);
+        tech.put("sql", 73);
+        tech.put("maven", 66);
+        tech.put("hibernate", 60);
+        tech.put("docker", 45);
+        tech.put("javascript", 44);
+        tech.put("jenkins", 44);
+        tech.put("design patterns", 44);
+        tech.put("spring boot", 42);
+        tech.put("rest", 41);
+        tech.put("oop", 41);
+        tech.put("linux", 40);
+        List<String> list = new ArrayList<>();
+        for (String key : tech.keySet()) {
+            for (int i = 0; i < tech.get(key); i++) {
+                list.add(key);
+            }
+        }
+        Collections.shuffle(list);
+        list.forEach(System.out::println);
     }
 
     private static void buildTechMap() {
