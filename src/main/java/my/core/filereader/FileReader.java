@@ -1,10 +1,13 @@
 package my.core.filereader;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * User: mtitov
@@ -16,8 +19,22 @@ public class FileReader {
     private static boolean show = true;
 
     public static void main(String args[]) {
-//        System.out.println(getNumberOfIterations(getPiDigits(), 4));
-        System.out.println(getDifferenceInIterationsOfNeighbourItems(8));
+        buildTechMap();
+    }
+
+    private static void buildTechMap() {
+        String fileName = "C:\\utils\\tech.txt";
+        try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+            Map<String, Long> techCounts = stream.collect(Collectors.groupingBy(s -> s.trim().toLowerCase(),
+                    Collectors.counting()));
+            Map<String, Long> sortedTechCounts = techCounts.entrySet()
+                    .stream()
+                    .sorted((Map.Entry.<String, Long>comparingByValue().reversed()))
+                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+            sortedTechCounts.forEach((k, v) -> System.out.println(k + " " + v));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static int getDifferenceInIterationsOfNeighbourItems(int nextItemNumber) {
