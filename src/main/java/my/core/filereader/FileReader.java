@@ -18,33 +18,50 @@ public class FileReader {
 
     public static void main(String args[]) {
         //buildTechMap();
-        printTechList();
+        printRandomizedFrequencyList();
     }
 
-    private static void printTechList() {
-        Map<String, Integer> tech = new HashMap<>();
-        tech.put("java", 220);
-        tech.put("git", 77);
-        tech.put("spring", 76);
-        tech.put("sql", 73);
-        tech.put("maven", 66);
-        tech.put("hibernate", 60);
-        tech.put("docker", 45);
-        tech.put("javascript", 44);
-        tech.put("jenkins", 44);
-        tech.put("design patterns", 44);
-        tech.put("spring boot", 42);
-        tech.put("rest", 41);
-        tech.put("oop", 41);
-        tech.put("linux", 40);
-        List<String> list = new ArrayList<>();
-        for (String key : tech.keySet()) {
-            for (int i = 0; i < tech.get(key); i++) {
-                list.add(key);
+    private static void printRandomizedFrequencyList() {
+        Map<String, Integer> frequencyMap = new HashMap<>();
+        //populateTechMap(frequencyMap);
+        populateGameMap(frequencyMap);
+        List<String> frequencyList = new ArrayList<>();
+        for (String key : frequencyMap.keySet()) {
+            for (int i = 0; i < frequencyMap.get(key); i++) {
+                frequencyList.add(key);
             }
         }
-        Collections.shuffle(list);
-        list.forEach(System.out::println);
+        Collections.shuffle(frequencyList);
+        frequencyList.forEach(System.out::println);
+    }
+
+    private static void populateGameMap(Map<String, Integer> frequencyMap) {
+        String fileName = "D:\\txt\\gf.txt";
+        try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
+            stream.forEach(s -> {
+                String[] gameFrequency = s.split("\t");
+                frequencyMap.put(gameFrequency[0], Integer.parseInt(gameFrequency[1]));
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void populateTechMap(Map<String, Integer> frequencyMap) {
+        frequencyMap.put("java", 220);
+        frequencyMap.put("git", 77);
+        frequencyMap.put("spring", 76);
+        frequencyMap.put("sql", 73);
+        frequencyMap.put("maven", 66);
+        frequencyMap.put("hibernate", 60);
+        frequencyMap.put("docker", 45);
+        frequencyMap.put("javascript", 44);
+        frequencyMap.put("jenkins", 44);
+        frequencyMap.put("design patterns", 44);
+        frequencyMap.put("spring boot", 42);
+        frequencyMap.put("rest", 41);
+        frequencyMap.put("oop", 41);
+        frequencyMap.put("linux", 40);
     }
 
     private static void buildTechMap() {
