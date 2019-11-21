@@ -23,8 +23,8 @@ public class Main {
         //StuffGenerator.generateName(8, 1);
         //StuffGenerator.generatePassword(10, 4);
         //StuffGenerator.print2WeekVacationStartDates();
-        //printPiTimePoints();
-        StuffGenerator.printZeroBasedPiDigitIndex();
+        StuffGenerator.printPiTimePoints();
+        //StuffGenerator.printZeroBasedPiDigitIndex();
         //StuffGenerator.generateNumber(1, 4);
         //StuffGenerator.printSportTimeCountingSecondPerDaySinceThirty();
         //getTrainTicketBuyDay(LocalDate.of(2017, Month.JANUARY, 8));
