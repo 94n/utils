@@ -36,7 +36,7 @@ public class FileReader {
     }
 
     private static void populateGameMap(Map<String, Integer> frequencyMap) {
-        String fileName = "D:\\txt\\gf.txt";
+        String fileName = "D:\\docs\\gf.txt";
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
             stream.forEach(s -> {
                 String[] gameFrequency = s.split("\t");

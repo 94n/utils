@@ -1,21 +1,18 @@
 package my;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import my.core.filereader.FileReader;
+
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-import java.util.stream.Stream;
 
 /**
  * Created by m on 02.08.2016 23:41.
  */
 public class Main {
+
+    private static void getTrainTicketBuyDay(LocalDate tripDay) {
+        StuffGenerator.addDays(tripDay, -44);
+        System.out.print("at 9:00");
+    }
 
     public static void main(String[] args) {
         //printInclusiveDateDifferenceInDays(LocalDate.now(), LocalDate.of(2016, Month.NOVEMBER, 29));
@@ -23,16 +20,16 @@ public class Main {
         //StuffGenerator.generateName(8, 1);
         //StuffGenerator.generatePassword(10, 4);
         //StuffGenerator.print2WeekVacationStartDates();
-        StuffGenerator.printPiTimePoints();
-        //StuffGenerator.printZeroBasedPiDigitIndex();
+        //StuffGenerator.printPiTimePoints();
+        StuffGenerator.printZeroBasedPiDigitIndex();
+        printGameList();
         //StuffGenerator.generateNumber(1, 4);
         //StuffGenerator.printSportTimeCountingSecondPerDaySinceThirty();
         //getTrainTicketBuyDay(LocalDate.of(2017, Month.JANUARY, 8));
     }
 
-    private static void getTrainTicketBuyDay(LocalDate tripDay) {
-        StuffGenerator.addDays(tripDay, -44);
-        System.out.print("at 9:00");
+    private static void printGameList() {
+        FileReader.main(null);
     }
 
 }
