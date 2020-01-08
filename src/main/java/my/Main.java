@@ -22,7 +22,7 @@ public class Main {
         //StuffGenerator.print2WeekVacationStartDates();
         //StuffGenerator.printPiTimePoints();
         StuffGenerator.printZeroBasedPiDigitIndex();
-        printGameList();
+        //printGameList();
         //StuffGenerator.generateNumber(1, 4);
         //StuffGenerator.printSportTimeCountingSecondPerDaySinceThirty();
         //getTrainTicketBuyDay(LocalDate.of(2017, Month.JANUARY, 8));
