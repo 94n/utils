@@ -14,8 +14,8 @@ import java.util.List;
  * Time: 7:40 PM
  */
 public class FileListGenerator {
-	
-	public static void generateFlatList(String path) {
+
+    public static void generateFlatList(String path) {
         try {
             generateFile(searchFiles(path, true), false);
         } catch (Exception e) {
@@ -55,16 +55,16 @@ public class FileListGenerator {
         }
     }
 
-    private static void generateFile(List<File> files, boolean random){
+    private static void generateFile(List<File> files, boolean random) {
         try {
-            if(random) {
+            if (random) {
                 Collections.shuffle(files);
             }
             System.out.println(files.size() + " files found:");
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             for (File file : files) {
                 byteArrayOutputStream.write((file.getAbsolutePath() + "\n").getBytes());
-                System.out.println(file.getAbsolutePath());
+                System.out.println(file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf('\\') + 1, file.getAbsolutePath().lastIndexOf('.')));
             }
             byteArrayOutputStream.write((files.size() + " files found").getBytes());
             OutputStream f2 = new FileOutputStream("FileList.txt");
@@ -87,7 +87,7 @@ public class FileListGenerator {
         } else {
             File[] list = folder.listFiles();
             if (list != null) {
-                if(flat) {
+                if (flat) {
                     for (File file : list) {
                         result.add(file);
                     }
