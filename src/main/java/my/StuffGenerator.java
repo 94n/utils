@@ -97,4 +97,11 @@ public interface StuffGenerator {
         p.accept(ChronoUnit.DAYS.between(start, end) + 1);
     }
 
+    static void printDarebeeTimePoints() {
+        List<LocalDateTime> timePoints = TimeUtils.get11To21HourlyTimePoints();
+        for (LocalDateTime timePoint : timePoints) {
+            p.accept(timePoint.format(DateTimeFormatter.ofPattern("d MMMM yyyy H:mm")));
+        }
+    }
+
 }

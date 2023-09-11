@@ -17,6 +17,8 @@ public class Main {
 
     public static void main(String[] args) {
         FileListGenerator.generateRandomList("D:\\Docs\\CV");
+        StuffGenerator.printDarebeeTimePoints();
+
         //printInclusiveDateDifferenceInDays(LocalDate.now(), LocalDate.of(2016, Month.NOVEMBER, 29));
         //printDateSince(LocalDate.of(2010, Month.DECEMBER, 16), 999);
         //StuffGenerator.generateName(8, 1);
