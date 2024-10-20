@@ -31,6 +31,14 @@ public class FileListGenerator {
         }
     }
 
+    public static void generateAlphaList(String path) {
+        try {
+            generateFile(searchFiles(path, false), false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void generateList(String path) {
         try {
             List<File> files;
@@ -59,6 +67,8 @@ public class FileListGenerator {
         try {
             if (random) {
                 Collections.shuffle(files);
+            } else {
+                Collections.sort(files);
             }
             System.out.println(files.size() + " files found:");
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();

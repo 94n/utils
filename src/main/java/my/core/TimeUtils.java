@@ -6,16 +6,15 @@ import java.util.List;
 
 public class TimeUtils {
 
-    public static List<LocalDateTime> get11To21HourlyTimePoints() {
+    public static List<LocalDateTime> get10To21HourlyTimePoints(LocalDateTime currentTimePoint, int number) {
         List<LocalDateTime> timePoints = new ArrayList<>();
-        LocalDateTime currentTimePoint = LocalDateTime.of(2023, Month.SEPTEMBER, 27, 19, 0);
         timePoints.add(currentTimePoint);
-        for (int i = 0; i < 100; i++) {
+        for (int i = 1; i < number; i++) {
             LocalDateTime nextPoint;
             if (currentTimePoint.getHour() < 21) {
                 nextPoint = currentTimePoint.plusHours(1);
             } else {
-                nextPoint = currentTimePoint.plusHours(14);
+                nextPoint = currentTimePoint.plusHours(13);
             }
             currentTimePoint = nextPoint;
             timePoints.add(currentTimePoint);
@@ -83,11 +82,11 @@ public class TimeUtils {
     }
 
     public static Duration getSportTimeCountingSecondPerDaySinceThirty() {
-        return Duration.ofSeconds(getDaySinceThirty());
+        return Duration.ofSeconds(getDaysSinceForty());
     }
 
-    public static long getDaySinceThirty() {
-        return Duration.between(LocalDateTime.of(2014, Month.APRIL, 12, 0, 0),
+    public static long getDaysSinceForty() {
+        return Duration.between(LocalDateTime.of(2024, Month.APRIL, 12, 0, 0),
                 LocalDateTime.now()).toDays();
     }
 

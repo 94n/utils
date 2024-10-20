@@ -7,11 +7,11 @@ package my.core;
  */
 public class PasswordGenerator {
 
-    private static final int LENGTH = 6
+    private static final int LENGTH = 8
             ;
 
     //1 or 2
-    private static final int STRENGTH = 1
+    private static final int STRENGTH = 2
             ;
 
     public static void main(String[] args) {
