@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50961de4-37b7-490c-b656-06d5b8211ccc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/my/core/UniqueWordCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/StuffGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/StuffGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/core/PasswordGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/core/PasswordGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/core/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/core/TimeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/core/filelists/FileListGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/core/filelists/FileListGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reformat.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,29 +45,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PasswordGenerator.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/makst/Documents/GitHub/utils&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.PasswordGenerator.executor": "Run",
+    "Application.YouTubeLatestVideos.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/makst/Documents/GitHub/utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="my.Main" />
@@ -106,9 +109,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="YouTubeLatestVideos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="my.YouTubeLatestVideos" />
+      <module name="utils" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.YouTubeLatestVideos" />
         <item itemvalue="Application.PasswordGenerator" />
         <item itemvalue="Application.Sorting" />
       </list>
@@ -145,7 +162,49 @@
       <workItem from="1724783516297" duration="141000" />
       <workItem from="1726310260811" duration="1473000" />
       <workItem from="1729430277119" duration="52000" />
-      <workItem from="1729430336281" duration="643000" />
+      <workItem from="1729430336281" duration="1000000" />
+      <workItem from="1729435156878" duration="699000" />
+      <workItem from="1730208271388" duration="2023000" />
+      <workItem from="1730282862831" duration="3307000" />
+      <workItem from="1731329060521" duration="1204000" />
+      <workItem from="1732873573787" duration="880000" />
+      <workItem from="1732874466176" duration="1777000" />
+      <workItem from="1732876261646" duration="1485000" />
+      <workItem from="1732881736021" duration="4222000" />
+      <workItem from="1732886012238" duration="193000" />
+      <workItem from="1732891110189" duration="560000" />
+      <workItem from="1733405808375" duration="3497000" />
+      <workItem from="1733650638207" duration="493000" />
+      <workItem from="1734017604919" duration="738000" />
+      <workItem from="1734101669561" duration="689000" />
+      <workItem from="1734171863202" duration="955000" />
+      <workItem from="1734287824615" duration="1332000" />
+      <workItem from="1734431388482" duration="726000" />
+      <workItem from="1734801826002" duration="697000" />
+      <workItem from="1734973964752" duration="1007000" />
+      <workItem from="1735459603093" duration="147000" />
+      <workItem from="1735571241723" duration="4724000" />
+      <workItem from="1736117674592" duration="903000" />
+      <workItem from="1736347541710" duration="679000" />
+      <workItem from="1736606456778" duration="144000" />
+      <workItem from="1737320111271" duration="72000" />
+      <workItem from="1737320191459" duration="10000" />
+      <workItem from="1737629838531" duration="90000" />
+      <workItem from="1737809978711" duration="1279000" />
+      <workItem from="1737914473237" duration="1155000" />
+      <workItem from="1737965273260" duration="645000" />
+      <workItem from="1738511566337" duration="870000" />
+      <workItem from="1738680045007" duration="717000" />
+      <workItem from="1739181910579" duration="760000" />
+      <workItem from="1740400640703" duration="394000" />
+      <workItem from="1740841010678" duration="746000" />
+      <workItem from="1741031354130" duration="1402000" />
+      <workItem from="1741594833390" duration="703000" />
+      <workItem from="1742815286817" duration="150000" />
+      <workItem from="1744015351648" duration="162000" />
+      <workItem from="1745264767938" duration="2041000" />
+      <workItem from="1745661762995" duration="99000" />
+      <workItem from="1745661871245" duration="3850000" />
     </task>
     <servers />
   </component>

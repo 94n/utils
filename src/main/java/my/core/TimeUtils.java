@@ -11,10 +11,10 @@ public class TimeUtils {
         timePoints.add(currentTimePoint);
         for (int i = 1; i < number; i++) {
             LocalDateTime nextPoint;
-            if (currentTimePoint.getHour() < 21) {
-                nextPoint = currentTimePoint.plusHours(1);
+            if (currentTimePoint.getHour() < 20) {
+                nextPoint = currentTimePoint.plusHours(2);
             } else {
-                nextPoint = currentTimePoint.plusHours(13);
+                nextPoint = currentTimePoint.plusHours(14);
             }
             currentTimePoint = nextPoint;
             timePoints.add(currentTimePoint);

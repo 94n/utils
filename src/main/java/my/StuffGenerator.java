@@ -85,7 +85,7 @@ public interface StuffGenerator {
 //        p.accept("Daylight average times per day=" + daylightTimesPerDay.values().stream().collect(Collectors.averagingInt(i -> i)));
     }
 
-    private static List<Integer> readPi() {
+    static List<Integer> readPi() {
         String fileName = "D:\\pi.txt";
         List<Integer> digitList = new ArrayList<>();
 
